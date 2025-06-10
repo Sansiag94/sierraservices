@@ -1,0 +1,612 @@
+/* Basic CSS Reset & Universal Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Define your custom color palette as CSS Variables */
+    --color-dark-background: #1A1A1A;
+    --color-light-background: #F5F5F5;
+    --color-pure-white: #FFFFFF;
+    --color-dark-text: #333333;
+    --color-light-text: #E0E0E0;
+    --color-medium-gray: #B0B0B0;
+    --color-accent-primary: #4A90E2; /* A vibrant blue */
+    --color-accent-dark: #357ABD;   /* A darker shade of the vibrant blue */
+    --shadow-base: rgba(0, 0, 0, 0.2);
+
+    /* Fonts */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-dark-text); /* text-dark-text */
+    background-color: var(--color-light-background); /* bg-light-background */
+    line-height: 1.6;
+    min-height: 100vh; /* Ensure body takes full viewport height */
+}
+
+.container {
+    max-width: 1280px; /* Equivalent to max-w-7xl if that was used, or a fixed max-width */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem; /* px-6 equivalent */
+    padding-right: 1.5rem; /* px-6 equivalent */
+}
+
+/* Scroll smooth - from HTML */
+html.scroll-smooth {
+    scroll-behavior: smooth;
+}
+
+/* Animations (from your Tailwind config, but now pure CSS) */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0; /* Hidden initially */
+}
+.animate-fade-in-up.delay-200 {
+    animation-delay: 0.2s;
+}
+.animate-fade-in-up.delay-400 {
+    animation-delay: 0.4s;
+}
+
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(26, 26, 26, 0.95); /* bg-dark-background opacity-95 */
+    z-index: 50;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* shadow-lg */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.navbar.scrolled {
+    background-color: var(--color-dark-background); /* full opacity */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05); /* stronger shadow */
+}
+
+
+.navbar-content {
+    display: flex; /* flex */
+    justify-content: space-between; /* justify-between */
+    align-items: center; /* items-center */
+    padding-top: 1rem; /* py-4 */
+    padding-bottom: 1rem; /* py-4 */    
+}
+
+.navbar-logo-link {
+    display: flex; /* flex */
+    align-items: center; /* items-center */
+    gap: 0.75rem; /* space-x-3 */
+    text-decoration: none
+}
+
+.navbar-logo {
+    height: 2.5rem; /* h-10 */
+    transition: transform 0.3s duration-300; /* transition-transform duration-300 */
+}
+.navbar-logo:hover {
+    transform: scale(1.05); /* hover:scale-105 */
+}
+
+.navbar-brand {
+    color: var(--color-light-text); /* text-light-text */
+    font-size: 1.5rem; /* text-2xl */
+    font-family: var(--font-heading); /* font-heading */
+    font-weight: 600; /* font-semibold */
+    display: none; /* hidden */
+}
+@media (min-width: 768px) { /* md:block */
+    .navbar-brand {
+        display: block;
+    }
+}
+
+.mobile-menu-button {
+    color: var(--color-pure-white); /* text-pure-white */
+    outline: none; /* focus:outline-none */
+}
+@media (min-width: 768px) { /* md:hidden */
+    .mobile-menu-button {
+        display: none;
+    }
+}
+
+.nav-links {
+    display: none; /* hidden */
+    flex-direction: column; /* flex-col */
+    gap: 2rem; /* space-x-8 - applied as gap here for flex-row */
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 500; /* font-medium */
+}
+@media (min-width: 768px) { /* md:flex md:flex-row */
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.nav-link {
+    display: block; /* block */
+    padding: 0.5rem 1rem; /* py-2 px-4 */
+    color: var(--color-light-text); /* text-light-text */
+    transition: color 0.3s duration-300; /* transition-colors duration-300 */
+}
+.nav-link:hover {
+    color: var(--color-accent-primary); /* hover:text-accent-primary */
+}
+
+.mobile-menu {
+    display: none; /* hidden */
+    background-color: rgba(26, 26, 26, 0.95); /* bg-dark-background opacity-95 */
+    padding-bottom: 1rem; /* pb-4 */
+}
+@media (min-width: 768px) { /* md:hidden */
+    .mobile-menu {
+        display: none !important; /* Hide on larger screens, even if JS shows it */
+    }
+}
+
+.mobile-nav-link {
+    display: block; /* block */
+    padding: 0.5rem 1.5rem; /* py-2 px-6 */
+    color: var(--color-light-text); /* text-light-text */
+    transition: color 0.3s duration-300; /* transition-colors duration-300 */
+}
+.mobile-nav-link:hover {
+    color: var(--color-accent-primary); /* hover:text-accent-primary */
+}
+
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('mountain.jpg'); /* NEW: Business background image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 0 1.5rem; /* px-6 */
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-dark-background); /* bg-dark-background */
+    opacity: 0.7; /* opacity-70 */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 64rem; /* max-w-4xl (1024px) */
+    color: var(--color-pure-white); /* text-pure-white */
+}
+
+.hero-title {
+    font-size: 3rem; /* text-5xl */
+    line-height: 1.25; /* leading-tight */
+    font-weight: 700; /* font-bold */
+    font-family: var(--font-heading); /* font-heading */
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+@media (min-width: 768px) { /* md:text-7xl */
+    .hero-title {
+        font-size: 4.5rem; /* 72px */
+    }
+}
+
+.hero-subtitle {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 300; /* font-light */
+    margin-bottom: 2.5rem; /* mb-10 */
+}
+@media (min-width: 768px) { /* md:text-2xl */
+    .hero-subtitle {
+        font-size: 1.5rem; /* 24px */
+    }
+}
+
+.hero-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.primary-button {
+    display: inline-block; /* inline-block */
+    background-color: var(--color-accent-primary); /* bg-accent-primary */
+    color: var(--color-pure-white); /* text-pure-white */
+    padding: 1rem 2.5rem; /* py-4 px-10 */
+    border-radius: 9999px; /* rounded-full */
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 600; /* font-semibold */
+    transition: background-color 0.3s duration-300, box-shadow 0.3s; /* transition-colors duration-300 */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* shadow-xl */
+    text-decoration: none; /* remove underline for links */
+}
+.primary-button:hover {
+    background-color: var(--color-accent-dark); /* hover:bg-accent-dark */
+}
+
+
+/* Section Titles - Reusable */
+.section-title {
+    font-size: 2.25rem; /* text-4xl */
+    font-family: var(--font-heading); /* font-heading */
+    font-weight: 600; /* font-semibold */
+    text-align: center; /* text-center */
+    color: var(--color-accent-primary); /* text-accent-primary */
+    margin-bottom: 3rem; /* mb-12 */
+    position: relative; /* relative */
+    padding-bottom: 1rem; /* pb-4 */
+}
+
+.section-title-text {
+    position: relative; /* relative */
+    z-index: 10; /* z-10 */
+    background-color: transparent; /* Changed to transparent */
+    padding: 0; /* Removed padding that was creating background effect */
+}
+
+.section-title::after {
+    content: '';
+    position: absolute; /* absolute */
+    left: 0; /* inset-x-0 */
+    right: 0; /* inset-x-0 */
+    bottom: 0; /* bottom-0 */
+    height: 0.125rem; /* h-0.5 */
+    background-color: var(--color-dark-background); /* bg-dark-background */
+}
+
+
+/* About Section */
+.about-section {
+    padding-top: 5rem; /* py-20 */
+    padding-bottom: 5rem; /* py-20 */
+    background-color: var(--color-pure-white); /* bg-pure-white */
+}
+
+.about-content {
+    max-width: 800px; /* max-w-5xl (800px) */
+}
+
+.about-flex-container {
+    display: flex; /* flex */
+    flex-direction: column; /* flex-col */
+    align-items: center; /* items-center */
+    gap: 3rem; /* gap-12 */
+}
+@media (min-width: 768px) { /* md:flex-row md:items-start */
+    .about-flex-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.about-image-wrapper {
+    flex-shrink: 0; /* flex-shrink-0 */
+    /* Ensure the image wrapper height matches the text container height for alignment */
+    /* This might need JavaScript for perfect dynamic height, or set a min-height */
+    min-height: 20rem; /* Example: adjust this to be roughly the height of the text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.about-image {
+    width: 20rem; /* Increased width */
+    height: 20rem; /* Increased height */
+    object-fit: cover; /* Added to maintain aspect ratio */
+    object-position: 50% 15%; /* Zoom in on face */
+    border-radius: 9999px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 4px solid var(--color-medium-gray);
+    transition: transform 0.3s duration-300;
+    margin-top: 50px; /* NEW: Move image down by 50px */
+}
+.about-image:hover {
+    transform: scale(1.05);
+}
+
+.about-text-container {
+    flex-grow: 1; /* flex-grow */
+    text-align: justify; /* Justified text */
+}
+@media (min-width: 768px) { /* md:text-left */
+    .about-text-container {
+        text-align: justify; /* Keep justified on larger screens */
+    }
+}
+
+.about-paragraph {
+    font-size: 1.125rem; /* text-lg */
+    line-height: 1.75; /* leading-relaxed */
+    margin-bottom: 1rem; /* mb-4 */
+    color: var(--color-dark-text); /* text-dark-text */
+}
+.about-paragraph:last-child {
+    margin-bottom: 0; /* Remove margin from last paragraph if desired */
+}
+
+
+/* Services Section */
+.services-section {
+    padding-top: 5rem; /* py-20 */
+    padding-bottom: 5rem; /* py-20 */
+    background-color: var(--color-light-background); /* bg-light-background */
+}
+
+.services-content {
+    max-width: 1024px; /* max-w-6xl */
+}
+
+.services-grid {
+    display: grid; /* grid */
+    grid-template-columns: repeat(1, minmax(0, 1fr)); /* grid-cols-1 */
+    gap: 2rem; /* gap-8 */
+}
+@media (min-width: 768px) { /* md:grid-cols-2 */
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (min-width: 1024px) { /* lg:grid-cols-3 */
+    .services-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.service-card {
+    background-color: var(--color-pure-white); /* bg-pure-white */
+    padding: 2rem; /* p-8 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    display: flex; /* flex */
+    flex-direction: column; /* flex-col */
+    align-items: center; /* items-center */
+    text-align: center; /* text-center */
+    transition: transform 0.3s duration-300, box-shadow 0.3s; /* transition-transform duration-300 hover:scale-105 hover:shadow-xl */
+    border-top: 4px solid var(--color-accent-primary); /* border-t-4 border-accent-primary */
+}
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.service-icon {
+    font-size: 3.125rem; /* text-5xl */
+    color: var(--color-accent-primary); /* text-accent-primary */
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.service-title {
+    font-size: 1.5rem; /* text-2xl */
+    font-family: var(--font-heading); /* font-heading */
+    font-weight: 600; /* font-semibold */
+    margin-bottom: 1rem; /* mb-4 */
+    color: var(--color-dark-text); /* text-dark-text */
+}
+
+.service-description {
+    font-size: 1rem; /* text-md */
+    color: var(--color-dark-text); /* text-dark-text */
+}
+
+
+/* Contact Section */
+.contact-section {
+    padding-top: 5rem; /* py-20 */
+    padding-bottom: 5rem; /* py-20 */
+    background-color: var(--color-pure-white); /* bg-pure-white */
+}
+
+.contact-content {
+    max-width: 64rem; /* max-w-4xl */
+}
+
+.contact-flex-container {
+    display: flex; /* flex */
+    flex-direction: column; /* flex-col */
+    gap: 3rem; /* gap-12 */
+}
+@media (min-width: 768px) { /* md:flex-row */
+    .contact-flex-container {
+        flex-direction: row;
+    }
+}
+
+.contact-form-wrapper {
+    flex: 1; /* flex-1 */
+    background-color: var(--color-light-background); /* bg-light-background */
+    padding: 2rem; /* p-8 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    border-top: 4px solid var(--color-accent-primary); /* border-t-4 border-accent-primary */
+}
+
+.contact-details-wrapper {
+    flex: 1; /* flex-1 */
+    background-color: var(--color-light-background); /* bg-light-background */
+    padding: 2rem; /* p-8 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    border-top: 4px solid var(--color-accent-primary); /* border-t-4 border-accent-primary */
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    gap: 1.5rem; /* Add gap between items */
+    position: relative; /* Essential for absolute positioning of the image below */
+    padding-bottom: 8rem; /* Add padding at the bottom to make space for the absolutely positioned image */
+}
+
+.contact-subheading {
+    font-size: 1.5rem; /* text-2xl */
+    font-family: var(--font-heading); /* font-heading */
+    font-weight: 600; /* font-semibold */
+    margin-bottom: 0.5rem; /* Reduced margin if photo is above */
+    color: var(--color-dark-text); /* text-dark-text */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* space-y-6 */
+}
+
+.form-group {
+    /* No specific styles needed for this container, just helps with spacing */
+}
+
+.form-label {
+    display: block; /* block */
+    font-size: 1rem; /* text-md */
+    font-weight: 500; /* font-medium */
+    color: var(--color-dark-text); /* text-dark-text */
+    margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.form-input,
+.form-textarea {
+    width: 100%; /* w-full */
+    padding: 0.75rem 1rem; /* px-4 py-3 */
+    border: 1px solid var(--color-medium-gray); /* border border-medium-gray */
+    border-radius: 0.375rem; /* rounded-md */
+    transition: border-color 0.2s, box-shadow 0.2s; /* transition duration-200 */
+    background-color: var(--color-pure-white); /* bg-pure-white */
+    color: var(--color-dark-text); /* text-dark-text */
+}
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--color-accent-primary); /* focus:border-accent-primary */
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3); /* focus:ring-accent-primary (approx) */
+}
+
+.form-textarea {
+    resize: vertical; /* Allow vertical resizing for textarea */
+}
+
+.submit-button {
+    width: 100%; /* w-full */
+    background-color: var(--color-accent-primary); /* bg-accent-primary */
+    color: var(--color-pure-white); /* text-pure-white */
+    padding: 0.75rem 1.5rem; /* py-3 px-6 */
+    border-radius: 0.375rem; /* rounded-md */
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 600; /* font-semibold */
+    transition: background-color 0.3s duration-300; /* transition-colors duration-300 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Indicate it's clickable */
+}
+.submit-button:hover {
+    background-color: var(--color-accent-dark); /* hover:bg-accent-dark */
+}
+
+.contact-details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* space-y-4 */
+    text-align: center; /* Centered for consistency with new layout */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center items */
+    gap: 1rem; /* space-x-4 */
+}
+@media (min-width: 768px) { /* md:text-left */
+    .contact-item {
+        justify-content: flex-start; /* Left-align on larger screens */
+    }
+}
+
+
+.contact-icon {
+    font-size: 1.5rem; /* text-2xl */
+    color: var(--color-accent-primary); /* text-accent-primary */
+}
+
+.contact-text {
+    font-size: 1.125rem; /* text-lg */
+    color: var(--color-dark-text); /* text-dark-text */
+    text-decoration: none; /* remove underline for links */
+    transition: color 0.3s;
+}
+.contact-link:hover {
+    color: var(--color-accent-primary); /* hover:text-accent-primary */
+}
+
+/* New styles for 'santiago white.jpg' moved to contact section */
+.contact-white-photo-container { /* New class for the container of 'santiago white.jpg' */
+    width: 18rem; /* Adjust size as desired, e.g., 15rem or 20rem */
+    height: 18rem; /* Adjust size as desired, keep it equal to width for a circle */
+    border-radius: 50%;
+    overflow: hidden; /* Ensures the image is clipped to the circle */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 4px solid var(--color-accent-primary); /* Optional border */
+    position: absolute; /* Position relative to .contact-details-wrapper */
+    bottom: 2.125rem; /* NEW: Moved up by 70px (7.5rem - 4.375rem = 3.125rem) */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for exact centering */
+    z-index: 10; /* Ensure it's above other elements if needed */
+}
+
+.contact-white-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Adjust if a specific part of the image needs to be visible */
+}
+
+
+/* Footer */
+.main-footer {
+    background-color: var(--color-dark-background); /* bg-dark-background */
+    color: var(--color-light-text); /* text-light-text */
+    padding-top: 2.5rem; /* py-10 */
+    padding-bottom: 2.5rem; /* py-10 */
+}
+
+.footer-content {
+    text-align: center; /* text-center */
+    font-size: 0.875rem; /* text-sm */
+}
+
+.footer-tagline {
+    margin-top: 0.5rem; /* mt-2 */
+}
+/* Footer Link Styling (add to styles.css) */
+.footer-link {
+    color: var(--color-light-text); /* Or a slightly different shade */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--color-accent-primary); /* Your accent blue */
+    text-decoration: underline;
+}
