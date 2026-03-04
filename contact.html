@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-CH">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a consultation with Santiago Sierra to bring more structure to your digital tools, CRM, and internal operations.">
+  <meta name="author" content="Santiago Sierra">
+  <title>Book a Conversation | Sierra Services</title>
+  <link rel="canonical" href="https://sierraservices.ch/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
+  <link rel="icon" href="logo black.jpg" type="image/jpeg">
+</head>
+<body data-page="contact">
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand" aria-label="Sierra Services home">
+        <img src="logo black.jpg" alt="Sierra Services logo" class="brand-logo" decoding="async">
+        <span class="brand-text">
+          <strong>Sierra Services</strong>
+          <small>Zurich, Switzerland</small>
+        </span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html" data-page="home">Home</a>
+        <a href="services.html" data-page="services">Services</a>
+        <a href="insights.html" data-page="insights">Insights</a>
+        <a href="about.html" data-page="about">About</a>
+        <a href="contact.html" data-page="contact" class="nav-cta">Book Consultation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container" data-reveal>
+        <p class="section-kicker">Contact</p>
+        <h1>Book a Conversation</h1>
+        <p>If your business is growing but your systems feel disorganized, we can discuss how to bring more structure and clarity.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <article class="contact-card" data-reveal>
+          <h2>Send Me Your Context</h2>
+          <p>I will review your message and come back with practical next steps.</p>
+          <form class="contact-form" action="https://formspree.io/f/mjkryqje" method="POST">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="field">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company">
+            </div>
+            <div class="field">
+              <label for="website">Website</label>
+              <input type="url" id="website" name="website" placeholder="https://">
+            </div>
+            <div class="field field-full">
+              <label for="challenge">What challenge are you currently facing?</label>
+              <textarea id="challenge" name="challenge" rows="5" required></textarea>
+            </div>
+            <div class="field field-full">
+              <label for="preferred-contact">Preferred contact method</label>
+              <select id="preferred-contact" name="preferred_contact" required>
+                <option value="">Select one</option>
+                <option value="Email">Email</option>
+                <option value="Phone">Phone</option>
+                <option value="WhatsApp">WhatsApp</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary field-full">Schedule Consultation</button>
+            <a href="https://wa.me/41762310235?text=Hello%20Santiago%2C%20I%20would%20like%20to%20discuss%20my%20business%20systems." class="btn btn-secondary field-full" target="_blank" rel="noopener noreferrer">Send WhatsApp Message</a>
+          </form>
+        </article>
+
+        <aside class="contact-card calendly-box" data-reveal>
+          <h2>Book Directly in My Calendar</h2>
+          <div class="calendly-inline-widget" data-url="https://calendly.com/sierra-services/20min"></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <a class="whatsapp-float" href="https://wa.me/41762310235?text=Hello%20Santiago%2C%20I%20would%20like%20to%20discuss%20my%20business%20systems." target="_blank" rel="noopener noreferrer" aria-label="Send WhatsApp message">
+    WhatsApp
+  </a>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>&copy; <span id="year"></span> Sierra Services</p>
+      <a href="mailto:santiago@sierraservices.ch">santiago@sierraservices.ch</a>
+      <a href="tel:+41762310235">+41 76 231 02 35</a>
+      <span>Zurich, Switzerland</span>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script src="script.js"></script>
+</body>
+</html>
