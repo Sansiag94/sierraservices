@@ -1,249 +1,380 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en-CH">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sierra Services offers professional business support in Zurich, from strategy and websites to digital marketing and administration.">
-    <title>Sierra Services - Professional Support for Businesses!</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="logo black.jpg" type="image/jpeg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sierra Services helps service businesses in Zurich build clear digital foundations, CRM systems, and operational workflows for sustainable growth.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Santiago Sierra">
+  <meta name="geo.region" content="CH-ZH">
+  <meta name="geo.placename" content="Zurich">
+  <title>Operational Clarity for Growing Service Businesses | Sierra Services</title>
+  <link rel="canonical" href="https://sierraservices.ch/">
+  <link rel="alternate" hreflang="en-CH" href="https://sierraservices.ch/">
+  <link rel="alternate" hreflang="x-default" href="https://sierraservices.ch/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_CH">
+  <meta property="og:site_name" content="Sierra Services">
+  <meta property="og:title" content="Operational Clarity for Growing Service Businesses | Sierra Services">
+  <meta property="og:description" content="Digital foundation, CRM and lead systems, and operational structure for service-based businesses.">
+  <meta property="og:url" content="https://sierraservices.ch/">
+  <meta property="og:image" content="https://sierraservices.ch/logo%20black.jpg">
+  <meta property="og:image:alt" content="Sierra Services logo">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Operational Clarity for Growing Service Businesses | Sierra Services">
+  <meta name="twitter:description" content="Structured digital systems for service businesses in Zurich and across Switzerland.">
+  <meta name="twitter:image" content="https://sierraservices.ch/logo%20black.jpg">
+  <link rel="icon" href="logo black.jpg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="logo black.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://sierraservices.ch/#website",
+          "url": "https://sierraservices.ch/",
+          "name": "Sierra Services",
+          "inLanguage": "en-CH",
+          "publisher": {
+            "@id": "https://sierraservices.ch/#organization"
+          }
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://sierraservices.ch/#organization",
+          "name": "Sierra Services",
+          "url": "https://sierraservices.ch/",
+          "image": "https://sierraservices.ch/logo%20black.jpg",
+          "logo": "https://sierraservices.ch/logo%20black.jpg",
+          "telephone": "+41762310235",
+          "email": "santiago@sierraservices.ch",
+          "founder": "Santiago Sierra",
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Switzerland"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Zurich",
+            "addressCountry": "CH"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "telephone": "+41762310235",
+            "email": "santiago@sierraservices.ch",
+            "availableLanguage": [
+              "en",
+              "de",
+              "es"
+            ]
+          },
+          "knowsAbout": [
+            "CRM setup",
+            "Lead tracking systems",
+            "Workflow documentation",
+            "Operational dashboards",
+            "Website foundations"
+          ]
+        }
+      ]
+    }
+  </script>
 </head>
 <body>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a href="#top" class="brand" aria-label="Sierra Services home">
+        <img src="logo black.jpg" alt="Sierra Services logo" class="brand-logo" decoding="async">
+        <span class="brand-text">
+          <strong>Sierra Services</strong>
+          <small>Zurich, Switzerland</small>
+        </span>
+      </a>
 
-    <nav id="navbar" class="navbar">
-        <div class="container navbar-content">
-            <a href="#hero" class="navbar-logo-link">
-                <img src="logo black.jpg" alt="Sierra Services Logo" class="navbar-logo">
-                <span class="navbar-brand">Sierra Services</span>
-            </a>
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-            <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Toggle navigation menu" aria-controls="mobile-menu" aria-expanded="false">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-
-            <div id="nav-links" class="nav-links">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-        </div>
-
-        <div id="mobile-menu" class="mobile-menu">
-            <a href="#about" class="mobile-nav-link">About</a>
-            <a href="#services" class="mobile-nav-link">Services</a>
-            <a href="#contact" class="mobile-nav-link">Contact</a>
-        </div>
-    </nav>
-
-    <section id="hero" class="hero-section">
-        <div class="hero-blob hero-blob-one" aria-hidden="true"></div>
-        <div class="hero-blob hero-blob-two" aria-hidden="true"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-layout">
-                <div class="hero-main">
-                    <p class="hero-eyebrow animate-fade-in-up">Zurich-Based Freelance Partner</p>
-                    <h1 class="hero-title animate-fade-in-up">
-                        Professional Support for Businesses - With Swiss Precision and Colombian Heart.
-                    </h1>
-                    <p class="hero-subtitle animate-fade-in-up delay-200">
-                        Hi, I'm Santiago Sierra - a professional based in Zurich with a Master's in Business Administration, 6+ years of experience, and a passion for helping people and businesses thrive. I offer flexible, trustworthy freelance support - from websites and admin to content creation and digital marketing.
-                    </p>
-                    <div class="hero-button-container animate-fade-in-up delay-400">
-                        <a href="#contact" class="primary-button">
-                            Work with me now
-                        </a>
-                        <a href="#services" class="secondary-button">
-                            View Services
-                        </a>
-                    </div>
-                    <div class="hero-stat-grid animate-fade-in-up delay-400">
-                        <div class="hero-stat-card">
-                            <span class="hero-stat-value">6+</span>
-                            <span class="hero-stat-label">Years Experience</span>
-                        </div>
-                        <div class="hero-stat-card">
-                            <span class="hero-stat-value">100%</span>
-                            <span class="hero-stat-label">Client Focus</span>
-                        </div>
-                        <div class="hero-stat-card">
-                            <span class="hero-stat-value">2</span>
-                            <span class="hero-stat-label">Languages</span>
-                        </div>
-                    </div>
-                </div>
-                <aside class="hero-profile-card animate-fade-in-up delay-400">
-                    <img src="photo santiago white.jpg" alt="Santiago Sierra" class="hero-profile-photo" decoding="async">
-                    <h2 class="hero-profile-name">Santiago Sierra</h2>
-                    <p class="hero-profile-role">Business Support Specialist</p>
-                    <ul class="hero-profile-list">
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i>Market and brand strategy</li>
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i>Website and SEO execution</li>
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i>Fast, reliable communication</li>
-                    </ul>
-                    <a href="https://wa.me/41762310235?text=Hello%20Santiago%2C%20I%27m%20interested%20in%20your%20services." class="hero-whatsapp-button" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                        <span>Chat on WhatsApp</span>
-                    </a>
-                </aside>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="about-section">
-        <div class="container about-content">
-            <h2 class="section-title">
-                <span class="section-title-text">About Santiago Sierra</span>
-            </h2>
-            <div class="about-flex-container" data-reveal>
-                <div class="about-image-wrapper">
-                    <img src="photo santiago about.jpg" alt="Santiago Sierra" class="about-image" loading="lazy" decoding="async">
-                </div>
-                <div class="about-text-container">
-                    <p class="about-paragraph">
-                        With a Master's degree in Business Administration (specializing in Development and Promotion), I bring over six years of experience helping businesses grow and individuals manage life's daily demands. My work spans digital support, organization, and hands-on help - always delivered with patience, care, and purpose.
-                    </p>
-                    <p class="about-paragraph">
-                        I'm a calm, reliable, and adaptable person who values trust, clear communication, and genuine connection. I believe the best results come from working together with honesty and intention. Whether I'm building a website, organizing your schedule, or handling your social media, I'm here to make your life easier, one task at a time.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="services-section">
-        <div class="container services-content">
-            <h2 class="section-title">
-                <span class="section-title-text">My Expertise</span>
-            </h2>
-            <div class="services-grid">
-                <div class="service-card" data-reveal>
-                    <i class="fas fa-chart-line service-icon"></i>
-                    <h3 class="service-title">Market Research</h3>
-                    <p class="service-description">In-depth analysis to identify opportunities and challenges within your target markets.</p>
-                </div>
-                <div class="service-card" data-reveal>
-                    <i class="fas fa-handshake service-icon"></i>
-                    <h3 class="service-title">Business Assessment</h3>
-                    <p class="service-description">Comprehensive evaluation of your current operations to pinpoint areas for improvement.</p>
-                </div>
-                <div class="service-card" data-reveal>
-                    <i class="fas fa-tag service-icon"></i>
-                    <h3 class="service-title">Brand Positioning</h3>
-                    <p class="service-description">Crafting a unique and compelling identity that resonates with your ideal audience.</p>
-                </div>
-                <div class="service-card" data-reveal>
-                    <i class="fas fa-bullhorn service-icon"></i>
-                    <h3 class="service-title">Brand Awareness</h3>
-                    <p class="service-description">Strategies to increase recognition and recall of your brand across various platforms.</p>
-                </div>
-                <div class="service-card" data-reveal>
-                    <i class="fas fa-share-alt service-icon"></i>
-                    <h3 class="service-title">Social Media Management</h3>
-                    <p class="service-description">Expert management of your social presence for engagement and growth.</p>
-                </div>
-                <div class="service-card" data-reveal>
-                    <i class="fas fa-globe service-icon"></i>
-                    <h3 class="service-title">Website Development</h3>
-                    <p class="service-description">Building sophisticated, high-performance websites tailored to your business needs.</p>
-                </div>
-                <div class="service-card" data-reveal>
-                    <i class="fas fa-rocket service-icon"></i>
-                    <h3 class="service-title">Website Optimization</h3>
-                    <p class="service-description">Enhancing site performance, user experience, and conversion rates.</p>
-                </div>
-                <div class="service-card" data-reveal>
-                    <i class="fas fa-search service-icon"></i>
-                    <h3 class="service-title">SEO Services</h3>
-                    <p class="service-description">Boosting your online visibility and organic search engine rankings.</p>
-                </div>
-                <div class="service-card" data-reveal>
-                    <i class="fas fa-chart-area service-icon"></i>
-                    <h3 class="service-title">Competitor Analysis</h3>
-                    <p class="service-description">Gaining competitive insights to refine your strategies and stay ahead.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <div class="container contact-content">
-            <h2 class="section-title">
-                <span class="section-title-text">Connect With Me</span>
-            </h2>
-            <div class="contact-flex-container">
-                <div class="contact-form-wrapper" data-reveal>
-                    <h3 class="contact-subheading">Send Me a Message</h3>
-                    <form action="https://formspree.io/f/mjkryqje" method="POST" class="contact-form">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="https://sierraservices.ch/thank-you.html">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" id="name" name="name" required class="form-input">
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" name="email" required class="form-input">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone" class="form-label">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" class="form-input">
-                        </div>
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea id="message" name="message" rows="5" required class="form-textarea"></textarea>
-                        </div>
-                        <button type="submit" class="submit-button">
-                            Submit Inquiry
-                        </button>
-                    </form>
-                </div>
-                <div class="contact-details-wrapper" data-reveal>
-                    <h3 class="contact-subheading">Reach Out Directly</h3>
-                    <div class="contact-details-list">
-                        <div class="contact-item">
-                            <i class="fas fa-user-tie contact-icon"></i>
-                            <span class="contact-text">Santiago Sierra</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope contact-icon"></i>
-                            <a href="mailto:santiago@sierraservices.ch" class="contact-text contact-link">santiago@sierraservices.ch</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone-alt contact-icon"></i>
-                            <a href="tel:+41762310235" class="contact-text contact-link">+41 76 231 02 35</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt contact-icon"></i>
-                            <span class="contact-text">Thalwil, Zurich, Switzerland</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-whatsapp contact-icon"></i>
-                            <a href="https://wa.me/41762310235?text=Hello%20Santiago%2C%20I%27m%20interested%20in%20your%20services." class="contact-text contact-link whatsapp-link" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp with Sierra Services">
-                                Chat on WhatsApp
-                            </a>
-                        </div>
-                    </div>
-                    <div class="contact-white-photo-container">
-                        <img src="photo santiago white.jpg" alt="Santiago Sierra" class="contact-white-photo" loading="lazy" decoding="async">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="main-footer">
-    <div class="container footer-content">
-        <p>&copy; 2026 Sierra Services. All rights reserved. | <a href="privacy.html" class="footer-link">Privacy Policy</a></p>
-        
-        <p class="footer-tagline">Designed with passion for quality and sophistication.</p>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#method">How I Work</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Schedule a Call</a>
+      </nav>
     </div>
-    </footer>
+  </header>
 
-    <script src="./script.js" defer></script>
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Structured Support for Service Businesses</p>
+          <h1>Operational Clarity for Growing Service Businesses</h1>
+          <p>
+            I help service-based businesses build clean digital foundations and organized backend systems - from websites and CRM setup to workflow structure and reporting.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Schedule a Call</a>
+            <a href="https://wa.me/41762310235?text=Hello%20Santiago%2C%20I%20would%20like%20to%20discuss%20my%20business%20systems." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Send WhatsApp Message</a>
+          </div>
+        </div>
+        <aside class="hero-panel reveal" aria-label="Operational outcomes">
+          <h2>What This Brings</h2>
+          <ul>
+            <li>Clear connection between website, CRM, and internal workflows</li>
+            <li>Visibility from first lead to delivery and follow-up</li>
+            <li>Processes that are structured, practical, and sustainable</li>
+          </ul>
+          <a href="#contact" class="panel-link">Start with a structured conversation</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section authority" id="authority">
+      <div class="container authority-grid">
+        <div class="authority-cards reveal">
+          <article class="trust-card">
+            <h2>MSc Business Administration</h2>
+            <p>Hochschule Luzern</p>
+          </article>
+          <article class="trust-card">
+            <h2>Based in Zurich</h2>
+            <p>Working with local and international service businesses</p>
+          </article>
+          <article class="trust-card">
+            <h2>6+ Years Experience</h2>
+            <p>Supporting businesses across operations, marketing, and growth</p>
+          </article>
+        </div>
+        <figure class="portrait reveal">
+          <img src="photo santiago about.jpg" alt="Portrait of Santiago Sierra" loading="lazy" decoding="async">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section problems" id="problems">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">Problem Identification</p>
+          <h2>When Growth Starts Creating Operational Chaos</h2>
+        </div>
+        <div class="card-grid">
+          <article class="problem-card reveal"><p>Leads arrive but follow-up is inconsistent</p></article>
+          <article class="problem-card reveal"><p>CRM exists but pipeline structure is unclear</p></article>
+          <article class="problem-card reveal"><p>Processes live inside people's heads</p></article>
+          <article class="problem-card reveal"><p>Tools exist but systems are not connected</p></article>
+          <article class="problem-card reveal"><p>Growth feels reactive rather than structured</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">Services</p>
+          <h2>Services</h2>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <h3>Digital Foundation</h3>
+            <p>Professional websites, analytics setup, and structured digital presence designed to support real business growth.</p>
+          </article>
+          <article class="service-card reveal">
+            <h3>CRM &amp; Lead Systems</h3>
+            <p>HubSpot CRM setup, pipeline architecture, lifecycle stages, automation, and lead tracking.</p>
+          </article>
+          <article class="service-card reveal">
+            <h3>Operational Structure</h3>
+            <p>Workflow mapping, process documentation, reporting dashboards, and internal visibility.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section method" id="method">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">Method</p>
+          <h2>How I Work</h2>
+        </div>
+        <ol class="step-list">
+          <li class="step reveal">
+            <span>Step 1</span>
+            <p>Understand your current systems and challenges.</p>
+          </li>
+          <li class="step reveal">
+            <span>Step 2</span>
+            <p>Design a clear structure connecting digital tools and operational workflows.</p>
+          </li>
+          <li class="step reveal">
+            <span>Step 3</span>
+            <p>Implement the systems and ensure they are usable and sustainable.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <p class="section-kicker">About</p>
+          <h2>About Santiago Sierra</h2>
+          <p>
+            Santiago Sierra is a Business Administration professional based in Zurich. He holds a Master's degree from Hochschule Luzern and has worked across operations management, marketing strategy, and digital systems.
+          </p>
+          <p>
+            His focus is helping service businesses organize their digital infrastructure and internal workflows so they can operate with clarity and control.
+          </p>
+          <p>
+            He values structure, reliability, and sustainable growth.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-wrap">
+        <div class="section-head reveal">
+          <p class="section-kicker">Contact</p>
+          <h2>Book a Conversation</h2>
+          <p>If your business is growing but your systems feel disorganized, we can discuss how to bring structure and clarity.</p>
+        </div>
+        <form class="contact-form reveal" id="contact-form" action="https://formspree.io/f/mjkryqje" method="POST" target="_blank">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="field">
+            <label for="company">Company (optional)</label>
+            <input type="text" id="company" name="company">
+          </div>
+          <div class="field">
+            <label for="website">Website (optional)</label>
+            <input type="url" id="website" name="website" placeholder="https://">
+          </div>
+          <div class="field field-full">
+            <label for="challenge">What challenge are you currently facing?</label>
+            <textarea id="challenge" name="challenge" rows="5" required></textarea>
+          </div>
+          <div class="field field-full">
+            <label for="preferred-contact">Preferred contact method</label>
+            <select id="preferred-contact" name="preferred_contact" required>
+              <option value="">Select one</option>
+              <option>Email</option>
+              <option>Phone</option>
+              <option>WhatsApp</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary field-full">Schedule Conversation</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section direct-contact" id="direct-contact">
+      <div class="container direct-grid reveal">
+        <h2>Direct Contact Options</h2>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:santiago@sierraservices.ch">santiago@sierraservices.ch</a></li>
+          <li><strong>Phone:</strong> <a href="tel:+41762310235">+41 76 231 02 35</a></li>
+          <li><strong>WhatsApp:</strong> <a href="https://wa.me/41762310235?text=Hello%20Santiago%2C%20I%20would%20like%20to%20discuss%20my%20business%20systems." target="_blank" rel="noopener noreferrer">Send Message</a></li>
+          <li><strong>Location:</strong> Zurich, Switzerland</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <a class="whatsapp-float" href="https://wa.me/41762310235?text=Hello%20Santiago%2C%20I%20would%20like%20to%20discuss%20my%20business%20systems." target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp">
+    <span>WhatsApp</span>
+  </a>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>&copy; <span id="year"></span> Sierra Services</p>
+      <a href="mailto:santiago@sierraservices.ch">santiago@sierraservices.ch</a>
+      <a href="tel:+41762310235">+41 76 231 02 35</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <script>
+    const FORCE_TOP_AFTER_RELOAD_KEY = 'forceTopAfterContactSubmit';
+    const menuToggle = document.getElementById('menu-toggle');
+    const siteNav = document.getElementById('site-nav');
+    const header = document.querySelector('.site-header');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = siteNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    siteNav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        siteNav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    const handleHeaderState = () => {
+      header.classList.toggle('scrolled', window.scrollY > 8);
+    };
+
+    window.addEventListener('scroll', handleHeaderState, { passive: true });
+    handleHeaderState();
+
+    const revealNodes = document.querySelectorAll('.reveal');
+    const contactForm = document.getElementById('contact-form');
+
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+
+    if (sessionStorage.getItem(FORCE_TOP_AFTER_RELOAD_KEY) === '1') {
+      sessionStorage.removeItem(FORCE_TOP_AFTER_RELOAD_KEY);
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      });
+    }
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      revealNodes.forEach((el) => observer.observe(el));
+    } else {
+      revealNodes.forEach((el) => el.classList.add('visible'));
+    }
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', () => {
+        sessionStorage.setItem(FORCE_TOP_AFTER_RELOAD_KEY, '1');
+        setTimeout(() => {
+          window.location.reload();
+        }, 250);
+      });
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
