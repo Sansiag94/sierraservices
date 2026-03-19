@@ -3,9 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About Santiago Sierra, consultant at Sierra Services based in Zurich, helping service businesses organize digital and operational systems.">
+  <meta name="description" content="Meet Santiago Sierra, Zurich-based consultant helping service businesses create clearer websites, CRM systems, and operational workflows.">
   <meta name="author" content="Santiago Sierra">
-  <title>About Me | Sierra Services</title>
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#142232">
+  <meta property="og:site_name" content="Sierra Services">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="About Santiago Sierra | Sierra Services">
+  <meta property="og:description" content="Meet Santiago Sierra, Zurich-based consultant helping service businesses create clearer websites, CRM systems, and operational workflows.">
+  <meta property="og:url" content="https://sierraservices.ch/about.html">
+  <meta property="og:image" content="https://sierraservices.ch/mountain.jpg">
+  <meta property="og:image:alt" content="Mountain landscape representing clarity and direction for Sierra Services.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Santiago Sierra | Sierra Services">
+  <meta name="twitter:description" content="Meet Santiago Sierra, Zurich-based consultant helping service businesses create clearer websites, CRM systems, and operational workflows.">
+  <meta name="twitter:image" content="https://sierraservices.ch/mountain.jpg">
+  <title>About Santiago Sierra | Sierra Services</title>
   <link rel="canonical" href="https://sierraservices.ch/about.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,12 +45,43 @@
       }
     })();
   </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Santiago Sierra",
+      "url": "https://sierraservices.ch/about.html",
+      "jobTitle": "Operational Systems Consultant",
+      "worksFor": {
+        "@type": "ProfessionalService",
+        "name": "Sierra Services",
+        "url": "https://sierraservices.ch/"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Zurich",
+        "addressCountry": "CH"
+      },
+      "email": "santiago@sierraservices.ch",
+      "telephone": "+41 76 231 02 35",
+      "knowsLanguage": [
+        "English",
+        "Spanish",
+        "German"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Hochschule Luzern"
+      }
+    }
+  </script>
 </head>
 <body data-page="about">
+  <a href="#main-content" class="skip-link">Skip to content</a>
   <header class="site-header" id="top">
     <div class="container nav-wrap">
-      <a href="index.html" class="brand" aria-label="Sierra Services home">
-        <img src="logo black.jpg" alt="Sierra Services logo" class="brand-logo" decoding="async">
+      <a href="./" class="brand" aria-label="Sierra Services home">
+        <img src="logo black.jpg" alt="Sierra Services logo" class="brand-logo" width="1400" height="1400" decoding="async">
         <span class="brand-text">
           <strong>Sierra Services</strong>
           <small>Zurich, Switzerland</small>
@@ -49,7 +93,7 @@
         <span></span>
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-        <a href="index.html" data-page="home">Home</a>
+        <a href="./" data-page="home">Home</a>
         <a href="services.html" data-page="services">Services</a>
         <a href="insights.html" data-page="insights">Insights</a>
         <a href="about.html" data-page="about">About</a>
@@ -58,25 +102,50 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="page-hero">
       <div class="container" data-reveal>
         <p class="section-kicker">About</p>
-        <h1>About Me</h1>
+        <h1>Santiago Sierra</h1>
+        <p>I help service businesses bring more structure to the way they attract leads, manage opportunities, and run their day-to-day operations.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container about-grid">
         <article class="about-copy" data-reveal>
-          <p>I’m based in Zurich and hold a Master’s degree in Business Administration from Hochschule Luzern.</p>
-          <p>My background spans operations management, marketing strategy, and digital systems. Over the years I’ve worked with service businesses to improve how their systems and processes function.</p>
-          <p>My focus is helping organizations organize their digital infrastructure and operational workflows so they can operate with clarity and control.</p>
-          <p>I value structure, reliability, and practical solutions that support sustainable growth.</p>
+          <p>I am based in Zurich and hold a Master&apos;s degree in Business Administration from Hochschule Luzern. My work sits at the intersection of operations, digital systems, and practical business execution.</p>
+          <p>Over the years I have worked with service businesses that reached a stage where growth exposed weak processes, unclear handovers, scattered information, or underused systems. In many cases, the problem was not effort. It was the absence of a clear operating structure.</p>
+          <p>What I do best is translate that complexity into something manageable. That can mean clarifying website messaging, structuring a CRM pipeline, documenting workflows, improving analytics, or making reporting more useful for decision-making.</p>
+          <p>I work best with founders and small teams who want practical improvements, clear prioritization, and systems that support real daily use rather than impressive but unnecessary complexity.</p>
         </article>
-        <aside class="about-photo-wrap" data-reveal aria-label="Professional portrait">
-          <img src="photo santiago about.jpg" alt="Professional portrait of Santiago Sierra" class="about-photo" loading="lazy" decoding="async">
+        <aside class="about-stack">
+          <div class="about-photo-wrap" data-reveal aria-label="Professional portrait">
+            <img src="photo santiago about.jpg" alt="Professional portrait of Santiago Sierra" class="about-photo" width="3072" height="4080" loading="lazy" decoding="async">
+          </div>
+          <article class="trust-card" data-reveal>
+            <h3>How I Work</h3>
+            <ul class="bullet-list">
+              <li>clear prioritization over bloated transformation projects</li>
+              <li>systems designed around daily execution, not theory</li>
+              <li>documentation that improves consistency and handover quality</li>
+              <li>straightforward communication in English and Spanish</li>
+            </ul>
+          </article>
         </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" data-reveal>
+        <article class="cta-panel">
+          <h2>If Your Business Is Growing Faster Than Your Systems</h2>
+          <p>I can help you identify where the friction is coming from and what to improve first so the business becomes easier to manage.</p>
+          <div class="cta-panel__actions">
+            <a href="contact.html" class="btn btn-primary">Book a Consultation</a>
+            <a href="services.html" class="btn btn-secondary">View Services</a>
+          </div>
+        </article>
       </div>
     </section>
   </main>

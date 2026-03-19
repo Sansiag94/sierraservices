@@ -3,15 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="I help growing service-based businesses organize websites, CRM systems, and internal operations so growth stays clear and manageable.">
+  <meta name="description" content="Sierra Services helps service businesses build clearer websites, CRM pipelines, and internal workflows so growth stays organized.">
   <meta name="author" content="Santiago Sierra">
-  <title>Sierra Services | Operational &amp; Digital Systems for Growing Service Businesses</title>
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#142232">
+  <meta property="og:site_name" content="Sierra Services">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sierra Services | Website, CRM &amp; Operational Systems for Service Businesses">
+  <meta property="og:description" content="Build a clearer website, CRM, and internal operating system so your service business can grow without unnecessary chaos.">
+  <meta property="og:url" content="https://sierraservices.ch/">
+  <meta property="og:image" content="https://sierraservices.ch/mountain.jpg">
+  <meta property="og:image:alt" content="Mountain landscape representing clarity and direction for Sierra Services.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sierra Services | Website, CRM &amp; Operational Systems for Service Businesses">
+  <meta name="twitter:description" content="Build a clearer website, CRM, and internal operating system so your service business can grow without unnecessary chaos.">
+  <meta name="twitter:image" content="https://sierraservices.ch/mountain.jpg">
+  <title>Sierra Services | Website, CRM &amp; Operational Systems for Service Businesses</title>
   <link rel="canonical" href="https://sierraservices.ch/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="logo black.jpg" type="image/jpeg">
+  <script>
+    (() => {
+      const { pathname, search, hash } = window.location;
+      if (!pathname.endsWith("/index.html")) {
+        return;
+      }
+
+      const nextPath = pathname.slice(0, -10) || "/";
+      window.history.replaceState(null, "", `${nextPath}${search}${hash}`);
+    })();
+  </script>
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -32,12 +56,92 @@
       }
     })();
   </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://sierraservices.ch/#business",
+          "name": "Sierra Services",
+          "url": "https://sierraservices.ch/",
+          "image": "https://sierraservices.ch/mountain.jpg",
+          "description": "Sierra Services helps service businesses build clearer websites, CRM pipelines, and internal workflows so growth stays organized.",
+          "founder": {
+            "@type": "Person",
+            "name": "Santiago Sierra"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Zurich",
+            "addressCountry": "CH"
+          },
+          "telephone": "+41 76 231 02 35",
+          "email": "santiago@sierraservices.ch",
+          "areaServed": [
+            "Switzerland",
+            "International"
+          ],
+          "availableLanguage": [
+            "English",
+            "Spanish",
+            "German"
+          ],
+          "serviceType": [
+            "Website strategy",
+            "CRM implementation",
+            "Operational workflow design",
+            "Reporting and analytics"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://sierraservices.ch/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Do I need a new website to work with you?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Not necessarily. Many projects start by improving the structure, messaging, analytics, or conversion flow of an existing site instead of rebuilding everything."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you work with the CRM and tools we already use?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. I usually start with the systems you already have and improve the setup, process design, and reporting before suggesting any major tool changes."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is this relevant for a small team?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. This work is often most valuable for founders and small service teams that need clearer processes without adding unnecessary complexity."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What happens in the first consultation?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We review your current setup, identify the main bottlenecks, and decide whether a focused engagement would be useful and what the first priorities should be."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
 </head>
 <body data-page="home">
+  <a href="#main-content" class="skip-link">Skip to content</a>
   <header class="site-header" id="top">
     <div class="container nav-wrap">
-      <a href="index.html" class="brand" aria-label="Sierra Services home">
-        <img src="logo black.jpg" alt="Sierra Services logo" class="brand-logo" decoding="async">
+      <a href="./" class="brand" aria-label="Sierra Services home">
+        <img src="logo black.jpg" alt="Sierra Services logo" class="brand-logo" width="1400" height="1400" decoding="async">
         <span class="brand-text">
           <strong>Sierra Services</strong>
           <small>Zurich, Switzerland</small>
@@ -49,7 +153,7 @@
         <span></span>
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-        <a href="index.html" data-page="home">Home</a>
+        <a href="./" data-page="home">Home</a>
         <a href="services.html" data-page="services">Services</a>
         <a href="insights.html" data-page="insights">Insights</a>
         <a href="about.html" data-page="about">About</a>
@@ -58,20 +162,26 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="hero-home">
       <div class="container hero-layout">
         <div class="hero-copy" data-reveal>
-          <p class="section-kicker">Sierra Services</p>
-          <h1>Operational &amp; Digital Systems for Growing Service Businesses</h1>
-          <p>I help service-based businesses organize their websites, CRM systems, and internal workflows so operations run smoothly and growth becomes manageable. I connect digital presence with operational systems so you gain visibility and control.</p>
+          <p class="section-kicker">Zurich-Based Operational Systems Consultant</p>
+          <h1>Bring Structure to Your Website, CRM, and Internal Workflows</h1>
+          <p>I help service-based businesses turn disconnected tools, unclear follow-up, and improvised processes into systems that support growth, better visibility, and more reliable execution.</p>
           <div class="hero-actions">
             <a href="contact.html" class="btn btn-primary">Book a 20-minute Consultation</a>
             <a href="https://wa.me/41762310235?text=Hello%20Santiago%2C%20I%20would%20like%20to%20discuss%20my%20business%20systems." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Send WhatsApp Message</a>
           </div>
+          <ul class="hero-proof">
+            <li>Based in Zurich</li>
+            <li>MSc Business Administration</li>
+            <li>English &amp; Spanish</li>
+            <li>Focused 20-minute intro call</li>
+          </ul>
         </div>
         <aside class="hero-portrait-wrap" data-reveal aria-label="Portrait of Santiago Sierra">
-          <img src="Photo santiago portrait.png" alt="Santiago Sierra portrait" class="hero-portrait" loading="lazy" decoding="async">
+          <img src="Photo santiago portrait.png" alt="Santiago Sierra portrait" class="hero-portrait" width="1024" height="1063" fetchpriority="high" decoding="async">
         </aside>
       </div>
     </section>
@@ -85,19 +195,19 @@
         <div class="authority-grid">
           <article class="authority-card" data-reveal>
             <h3>MSc Business Administration</h3>
-            <p>Hochschule Luzern - Switzerland</p>
+            <p>Hochschule Luzern in Switzerland, with a practical focus on execution and business structure.</p>
           </article>
           <article class="authority-card" data-reveal>
             <h3>Based in Zurich</h3>
-            <p>I support businesses in Switzerland and internationally.</p>
+            <p>I support businesses across Switzerland and work comfortably with international service firms.</p>
           </article>
           <article class="authority-card" data-reveal>
-            <h3>6+ Years Experience</h3>
-            <p>I have worked across operations, marketing, digital systems, and business development.</p>
+            <h3>Cross-Functional Experience</h3>
+            <p>My background spans operations, marketing, digital systems, and business development.</p>
           </article>
           <article class="authority-card" data-reveal>
-            <h3>Languages</h3>
-            <p>English, Spanish, German (basics)</p>
+            <h3>Practical Working Style</h3>
+            <p>I focus on useful systems, clear documentation, and changes that teams can actually sustain.</p>
           </article>
         </div>
       </div>
@@ -110,11 +220,11 @@
           <h2>When Growth Creates Operational Chaos</h2>
         </div>
         <div class="problem-grid">
-          <article class="problem-card" data-reveal><p>Leads arrive but follow-up is inconsistent.</p></article>
-          <article class="problem-card" data-reveal><p>A CRM exists but pipeline structure is unclear.</p></article>
-          <article class="problem-card" data-reveal><p>Processes live inside people's heads.</p></article>
-          <article class="problem-card" data-reveal><p>Digital tools exist but systems are not connected.</p></article>
-          <article class="problem-card" data-reveal><p>Growth feels reactive instead of structured.</p></article>
+          <article class="problem-card" data-reveal><p>Leads arrive, but follow-up is inconsistent or depends on memory.</p></article>
+          <article class="problem-card" data-reveal><p>A CRM exists, but the pipeline and lifecycle stages are still unclear.</p></article>
+          <article class="problem-card" data-reveal><p>Processes live in chat threads, inboxes, and people&apos;s heads.</p></article>
+          <article class="problem-card" data-reveal><p>Your website and internal systems are not working together.</p></article>
+          <article class="problem-card" data-reveal><p>Growth feels reactive instead of structured and visible.</p></article>
         </div>
       </div>
     </section>
@@ -128,15 +238,15 @@
         <div class="service-preview-grid">
           <article class="service-card" data-reveal>
             <h3>Digital Foundations</h3>
-            <p>I build professional websites and implement analytics and SEO basics so your digital presence supports real business growth.</p>
+            <p>I improve website structure, messaging, analytics, and SEO basics so your digital presence supports actual business conversations.</p>
           </article>
           <article class="service-card" data-reveal>
             <h3>CRM &amp; Lead Systems</h3>
-            <p>I set up CRM pipelines, lifecycle stages, and lead tracking so opportunities are managed consistently.</p>
+            <p>I structure CRM pipelines, lifecycle stages, follow-up routines, and reporting so opportunities are handled consistently.</p>
           </article>
           <article class="service-card" data-reveal>
             <h3>Operational Structure</h3>
-            <p>I help organize workflows, document processes, and build reporting dashboards so your business operates with clarity.</p>
+            <p>I document workflows, clarify handovers, and improve reporting so your team can execute more reliably as workload grows.</p>
           </article>
         </div>
         <p class="section-cta" data-reveal><a href="services.html" class="btn btn-secondary">View Services</a></p>
@@ -144,24 +254,74 @@
     </section>
 
     <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="section-kicker">Process</p>
+          <h2>How a Focused Engagement Usually Works</h2>
+          <p>I keep projects practical: identify the bottleneck, prioritize the highest-leverage fixes, then implement a system your team can actually use.</p>
+        </div>
+        <div class="process-grid">
+          <article class="process-card" data-reveal>
+            <span class="process-step">1</span>
+            <h3>Review the Current Setup</h3>
+            <p>We look at the website, tools, workflow gaps, and reporting blind spots that are creating friction right now.</p>
+          </article>
+          <article class="process-card" data-reveal>
+            <span class="process-step">2</span>
+            <h3>Prioritize What Matters First</h3>
+            <p>I help you focus on the changes that improve lead flow, team execution, and visibility without adding unnecessary complexity.</p>
+          </article>
+          <article class="process-card" data-reveal>
+            <span class="process-step">3</span>
+            <h3>Implement and Document</h3>
+            <p>The goal is not only to fix the setup, but to leave you with a clearer process and structure your team can maintain.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="section-kicker">Outcomes</p>
+          <h2>What Improves When the System Is Clear</h2>
+        </div>
+        <div class="result-grid">
+          <article class="result-card" data-reveal>
+            <h3>More Reliable Follow-Up</h3>
+            <p>Leads are less likely to disappear because ownership, stages, and next steps are better defined.</p>
+          </article>
+          <article class="result-card" data-reveal>
+            <h3>Stronger Operational Visibility</h3>
+            <p>Owners and managers can see what is moving, what is stuck, and where better decisions are needed.</p>
+          </article>
+          <article class="result-card" data-reveal>
+            <h3>Less Friction Between Tools</h3>
+            <p>Your website, CRM, and internal workflows start working together instead of creating duplicate effort.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="container two-col">
         <article class="audience-card" data-reveal>
-          <h2>Who I Work With</h2>
-          <p>I usually work with:</p>
+          <h2>Who I Usually Work With</h2>
+          <p>This work is often a strong fit for:</p>
           <ul class="audience-list">
             <li>consultants and coaches</li>
             <li>therapy practices and small clinics</li>
             <li>professional service firms</li>
-            <li>growing local businesses</li>
+            <li>growing local businesses that need better structure</li>
           </ul>
         </article>
         <article class="engagement-card" data-reveal>
           <h2>Typical Engagements</h2>
           <ul class="engagement-list">
-            <li>building structured websites and SEO foundations for new practices</li>
-            <li>implementing CRM pipelines for growing service businesses</li>
+            <li>clarifying website messaging and conversion paths</li>
+            <li>implementing CRM pipelines for more consistent lead management</li>
             <li>organizing internal workflows and reporting systems</li>
-            <li>connecting digital tools so information flows more clearly</li>
+            <li>connecting tools so information flows more clearly across the business</li>
           </ul>
         </article>
       </div>
@@ -192,28 +352,40 @@
     <section class="section">
       <div class="container">
         <div class="section-head" data-reveal>
-          <p class="section-kicker">Decision Filter</p>
-          <h2>Is This Relevant For You?</h2>
+          <p class="section-kicker">FAQ</p>
+          <h2>Common Questions Before We Speak</h2>
         </div>
-        <div class="decision-grid">
-          <article class="filter-card" data-reveal>
-            <h3>My work is usually helpful if:</h3>
-            <ul class="bullet-list">
-              <li>you run a service-based business</li>
-              <li>your company is growing but systems feel disorganized</li>
-              <li>you use several digital tools that are not well connected</li>
-              <li>you want clearer processes and operational visibility</li>
-            </ul>
+        <div class="faq-grid">
+          <article class="faq-item" data-reveal>
+            <h3>Do I need a new website to work with you?</h3>
+            <p>Not necessarily. Many projects begin by improving structure, messaging, analytics, or conversion flow on an existing site before any rebuild is considered.</p>
           </article>
-          <article class="filter-card" data-reveal>
-            <h3>My work may not be necessary if:</h3>
-            <ul class="bullet-list">
-              <li>your business already has fully structured internal systems</li>
-              <li>you are only looking for purely technical development work</li>
-              <li>you require a large agency team</li>
-            </ul>
+          <article class="faq-item" data-reveal>
+            <h3>Can you work with the CRM and tools we already use?</h3>
+            <p>Yes. I usually start with your current setup and improve the way it is configured, documented, and used before suggesting bigger tool changes.</p>
+          </article>
+          <article class="faq-item" data-reveal>
+            <h3>Is this relevant for a small team?</h3>
+            <p>Yes. This type of work is often most useful for founders and small teams that need more structure without becoming heavy or bureaucratic.</p>
+          </article>
+          <article class="faq-item" data-reveal>
+            <h3>What happens in the first consultation?</h3>
+            <p>We review the current bottlenecks, clarify priorities, and decide whether a focused engagement would make sense and what the first actions should be.</p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" data-reveal>
+        <article class="cta-panel">
+          <h2>Ready to Bring More Structure to the Business?</h2>
+          <p>If your website, CRM, or internal workflows are creating unnecessary friction, we can review your current setup and identify the next practical step.</p>
+          <div class="cta-panel__actions">
+            <a href="contact.html" class="btn btn-primary">Book a Consultation</a>
+            <a href="mailto:santiago@sierraservices.ch" class="btn btn-secondary">Email Me Directly</a>
+          </div>
+        </article>
       </div>
     </section>
   </main>

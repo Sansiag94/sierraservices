@@ -50,6 +50,15 @@ a:hover {
   color: var(--accent-deep);
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(35, 79, 128, 0.24);
+  outline-offset: 3px;
+}
+
 h1,
 h2,
 h3,
@@ -73,6 +82,23 @@ ol {
 
 section {
   scroll-margin-top: 100px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 120;
+  padding: 0.7rem 0.95rem;
+  border-radius: 999px;
+  background: #142232;
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
 }
 
 .container {
@@ -295,6 +321,21 @@ section {
   font-size: 1.03rem;
 }
 
+.hero-proof {
+  margin-top: 1.1rem;
+  padding-left: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem 1rem;
+}
+
+.hero-proof li {
+  color: #29415c;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
 .hero-actions {
   margin-top: 1.8rem;
   display: flex;
@@ -377,7 +418,13 @@ section {
 .detail-card,
 .engagement-card,
 .filter-card,
-.audience-card {
+.audience-card,
+.process-card,
+.result-card,
+.faq-item,
+.trust-card,
+.cta-panel,
+.thank-you-card {
   border: 1px solid #d9e2eb;
   border-radius: var(--radius-md);
   background: #fff;
@@ -390,7 +437,13 @@ section {
 .detail-card h3,
 .engagement-card h3,
 .filter-card h3,
-.audience-card h3 {
+.audience-card h3,
+.process-card h3,
+.result-card h3,
+.faq-item h3,
+.trust-card h3,
+.cta-panel h3,
+.thank-you-card h3 {
   font-size: 1.08rem;
   margin-bottom: 0.6rem;
 }
@@ -400,8 +453,51 @@ section {
 .detail-card p,
 .engagement-card p,
 .filter-card p,
-.audience-card p {
+.audience-card p,
+.process-card p,
+.result-card p,
+.faq-item p,
+.trust-card p,
+.cta-panel p,
+.thank-you-card p {
   color: var(--ink-soft);
+}
+
+.process-grid,
+.result-grid,
+.faq-grid,
+.thank-you-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.process-grid,
+.result-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.faq-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.result-card p strong,
+.thank-you-card p strong {
+  color: #1d3349;
+}
+
+.process-step {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
 }
 
 .section-cta {
@@ -508,6 +604,11 @@ section {
   margin-top: 0.8rem;
 }
 
+.about-stack {
+  display: grid;
+  gap: 1rem;
+}
+
 .about-photo-wrap {
   background: #fff;
   border: 1px solid #d9e1e8;
@@ -540,6 +641,12 @@ section {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.8rem;
+}
+
+.contact-note {
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-size: 0.94rem;
 }
 
 .field {
@@ -576,6 +683,29 @@ section {
   grid-column: 1 / -1;
 }
 
+.form-status {
+  min-height: 1.5rem;
+  margin-top: 0.25rem;
+  font-size: 0.94rem;
+}
+
+.form-status[data-state="pending"] {
+  color: #445e78;
+}
+
+.form-status[data-state="success"] {
+  color: #12603d;
+}
+
+.form-status[data-state="error"] {
+  color: #a12727;
+}
+
+.btn[disabled] {
+  opacity: 0.72;
+  cursor: wait;
+}
+
 .calendly-box {
   overflow: hidden;
   padding: 0;
@@ -589,6 +719,10 @@ section {
 .calendly-inline-widget {
   min-width: 320px;
   height: 760px;
+}
+
+.calendly-note {
+  padding: 0 1.25rem 1.25rem;
 }
 
 .site-footer {
@@ -668,6 +802,29 @@ section {
   margin: 0.7rem 0 1.2rem;
 }
 
+.cta-panel {
+  display: grid;
+  gap: 0.9rem;
+  text-align: center;
+}
+
+.cta-panel__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.thank-you-grid {
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.thank-you-card ul {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 0.6rem;
+}
+
 .cookie-banner {
   position: fixed;
   left: 50%;
@@ -739,7 +896,8 @@ section {
 @media (max-width: 900px) {
   .hero-layout,
   .about-grid,
-  .contact-grid {
+  .contact-grid,
+  .thank-you-grid {
     grid-template-columns: 1fr;
   }
 
@@ -749,7 +907,10 @@ section {
 
   .service-preview-grid,
   .two-col,
-  .decision-grid {
+  .decision-grid,
+  .process-grid,
+  .result-grid,
+  .faq-grid {
     grid-template-columns: 1fr;
   }
 
@@ -805,6 +966,10 @@ section {
   }
 
   .authority-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-proof {
     grid-template-columns: 1fr;
   }
 
