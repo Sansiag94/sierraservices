@@ -36,24 +36,6 @@ body {
     linear-gradient(180deg, #eef2f6 0%, #f3f6f8 38%, #eef2f5 100%);
 }
 
-.skip-link {
-  position: absolute;
-  left: 1rem;
-  top: 0.85rem;
-  z-index: 120;
-  padding: 0.7rem 0.95rem;
-  border-radius: 999px;
-  background: #142232;
-  color: #fff;
-  transform: translateY(-180%);
-  transition: transform 0.2s ease;
-}
-
-.skip-link:focus {
-  transform: translateY(0);
-  color: #fff;
-}
-
 img {
   max-width: 100%;
   display: block;
@@ -843,6 +825,7 @@ section {
 }
 
 .about-photo {
+  width: 100%;
   border-radius: 14px;
   aspect-ratio: 4 / 5;
   object-fit: cover;
