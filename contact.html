@@ -1,198 +1,126 @@
-<!DOCTYPE html>
-<html lang="en-CH">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Book a consultation with Santiago Sierra to bring more structure to your website, CRM, and internal operations.">
-  <meta name="author" content="Santiago Sierra">
-  <meta name="robots" content="index,follow">
-  <meta name="theme-color" content="#142232">
-  <meta property="og:site_name" content="Sierra Services">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Book a Conversation | Sierra Services">
-  <meta property="og:description" content="Get in touch with Sierra Services to discuss website structure, CRM setup, and operational systems for your business.">
-  <meta property="og:url" content="https://sierraservices.ch/contact">
-  <meta property="og:image" content="https://sierraservices.ch/mountain.jpg">
-  <meta property="og:image:alt" content="Mountain landscape representing clarity and direction for Sierra Services.">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Book a Conversation | Sierra Services">
-  <meta name="twitter:description" content="Get in touch with Sierra Services to discuss website structure, CRM setup, and operational systems for your business.">
-  <meta name="twitter:image" content="https://sierraservices.ch/mountain.jpg">
-  <title>Book a Conversation | Sierra Services</title>
-  <link rel="canonical" href="https://sierraservices.ch/contact">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
-  <link rel="icon" href="logo black.jpg" type="image/jpeg">
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "vqp657dphp");
-  </script>
-  <script>
-    (() => {
-      try {
-        const storedConsent = window.localStorage.getItem("sierraservices-cookie-consent");
-        window.clarity("consentv2", {
-          ad_Storage: "denied",
-          analytics_Storage: storedConsent === "granted" ? "granted" : "denied"
-        });
-      } catch (error) {
-        // Ignore storage access issues and let the banner handle consent later.
-      }
-    })();
-  </script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ContactPage",
-      "name": "Contact Sierra Services",
-      "url": "https://sierraservices.ch/contact",
-      "description": "Contact Sierra Services to discuss website structure, CRM implementation, and operational systems.",
-      "about": {
-        "@type": "ProfessionalService",
-        "name": "Sierra Services",
-        "url": "https://sierraservices.ch/"
-      }
-    }
-  </script>
-</head>
-<body data-page="contact">
-  <header class="site-header" id="top">
-    <div class="container nav-wrap">
-      <a href="./" class="brand" aria-label="Sierra Services home">
-        <img src="logo black.jpg" alt="Sierra Services logo" class="brand-logo" width="1400" height="1400" decoding="async">
-        <span class="brand-text">
-          <strong>Sierra Services</strong>
-          <small>Zurich, Switzerland</small>
-        </span>
-      </a>
-      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-        <a href="./" data-page="home">Home</a>
-        <a href="services" data-page="services">Services</a>
-        <a href="insights" data-page="insights">Insights</a>
-        <a href="about" data-page="about">About</a>
-        <a href="contact" data-page="contact" class="nav-cta">Get in touch</a>
-      </nav>
+<?php
+$page = [
+    'id' => 'contact',
+    'title' => 'Book a Conversation | Sierra Services',
+    'description' => 'Book a consultation with Santiago Sierra to bring more structure to your website, CRM, and internal operations.',
+    'canonical' => 'contact',
+    'og_title' => 'Book a Conversation | Sierra Services',
+    'og_description' => 'Get in touch with Sierra Services to discuss website structure, CRM setup, and operational systems for your business.',
+    'structured_data' => <<<'JSON'
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Sierra Services",
+  "url": "https://sierraservices.ch/contact",
+  "description": "Contact Sierra Services to discuss website structure, CRM implementation, and operational systems.",
+  "about": {
+    "@type": "ProfessionalService",
+    "name": "Sierra Services",
+    "url": "https://sierraservices.ch/"
+  }
+}
+JSON,
+    'show_whatsapp' => true,
+];
+
+require __DIR__ . '/includes/page-start.php';
+?>
+<main id="main-content">
+  <section class="page-hero">
+    <div class="container" data-reveal>
+      <p class="section-kicker">Contact</p>
+      <h1>Book a Conversation</h1>
+      <p>If your business is growing but the systems behind it feel disorganized, we can review where the friction is coming from and what to fix first.</p>
     </div>
-  </header>
+  </section>
 
-  <main id="main-content">
-    <section class="page-hero">
-      <div class="container" data-reveal>
-        <p class="section-kicker">Contact</p>
-        <h1>Book a Conversation</h1>
-        <p>If your business is growing but the systems behind it feel disorganized, we can review where the friction is coming from and what to fix first.</p>
+  <section class="section">
+    <div class="container contact-grid">
+      <article class="contact-card" data-reveal>
+        <h2>Send Me Your Context</h2>
+        <p>I review enquiries personally and usually reply within two business days with practical next steps.</p>
+        <p class="contact-note">If your request is urgent, mention that in your message or send a WhatsApp message as well.</p>
+        <form class="contact-form" action="https://formspree.io/f/mjkryqje" method="POST" accept-charset="UTF-8" data-formspree-form>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" autocomplete="organization">
+          </div>
+          <div class="field field-full">
+            <label for="website">Website</label>
+            <input type="url" id="website" name="website" inputmode="url" placeholder="https://">
+          </div>
+          <div class="field field-full">
+            <label for="challenge">What challenge are you currently facing?</label>
+            <textarea id="challenge" name="challenge" rows="5" required></textarea>
+          </div>
+          <div class="field field-full">
+            <label for="preferred-contact">Preferred contact method</label>
+            <select id="preferred-contact" name="preferred_contact" required>
+              <option value="">Select one</option>
+              <option value="Email">Email</option>
+              <option value="Phone">Phone</option>
+              <option value="WhatsApp">WhatsApp</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary field-full">Send Message</button>
+          <p class="form-status field-full" data-form-status aria-live="polite" role="status"></p>
+          <p class="contact-note field-full">By sending this form, you agree that I may use your details to reply to your enquiry.</p>
+          <a href="<?= site_escape($site['whatsapp_url']); ?>" class="btn btn-secondary field-full" target="_blank" rel="noopener noreferrer">Send WhatsApp Message</a>
+        </form>
+      </article>
+
+      <aside class="contact-card calendly-box" data-reveal>
+        <h2>Book Directly in My Calendar</h2>
+        <p class="contact-note">Choose a time that works for you. The booking calendar loads only when you request it, and after booking you will be taken to a confirmation page on this site with the next steps.</p>
+        <div class="calendly-shell" data-calendly-shell data-url="https://calendly.com/sierra-services/20min">
+          <button type="button" class="btn btn-primary calendly-load-button" data-calendly-load>Load booking calendar</button>
+          <p class="calendly-status" data-calendly-status aria-live="polite">The calendar is available on demand to keep this page lighter.</p>
+          <div class="calendly-inline-host" data-calendly-inline></div>
+          <noscript>
+            <p class="contact-note">JavaScript is required to load the embedded calendar. You can still book directly on <a href="https://calendly.com/sierra-services/20min" target="_blank" rel="noopener noreferrer">Calendly</a>.</p>
+          </noscript>
+        </div>
+        <p class="contact-note calendly-note">If no suitable time appears, email me directly at <a href="mailto:santiago@sierraservices.ch">santiago@sierraservices.ch</a>.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <p class="section-kicker">Next Step</p>
+        <h2>What Happens After You Reach Out</h2>
       </div>
-    </section>
-
-    <section class="section">
-      <div class="container contact-grid">
-        <article class="contact-card" data-reveal>
-          <h2>Send Me Your Context</h2>
-          <p>I review enquiries personally and usually reply within two business days with practical next steps.</p>
-          <p class="contact-note">If your request is urgent, mention that in your message or send a WhatsApp message as well.</p>
-          <form class="contact-form" action="https://formspree.io/f/mjkryqje" method="POST" accept-charset="UTF-8" data-formspree-form>
-            <div class="field">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="field">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone" autocomplete="tel">
-            </div>
-            <div class="field">
-              <label for="company">Company</label>
-              <input type="text" id="company" name="company" autocomplete="organization">
-            </div>
-            <div class="field field-full">
-              <label for="website">Website</label>
-              <input type="url" id="website" name="website" placeholder="https://">
-            </div>
-            <div class="field field-full">
-              <label for="challenge">What challenge are you currently facing?</label>
-              <textarea id="challenge" name="challenge" rows="5" required></textarea>
-            </div>
-            <div class="field field-full">
-              <label for="preferred-contact">Preferred contact method</label>
-              <select id="preferred-contact" name="preferred_contact" required>
-                <option value="">Select one</option>
-                <option value="Email">Email</option>
-                <option value="Phone">Phone</option>
-                <option value="WhatsApp">WhatsApp</option>
-              </select>
-            </div>
-            <button type="submit" class="btn btn-primary field-full">Send Message</button>
-            <p class="form-status field-full" data-form-status aria-live="polite"></p>
-            <p class="contact-note field-full">By sending this form, you agree that I may use your details to reply to your enquiry.</p>
-            <a href="https://wa.me/41762310235?text=Hello%20Santiago%2C%20I%20would%20like%20to%20discuss%20my%20business%20systems." class="btn btn-secondary field-full" target="_blank" rel="noopener noreferrer">Send WhatsApp Message</a>
-          </form>
+      <div class="process-grid">
+        <article class="process-card" data-reveal>
+          <span class="process-step">1</span>
+          <h3>I Review the Situation</h3>
+          <p>I look at the context you provide and identify the area where better structure would have the most immediate value.</p>
         </article>
-
-        <aside class="contact-card calendly-box" data-reveal>
-          <h2>Book Directly in My Calendar</h2>
-          <p class="contact-note">Choose a time that works for you. After booking, you will be taken to a confirmation page on this site with the next steps.</p>
-          <div class="calendly-inline-widget" data-url="https://calendly.com/sierra-services/20min"></div>
-          <p class="contact-note calendly-note">If no suitable time appears, email me directly at <a href="mailto:santiago@sierraservices.ch">santiago@sierraservices.ch</a>.</p>
-        </aside>
+        <article class="process-card" data-reveal>
+          <span class="process-step">2</span>
+          <h3>We Clarify Priorities</h3>
+          <p>During the first conversation, we define the bottlenecks, current tools, and the most sensible starting point.</p>
+        </article>
+        <article class="process-card" data-reveal>
+          <span class="process-step">3</span>
+          <h3>You Leave With Direction</h3>
+          <p>Even if we do not start a project immediately, the goal is that you leave the discussion with clearer priorities and next actions.</p>
+        </article>
       </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <p class="section-kicker">Next Step</p>
-          <h2>What Happens After You Reach Out</h2>
-        </div>
-        <div class="process-grid">
-          <article class="process-card" data-reveal>
-            <span class="process-step">1</span>
-            <h3>I Review the Situation</h3>
-            <p>I look at the context you provide and identify the area where better structure would have the most immediate value.</p>
-          </article>
-          <article class="process-card" data-reveal>
-            <span class="process-step">2</span>
-            <h3>We Clarify Priorities</h3>
-            <p>During the first conversation, we define the bottlenecks, current tools, and the most sensible starting point.</p>
-          </article>
-          <article class="process-card" data-reveal>
-            <span class="process-step">3</span>
-            <h3>You Leave With Direction</h3>
-            <p>Even if we do not start a project immediately, the goal is that you leave the discussion with clearer priorities and next actions.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <a class="whatsapp-float" href="https://wa.me/41762310235?text=Hello%20Santiago%2C%20I%20would%20like%20to%20discuss%20my%20business%20systems." target="_blank" rel="noopener noreferrer" aria-label="Send WhatsApp message">
-    WhatsApp
-  </a>
-
-  <footer class="site-footer">
-    <div class="container footer-wrap">
-      <p>&copy; <span id="year"></span> Sierra Services</p>
-      <a href="mailto:santiago@sierraservices.ch">santiago@sierraservices.ch</a>
-      <a href="tel:+41762310235">+41 76 231 02 35</a>
-      <span>Zurich, Switzerland</span>
-      <a href="privacy">Privacy Policy</a>
     </div>
-  </footer>
-
-  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-  <script src="script.js"></script>
-</body>
-</html>
+  </section>
+</main>
+<?php require __DIR__ . '/includes/page-end.php'; ?>

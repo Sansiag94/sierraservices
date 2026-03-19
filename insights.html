@@ -1,133 +1,56 @@
-<!DOCTYPE html>
-<html lang="en-CH">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Insights from Sierra Services on CRM implementation and operational systems for growing service businesses.">
-  <meta name="author" content="Santiago Sierra">
-  <meta name="robots" content="index,follow">
-  <meta name="theme-color" content="#142232">
-  <meta property="og:site_name" content="Sierra Services">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Insights | Sierra Services">
-  <meta property="og:description" content="Read practical insights from Sierra Services on CRM implementation, workflow clarity, and operational systems for service businesses.">
-  <meta property="og:url" content="https://sierraservices.ch/insights">
-  <meta property="og:image" content="https://sierraservices.ch/mountain.jpg">
-  <meta property="og:image:alt" content="Mountain landscape representing clarity and direction for Sierra Services.">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Insights | Sierra Services">
-  <meta name="twitter:description" content="Read practical insights from Sierra Services on CRM implementation, workflow clarity, and operational systems for service businesses.">
-  <meta name="twitter:image" content="https://sierraservices.ch/mountain.jpg">
-  <title>Insights | Sierra Services</title>
-  <link rel="canonical" href="https://sierraservices.ch/insights">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="logo black.jpg" type="image/jpeg">
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "vqp657dphp");
-  </script>
-  <script>
-    (() => {
-      try {
-        const storedConsent = window.localStorage.getItem("sierraservices-cookie-consent");
-        window.clarity("consentv2", {
-          ad_Storage: "denied",
-          analytics_Storage: storedConsent === "granted" ? "granted" : "denied"
-        });
-      } catch (error) {
-        // Ignore storage access issues and let the banner handle consent later.
-      }
-    })();
-  </script>
-</head>
-<body data-page="insights">
-  <header class="site-header" id="top">
-    <div class="container nav-wrap">
-      <a href="./" class="brand" aria-label="Sierra Services home">
-        <img src="logo black.jpg" alt="Sierra Services logo" class="brand-logo" width="1400" height="1400" decoding="async">
-        <span class="brand-text">
-          <strong>Sierra Services</strong>
-          <small>Zurich, Switzerland</small>
-        </span>
-      </a>
-      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-        <a href="./" data-page="home">Home</a>
-        <a href="services" data-page="services">Services</a>
-        <a href="insights" data-page="insights">Insights</a>
-        <a href="about" data-page="about">About</a>
-        <a href="contact" data-page="contact" class="nav-cta">Get in touch</a>
-      </nav>
+<?php
+$page = [
+    'id' => 'insights',
+    'title' => 'Insights | Sierra Services',
+    'description' => 'Insights from Sierra Services on CRM implementation and operational systems for growing service businesses.',
+    'canonical' => 'insights',
+    'og_title' => 'Insights | Sierra Services',
+    'og_description' => 'Read practical insights from Sierra Services on CRM implementation, workflow clarity, and operational systems for service businesses.',
+    'show_whatsapp' => true,
+];
+
+require __DIR__ . '/includes/page-start.php';
+?>
+<main id="main-content">
+  <section class="page-hero">
+    <div class="container" data-reveal>
+      <p class="section-kicker">Insights</p>
+      <h1>Operational and CRM Insights for Service Businesses</h1>
+      <p>I share short practical notes about the patterns I most often see in growing service businesses: unclear systems, underused tools, and processes that become fragile as the workload increases.</p>
     </div>
-  </header>
+  </section>
 
-  <main id="main-content">
-    <section class="page-hero">
-      <div class="container" data-reveal>
-        <p class="section-kicker">Insights</p>
-        <h1>Operational and CRM Insights for Service Businesses</h1>
-        <p>I share short practical notes about the patterns I most often see in growing service businesses: unclear systems, underused tools, and processes that become fragile as the workload increases.</p>
-      </div>
-    </section>
+  <section class="section">
+    <div class="container article-list">
+      <article class="article-card" id="crm-systems" data-reveal>
+        <h2>Why Most Small Businesses Struggle With CRM Systems</h2>
+        <p>Many service businesses invest in a CRM because they know lead management matters, but the tool alone does not create structure. In most cases I review, the challenge is not the platform itself. The challenge is a missing operating model around the platform.</p>
+        <p>A CRM becomes difficult when pipeline stages are vague, ownership is unclear, and follow-up responsibilities are not documented. Teams then use the tool inconsistently, data quality drops, and managers lose trust in the reporting. Once that happens, decisions move back to intuition and private notes.</p>
+        <p>The solution is usually straightforward. I define pipeline stages that reflect the real sales process, assign clear accountability for each stage, and set minimum data requirements. I also establish simple weekly habits so everyone knows what must be updated and why it matters.</p>
+        <p>When these foundations are in place, CRM systems become operational tools rather than administrative burdens. Business owners gain visibility into deal progression, follow-up consistency improves, and forecasting becomes more reliable.</p>
+      </article>
 
-    <section class="section">
-      <div class="container article-list">
-        <article class="article-card" id="crm-systems" data-reveal>
-          <h2>Why Most Small Businesses Struggle With CRM Systems</h2>
-          <p>Many service businesses invest in a CRM because they know lead management matters, but the tool alone does not create structure. In most cases I review, the challenge is not the platform itself. The challenge is a missing operating model around the platform.</p>
-          <p>A CRM becomes difficult when pipeline stages are vague, ownership is unclear, and follow-up responsibilities are not documented. Teams then use the tool inconsistently, data quality drops, and managers lose trust in the reporting. Once that happens, decisions move back to intuition and private notes.</p>
-          <p>The solution is usually straightforward. I define pipeline stages that reflect the real sales process, assign clear accountability for each stage, and set minimum data requirements. I also establish simple weekly habits so everyone knows what must be updated and why it matters.</p>
-          <p>When these foundations are in place, CRM systems become operational tools rather than administrative burdens. Business owners gain visibility into deal progression, follow-up consistency improves, and forecasting becomes more reliable.</p>
-        </article>
-
-        <article class="article-card" id="operational-systems" data-reveal>
-          <h2>When Growing Service Firms Need Operational Systems</h2>
-          <p>Growth often looks positive from the outside, but internally it can expose weak process design. New clients arrive faster, team coordination becomes more complex, and information starts living in scattered documents, chat threads, and individual memory.</p>
-          <p>I typically see three warning signs. First, recurring tasks are handled differently every time. Second, handovers between sales, delivery, and follow-up are inconsistent. Third, leadership cannot quickly see where delays or margin leaks are happening. These are not isolated issues. They are system issues.</p>
-          <p>Operational structure does not need to be heavy. I focus on mapping core workflows, documenting key responsibilities, and defining a small set of performance indicators. The goal is to create clarity with minimal overhead, not to create bureaucracy.</p>
-          <p>Once workflows are visible and tools are connected, teams execute with more confidence. Decisions become less reactive, service quality stays more stable, and growth becomes easier to manage without constant firefighting.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container" data-reveal>
-        <article class="cta-panel">
-          <h2>If These Problems Sound Familiar, the Next Step Is a Conversation</h2>
-          <p>I can review your current setup, identify the highest-friction area, and help you decide what should be improved first.</p>
-          <div class="cta-panel__actions">
-            <a href="contact" class="btn btn-primary">Book a Consultation</a>
-            <a href="services" class="btn btn-secondary">See Service Areas</a>
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <a class="whatsapp-float" href="https://wa.me/41762310235?text=Hello%20Santiago%2C%20I%20would%20like%20to%20discuss%20my%20business%20systems." target="_blank" rel="noopener noreferrer" aria-label="Send WhatsApp message">
-    WhatsApp
-  </a>
-
-  <footer class="site-footer">
-    <div class="container footer-wrap">
-      <p>&copy; <span id="year"></span> Sierra Services</p>
-      <a href="mailto:santiago@sierraservices.ch">santiago@sierraservices.ch</a>
-      <a href="tel:+41762310235">+41 76 231 02 35</a>
-      <span>Zurich, Switzerland</span>
-      <a href="privacy">Privacy Policy</a>
+      <article class="article-card" id="operational-systems" data-reveal>
+        <h2>When Growing Service Firms Need Operational Systems</h2>
+        <p>Growth often looks positive from the outside, but internally it can expose weak process design. New clients arrive faster, team coordination becomes more complex, and information starts living in scattered documents, chat threads, and individual memory.</p>
+        <p>I typically see three warning signs. First, recurring tasks are handled differently every time. Second, handovers between sales, delivery, and follow-up are inconsistent. Third, leadership cannot quickly see where delays or margin leaks are happening. These are not isolated issues. They are system issues.</p>
+        <p>Operational structure does not need to be heavy. I focus on mapping core workflows, documenting key responsibilities, and defining a small set of performance indicators. The goal is to create clarity with minimal overhead, not to create bureaucracy.</p>
+        <p>Once workflows are visible and tools are connected, teams execute with more confidence. Decisions become less reactive, service quality stays more stable, and growth becomes easier to manage without constant firefighting.</p>
+      </article>
     </div>
-  </footer>
+  </section>
 
-  <script src="script.js"></script>
-</body>
-</html>
+  <section class="section">
+    <div class="container" data-reveal>
+      <article class="cta-panel">
+        <h2>If These Problems Sound Familiar, the Next Step Is a Conversation</h2>
+        <p>I can review your current setup, identify the highest-friction area, and help you decide what should be improved first.</p>
+        <div class="cta-panel__actions">
+          <a href="contact" class="btn btn-primary">Book a Consultation</a>
+          <a href="services" class="btn btn-secondary">See Service Areas</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+<?php require __DIR__ . '/includes/page-end.php'; ?>

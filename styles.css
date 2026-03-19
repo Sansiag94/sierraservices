@@ -36,6 +36,24 @@ body {
     linear-gradient(180deg, #eef2f6 0%, #f3f6f8 38%, #eef2f5 100%);
 }
 
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 0.85rem;
+  z-index: 120;
+  padding: 0.7rem 0.95rem;
+  border-radius: 999px;
+  background: #142232;
+  color: #fff;
+  transform: translateY(-180%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  color: #fff;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -915,29 +933,69 @@ section {
 
 .calendly-box {
   overflow: hidden;
-  padding: 0;
 }
 
 .calendly-box h2 {
   text-align: center;
-  padding: 1.25rem 1.25rem 0.6rem;
 }
 
 .calendly-box .contact-note {
   max-width: 41rem;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 1.25rem;
   text-align: center;
 }
 
-.calendly-inline-widget {
+.calendly-shell {
+  display: grid;
+  gap: 0.9rem;
+  justify-items: center;
+  padding: 1.1rem 0 0.35rem;
+}
+
+.calendly-shell.is-loaded {
+  padding-top: 0.4rem;
+}
+
+.calendly-load-button {
+  min-width: 220px;
+}
+
+.calendly-status {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  text-align: center;
+}
+
+.calendly-status[data-state="pending"] {
+  color: #445e78;
+}
+
+.calendly-status[data-state="success"] {
+  color: #12603d;
+}
+
+.calendly-status[data-state="error"] {
+  color: #a12727;
+}
+
+.calendly-inline-host {
+  width: 100%;
+  display: none;
+}
+
+.calendly-shell.is-loaded .calendly-inline-host {
+  display: block;
+}
+
+.calendly-inline-host .calendly-inline-widget {
   min-width: 320px;
   height: 760px;
 }
 
 .calendly-note {
-  padding: 0 1.25rem 1.25rem;
+  padding-bottom: 0.35rem;
 }
 
 .site-footer {
@@ -1152,15 +1210,15 @@ section {
     grid-template-columns: 1fr;
   }
 
-  .calendly-inline-widget {
+  .calendly-inline-host .calendly-inline-widget {
     height: 680px;
   }
 
-  .menu-toggle {
+  .js .menu-toggle {
     display: inline-block;
   }
 
-  .site-nav {
+  .js .site-nav {
     position: absolute;
     top: calc(100% + 8px);
     right: 4vw;
@@ -1180,7 +1238,7 @@ section {
     transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
   }
 
-  .site-nav.open {
+  .js .site-nav.open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;

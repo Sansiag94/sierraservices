@@ -1,5 +1,6 @@
 (() => {
   const consentStorageKey = "sierraservices-cookie-consent";
+  const clarityProjectId = "vqp657dphp";
   const menuToggle = document.getElementById("menu-toggle");
   const siteNav = document.getElementById("site-nav");
   const header = document.querySelector(".site-header");
@@ -7,21 +8,115 @@
   const revealNodes = Array.from(document.querySelectorAll("[data-reveal]"));
   const currentYear = document.getElementById("year");
   const pageId = document.body.getAttribute("data-page");
-  const footerWrap = document.querySelector(".footer-wrap");
   const contactForm = document.querySelector("[data-formspree-form]");
   const formStatus = document.querySelector("[data-form-status]");
+  const cookieSettingsButtons = Array.from(document.querySelectorAll("[data-open-cookie-settings]"));
+  const calendlyShell = document.querySelector("[data-calendly-shell]");
+  const calendlyLoadButton = document.querySelector("[data-calendly-load]");
+  const calendlyInlineHost = document.querySelector("[data-calendly-inline]");
+  const calendlyStatus = document.querySelector("[data-calendly-status]");
   let consentBanner;
   let hasRedirectedAfterBooking = false;
+  let clarityLoadPromise;
+  let calendlyLoadPromise;
 
-  const applyClarityConsent = (status) => {
-    if (typeof window.clarity !== "function") {
+  const loadScript = (src, attributes = {}) =>
+    new Promise((resolve, reject) => {
+      const existingScript = document.querySelector(`script[src="${src}"]`);
+      if (existingScript) {
+        if (existingScript.dataset.loaded === "true") {
+          resolve(existingScript);
+          return;
+        }
+
+        existingScript.addEventListener("load", () => resolve(existingScript), { once: true });
+        existingScript.addEventListener("error", () => reject(new Error(`Failed to load ${src}`)), {
+          once: true
+        });
+        return;
+      }
+
+      const script = document.createElement("script");
+      script.src = src;
+      Object.entries(attributes).forEach(([name, value]) => {
+        if (value === true) {
+          script.setAttribute(name, "");
+          return;
+        }
+
+        script.setAttribute(name, String(value));
+      });
+      script.addEventListener(
+        "load",
+        () => {
+          script.dataset.loaded = "true";
+          resolve(script);
+        },
+        { once: true }
+      );
+      script.addEventListener("error", () => reject(new Error(`Failed to load ${src}`)), {
+        once: true
+      });
+      document.head.appendChild(script);
+    });
+
+  const loadStylesheet = (href) =>
+    new Promise((resolve, reject) => {
+      const existingLink = document.querySelector(`link[href="${href}"]`);
+      if (existingLink) {
+        resolve(existingLink);
+        return;
+      }
+
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = href;
+      link.addEventListener("load", () => resolve(link), { once: true });
+      link.addEventListener("error", () => reject(new Error(`Failed to load ${href}`)), {
+        once: true
+      });
+      document.head.appendChild(link);
+    });
+
+  const ensureClarity = async () => {
+    if (typeof window.clarity === "function") {
+      return window.clarity;
+    }
+
+    if (!clarityLoadPromise) {
+      clarityLoadPromise = loadScript(`https://www.clarity.ms/tag/${clarityProjectId}`, { async: true })
+        .then(() => window.clarity)
+        .catch((error) => {
+          clarityLoadPromise = undefined;
+          throw error;
+        });
+    }
+
+    return clarityLoadPromise;
+  };
+
+  const applyClarityConsent = async (status) => {
+    if (status !== "granted") {
+      if (typeof window.clarity === "function") {
+        window.clarity("consentv2", {
+          ad_Storage: "denied",
+          analytics_Storage: "denied"
+        });
+      }
       return;
     }
 
-    window.clarity("consentv2", {
-      ad_Storage: "denied",
-      analytics_Storage: status === "granted" ? "granted" : "denied"
-    });
+    try {
+      const clarity = await ensureClarity();
+      if (typeof clarity === "function") {
+        clarity("consentv2", {
+          ad_Storage: "denied",
+          analytics_Storage: "granted"
+        });
+      }
+    } catch (error) {
+      // Keep the page usable if the analytics script fails to load.
+    }
   };
 
   const readConsent = () => {
@@ -43,13 +138,14 @@
   const setConsent = (status) => {
     writeConsent(status);
     applyClarityConsent(status);
+
     if (consentBanner) {
       consentBanner.remove();
       consentBanner = null;
     }
   };
 
-  const openConsentBanner = () => {
+  const openConsentBanner = ({ moveFocus = false } = {}) => {
     if (!consentBanner) {
       createConsentBanner();
     }
@@ -59,6 +155,15 @@
     }
 
     consentBanner.hidden = false;
+
+    if (moveFocus) {
+      window.requestAnimationFrame(() => {
+        const primaryAction = consentBanner.querySelector("[data-consent-action='grant']");
+        if (primaryAction instanceof HTMLElement) {
+          primaryAction.focus();
+        }
+      });
+    }
   };
 
   const createConsentBanner = () => {
@@ -68,14 +173,15 @@
 
     consentBanner = document.createElement("section");
     consentBanner.className = "cookie-banner";
-    consentBanner.setAttribute("aria-label", "Cookie preferences");
+    consentBanner.setAttribute("aria-labelledby", "cookie-banner-title");
+    consentBanner.setAttribute("aria-describedby", "cookie-banner-description");
     consentBanner.hidden = true;
     consentBanner.innerHTML = `
       <div class="cookie-banner__copy">
-        <p class="cookie-banner__title">Cookie settings</p>
-        <p class="cookie-banner__text">
+        <p class="cookie-banner__title" id="cookie-banner-title">Cookie settings</p>
+        <p class="cookie-banner__text" id="cookie-banner-description">
           This website uses optional analytics cookies to understand how visitors use the site and improve the experience.
-          Accepting analytics cookies helps keep your visit connected as you move between pages.
+          Analytics are loaded only if you choose to accept them.
         </p>
       </div>
       <div class="cookie-banner__actions">
@@ -94,19 +200,6 @@
     });
 
     document.body.appendChild(consentBanner);
-  };
-
-  const createCookieSettingsButton = () => {
-    if (!footerWrap) {
-      return;
-    }
-
-    const settingsButton = document.createElement("button");
-    settingsButton.type = "button";
-    settingsButton.className = "footer-link-button";
-    settingsButton.textContent = "Cookie Settings";
-    settingsButton.addEventListener("click", openConsentBanner);
-    footerWrap.appendChild(settingsButton);
   };
 
   const setFormStatus = (message, state = "") => {
@@ -180,9 +273,84 @@
     return typeof event.data.event === "string" && event.data.event.startsWith("calendly.");
   };
 
+  const setCalendlyStatus = (message, state = "") => {
+    if (!calendlyStatus) {
+      return;
+    }
+
+    calendlyStatus.textContent = message;
+    calendlyStatus.dataset.state = state;
+  };
+
+  const loadCalendlyWidget = async () => {
+    if (!calendlyShell || !calendlyInlineHost) {
+      return;
+    }
+
+    if (calendlyInlineHost.dataset.ready === "true") {
+      return;
+    }
+
+    if (!calendlyLoadPromise) {
+      calendlyLoadPromise = (async () => {
+        const bookingUrl = calendlyShell.dataset.url;
+        if (!bookingUrl) {
+          throw new Error("Calendly URL is missing.");
+        }
+
+        if (calendlyLoadButton) {
+          calendlyLoadButton.disabled = true;
+          calendlyLoadButton.textContent = "Loading calendar...";
+        }
+        setCalendlyStatus("Loading available times...", "pending");
+
+        await loadStylesheet("https://assets.calendly.com/assets/external/widget.css");
+        await loadScript("https://assets.calendly.com/assets/external/widget.js", { async: true });
+
+        if (!window.Calendly || typeof window.Calendly.initInlineWidget !== "function") {
+          throw new Error("Calendly did not initialize.");
+        }
+
+        window.Calendly.initInlineWidget({
+          url: bookingUrl,
+          parentElement: calendlyInlineHost,
+          resize: true
+        });
+
+        calendlyInlineHost.dataset.ready = "true";
+        calendlyShell.classList.add("is-loaded");
+        setCalendlyStatus("The booking calendar is ready.", "success");
+        if (calendlyLoadButton) {
+          calendlyLoadButton.remove();
+        }
+      })().catch((error) => {
+        calendlyLoadPromise = undefined;
+        if (calendlyLoadButton) {
+          calendlyLoadButton.disabled = false;
+          calendlyLoadButton.textContent = "Load booking calendar";
+        }
+        setCalendlyStatus(
+          "I could not load the calendar right now. Please try again or open Calendly in a new tab.",
+          "error"
+        );
+        throw error;
+      });
+    }
+
+    return calendlyLoadPromise;
+  };
+
   const setupCalendlyRedirect = () => {
     if (pageId !== "contact") {
       return;
+    }
+
+    if (calendlyLoadButton) {
+      calendlyLoadButton.addEventListener("click", () => {
+        loadCalendlyWidget().catch(() => {
+          // The UI already shows the error state.
+        });
+      });
     }
 
     window.addEventListener("message", (event) => {
@@ -252,8 +420,10 @@
     if (!siteNav || !menuToggle) {
       return;
     }
+
     siteNav.classList.toggle("open", isOpen);
     menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
   };
 
   if (menuToggle && siteNav) {
@@ -263,6 +433,21 @@
 
     siteNav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => setMenuOpen(false));
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!siteNav.classList.contains("open")) {
+        return;
+      }
+
+      const target = event.target;
+      if (
+        target instanceof Node &&
+        !siteNav.contains(target) &&
+        !menuToggle.contains(target)
+      ) {
+        setMenuOpen(false);
+      }
     });
 
     document.addEventListener("keydown", (event) => {
@@ -314,7 +499,10 @@
     currentYear.textContent = new Date().getFullYear();
   }
 
-  createCookieSettingsButton();
+  cookieSettingsButtons.forEach((button) => {
+    button.addEventListener("click", () => openConsentBanner({ moveFocus: true }));
+  });
+
   setupContactForm();
   setupCalendlyRedirect();
   setupThankYouPage();
