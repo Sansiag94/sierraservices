@@ -923,6 +923,14 @@ section {
   padding: 1.25rem 1.25rem 0.6rem;
 }
 
+.calendly-box .contact-note {
+  max-width: 41rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.25rem;
+  text-align: center;
+}
+
 .calendly-inline-widget {
   min-width: 320px;
   height: 760px;

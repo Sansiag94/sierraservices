@@ -150,7 +150,7 @@
 
       contactForm.reset();
       setFormStatus("Thanks. Your message has been sent.", "success");
-      window.location.assign("thank-you.html?source=form");
+      window.location.assign("thank-you?source=form");
     } catch (error) {
       setFormStatus(
         "I could not send your message right now. Please try again or email me directly.",
@@ -199,7 +199,7 @@
       }
 
       hasRedirectedAfterBooking = true;
-      window.location.assign("thank-you.html?source=calendly");
+      window.location.assign("thank-you?source=calendly");
     });
   };
 
