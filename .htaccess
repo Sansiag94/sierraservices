@@ -1,8 +1,10 @@
 Options -Indexes
 DirectoryIndex index.html
 
-<IfModule mod_php.c>
-  AddType application/x-httpd-php .html
+<IfModule php_module>
+  <FilesMatch "\.html$">
+    SetHandler application/x-httpd-php
+  </FilesMatch>
 </IfModule>
 
 <IfModule mod_headers.c>
