@@ -74,12 +74,13 @@
       </div>
     `;
 
-    consentBanner.querySelector('[data-consent-action="deny"]').addEventListener("click", () => {
-      setConsent("denied");
-    });
+    consentBanner.addEventListener("click", (event) => {
+      const trigger = event.target.closest("[data-consent-action]");
+      if (!trigger) {
+        return;
+      }
 
-    consentBanner.querySelector('[data-consent-action="grant"]').addEventListener("click", () => {
-      setConsent("granted");
+      setConsent(trigger.dataset.consentAction === "grant" ? "granted" : "denied");
     });
 
     document.body.appendChild(consentBanner);
