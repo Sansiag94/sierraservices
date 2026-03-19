@@ -95,10 +95,12 @@ section {
   color: #fff;
   box-shadow: var(--shadow-sm);
   transition: top 0.2s ease;
+  pointer-events: none;
 }
 
 .skip-link:focus {
   top: 1rem;
+  pointer-events: auto;
 }
 
 .container {
@@ -1069,8 +1071,11 @@ section {
 }
 
 .cookie-banner__copy {
+  flex: 1 1 420px;
+  min-width: 0;
   display: grid;
   gap: 0.3rem;
+  pointer-events: none;
 }
 
 .cookie-banner__title {
@@ -1086,13 +1091,19 @@ section {
 }
 
 .cookie-banner__actions {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 0.65rem;
+  pointer-events: auto;
 }
 
 .cookie-banner__button {
+  position: relative;
+  z-index: 1;
   white-space: nowrap;
 }
 
@@ -1176,6 +1187,7 @@ section {
     box-shadow: var(--shadow-md);
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
     transform: translateY(-8px);
     transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
   }
@@ -1183,6 +1195,7 @@ section {
   .site-nav.open {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
     transform: translateY(0);
   }
 }
