@@ -44,18 +44,28 @@
     writeConsent(status);
     applyClarityConsent(status);
     if (consentBanner) {
-      consentBanner.hidden = true;
+      consentBanner.remove();
+      consentBanner = null;
     }
   };
 
   const openConsentBanner = () => {
     if (!consentBanner) {
+      createConsentBanner();
+    }
+
+    if (!consentBanner) {
       return;
     }
+
     consentBanner.hidden = false;
   };
 
   const createConsentBanner = () => {
+    if (consentBanner) {
+      return;
+    }
+
     consentBanner = document.createElement("section");
     consentBanner.className = "cookie-banner";
     consentBanner.setAttribute("aria-label", "Cookie preferences");
@@ -304,7 +314,6 @@
     currentYear.textContent = new Date().getFullYear();
   }
 
-  createConsentBanner();
   createCookieSettingsButton();
   setupContactForm();
   setupCalendlyRedirect();

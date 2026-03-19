@@ -1053,6 +1053,10 @@ section {
   isolation: isolate;
 }
 
+.cookie-banner[hidden] {
+  display: none !important;
+}
+
 .cookie-banner__copy {
   min-width: 0;
   display: grid;
