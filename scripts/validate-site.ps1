@@ -12,7 +12,7 @@ if (-not $phpExe) {
 }
 
 $filesToLint = @(
-    Get-ChildItem -Path $repoRoot -Filter *.html -File
+    Get-ChildItem -Path $repoRoot -Filter *.php -File
     Get-ChildItem -Path (Join-Path $repoRoot "includes") -Filter *.php -File
 )
 
@@ -48,7 +48,7 @@ $allowedPrefixes = @("http://", "https://", "mailto:", "tel:")
 $invalidLinks = @()
 $linkPattern = 'href\s*=\s*"([^"]+)"'
 
-foreach ($file in Get-ChildItem -Path $repoRoot -Filter *.html -File) {
+foreach ($file in Get-ChildItem -Path $repoRoot -Filter *.php -File) {
     $content = Get-Content -Path $file.FullName -Raw
     foreach ($match in [regex]::Matches($content, $linkPattern)) {
         $href = $match.Groups[1].Value
@@ -70,7 +70,7 @@ foreach ($file in Get-ChildItem -Path $repoRoot -Filter *.html -File) {
             continue
         }
 
-        if (Test-Path (Join-Path $repoRoot ($normalizedHref + ".html"))) {
+        if (Test-Path (Join-Path $repoRoot ($normalizedHref + ".php"))) {
             continue
         }
 
