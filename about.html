@@ -19,6 +19,19 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "vqp657dphp");
   </script>
+  <script>
+    (() => {
+      try {
+        const storedConsent = window.localStorage.getItem("sierraservices-cookie-consent");
+        window.clarity("consentv2", {
+          ad_Storage: "denied",
+          analytics_Storage: storedConsent === "granted" ? "granted" : "denied"
+        });
+      } catch (error) {
+        // Ignore storage access issues and let the banner handle consent later.
+      }
+    })();
+  </script>
 </head>
 <body data-page="about">
   <header class="site-header" id="top">

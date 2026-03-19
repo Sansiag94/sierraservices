@@ -19,6 +19,19 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "vqp657dphp");
   </script>
+  <script>
+    (() => {
+      try {
+        const storedConsent = window.localStorage.getItem("sierraservices-cookie-consent");
+        window.clarity("consentv2", {
+          ad_Storage: "denied",
+          analytics_Storage: storedConsent === "granted" ? "granted" : "denied"
+        });
+      } catch (error) {
+        // Ignore storage access issues and let the banner handle consent later.
+      }
+    })();
+  </script>
 </head>
 <body data-page="privacy">
   <header class="site-header" id="top">
@@ -51,7 +64,7 @@
         <article class="privacy-card">
           <p class="section-kicker">Legal</p>
           <h1>Privacy Policy</h1>
-          <p class="privacy-updated">Last updated: March 4, 2026</p>
+          <p class="privacy-updated">Last updated: March 19, 2026</p>
 
           <h2>1. Overview</h2>
           <p>This website (https://sierraservices.ch/) explains my consulting services. This policy describes what personal data is collected, how it is used, and your rights regarding that data.</p>
@@ -81,7 +94,10 @@
           <p>You can request access, correction, or deletion of your personal data at any time by contacting me via email.</p>
 
           <h2>6. Cookies and Third-Party Tools</h2>
-          <p>This website includes third-party tools such as Calendly and Formspree on the contact page. Their use may involve their own privacy and cookie policies.</p>
+          <p>This website uses a cookie banner to let you choose whether analytics cookies are enabled.</p>
+          <p>If you accept analytics cookies, Microsoft Clarity may set cookies to understand how visitors move through the website and to keep page visits connected within the same browsing session.</p>
+          <p>This website also includes third-party tools such as Calendly and Formspree on the contact page. Their use may involve their own privacy and cookie policies.</p>
+          <p>You can change your cookie choice at any time by selecting Cookie Settings in the footer.</p>
 
           <h2>7. Updates</h2>
           <p>I may update this privacy policy as needed.</p>
