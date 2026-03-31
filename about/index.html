@@ -3,23 +3,25 @@
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Meet Santiago Sierra, Zurich-based consultant helping service businesses create clearer websites, CRM systems, and operational workflows.">
+      <meta name="description" content="Meet Santiago Sierra, a Zurich-based consultant helping service businesses improve websites, CRM systems, and operational workflows.">
       <meta name="author" content="Santiago Sierra">
       <meta name="robots" content="index,follow">
       <meta name="theme-color" content="#142232">
+      <meta property="og:locale" content="en_CH">
       <meta property="og:site_name" content="Sierra Services">
       <meta property="og:type" content="profile">
-      <meta property="og:title" content="About Santiago Sierra | Sierra Services">
-      <meta property="og:description" content="Meet Santiago Sierra, Zurich-based consultant helping service businesses create clearer websites, CRM systems, and operational workflows.">
+      <meta property="og:title" content="About Santiago Sierra | Business Systems Consultant">
+      <meta property="og:description" content="Learn about Santiago Sierra, the Zurich-based consultant behind Sierra Services and its practical approach to websites, CRM, and operations.">
       <meta property="og:url" content="https://sierraservices.ch/about">
       <meta property="og:image" content="https://sierraservices.ch/social-cover.jpg">
       <meta property="og:image:alt" content="Mountain landscape representing clarity and direction for Sierra Services.">
       <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:title" content="About Santiago Sierra | Sierra Services">
-      <meta name="twitter:description" content="Meet Santiago Sierra, Zurich-based consultant helping service businesses create clearer websites, CRM systems, and operational workflows.">
+      <meta name="twitter:title" content="About Santiago Sierra | Business Systems Consultant">
+      <meta name="twitter:description" content="Learn about Santiago Sierra, the Zurich-based consultant behind Sierra Services and its practical approach to websites, CRM, and operations.">
       <meta name="twitter:image" content="https://sierraservices.ch/social-cover.jpg">
+      <meta name="twitter:image:alt" content="Mountain landscape representing clarity and direction for Sierra Services.">
       <title>
-        About Santiago Sierra | Sierra Services
+        About Santiago Sierra | Business Systems Consultant
       </title>
       <link rel="canonical" href="https://sierraservices.ch/about">
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,31 +35,54 @@
       <script type="application/ld+json">
         {
           "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Santiago Sierra",
-          "url": "https://sierraservices.ch/about",
-          "jobTitle": "Operational Systems Consultant",
-          "worksFor": {
-            "@type": "ProfessionalService",
-            "name": "Sierra Services",
-            "url": "https://sierraservices.ch/"
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Zurich",
-            "addressCountry": "CH"
-          },
-          "email": "santiago@sierraservices.ch",
-          "telephone": "+41 76 231 02 35",
-          "knowsLanguage": [
-            "English",
-            "Spanish",
-            "German"
-          ],
-          "alumniOf": {
-            "@type": "CollegeOrUniversity",
-            "name": "Hochschule Luzern"
-          }
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://sierraservices.ch/about#breadcrumbs",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://sierraservices.ch/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "About",
+                  "item": "https://sierraservices.ch/about"
+                }
+              ]
+            },
+            {
+              "@type": "Person",
+              "@id": "https://sierraservices.ch/about#person",
+              "name": "Santiago Sierra",
+              "url": "https://sierraservices.ch/about",
+              "jobTitle": "Business Systems Consultant",
+              "worksFor": {
+                "@type": "ProfessionalService",
+                "name": "Sierra Services",
+                "url": "https://sierraservices.ch/"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Zurich",
+                "addressCountry": "CH"
+              },
+              "email": "santiago@sierraservices.ch",
+              "telephone": "+41 76 231 02 35",
+              "knowsLanguage": [
+                "English",
+                "Spanish",
+                "German"
+              ],
+              "alumniOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "Hochschule Luzern"
+              }
+            }
+          ]
         }
       </script>
     </head>

@@ -3,23 +3,25 @@
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Book a consultation with Santiago Sierra to bring more structure to your website, CRM, and internal operations.">
+      <meta name="description" content="Contact Sierra Services to discuss website improvements, CRM setup, and operational workflows for your service business.">
       <meta name="author" content="Santiago Sierra">
       <meta name="robots" content="index,follow">
       <meta name="theme-color" content="#142232">
+      <meta property="og:locale" content="en_CH">
       <meta property="og:site_name" content="Sierra Services">
       <meta property="og:type" content="website">
-      <meta property="og:title" content="Book a Conversation | Sierra Services">
+      <meta property="og:title" content="Contact Sierra Services | Book a Consultation">
       <meta property="og:description" content="Get in touch with Sierra Services to discuss website structure, CRM setup, and operational systems for your business.">
       <meta property="og:url" content="https://sierraservices.ch/contact">
       <meta property="og:image" content="https://sierraservices.ch/social-cover.jpg">
       <meta property="og:image:alt" content="Mountain landscape representing clarity and direction for Sierra Services.">
       <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:title" content="Book a Conversation | Sierra Services">
+      <meta name="twitter:title" content="Contact Sierra Services | Book a Consultation">
       <meta name="twitter:description" content="Get in touch with Sierra Services to discuss website structure, CRM setup, and operational systems for your business.">
       <meta name="twitter:image" content="https://sierraservices.ch/social-cover.jpg">
+      <meta name="twitter:image:alt" content="Mountain landscape representing clarity and direction for Sierra Services.">
       <title>
-        Book a Conversation | Sierra Services
+        Contact Sierra Services | Book a Consultation
       </title>
       <link rel="canonical" href="https://sierraservices.ch/contact">
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,15 +35,38 @@
       <script type="application/ld+json">
         {
           "@context": "https://schema.org",
-          "@type": "ContactPage",
-          "name": "Contact Sierra Services",
-          "url": "https://sierraservices.ch/contact",
-          "description": "Contact Sierra Services to discuss website structure, CRM implementation, and operational systems.",
-          "about": {
-            "@type": "ProfessionalService",
-            "name": "Sierra Services",
-            "url": "https://sierraservices.ch/"
-          }
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://sierraservices.ch/contact#breadcrumbs",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://sierraservices.ch/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Contact",
+                  "item": "https://sierraservices.ch/contact"
+                }
+              ]
+            },
+            {
+              "@type": "ContactPage",
+              "@id": "https://sierraservices.ch/contact#webpage",
+              "name": "Contact Sierra Services",
+              "url": "https://sierraservices.ch/contact",
+              "description": "Contact Sierra Services to discuss website structure, CRM implementation, and operational systems.",
+              "about": {
+                "@type": "ProfessionalService",
+                "name": "Sierra Services",
+                "url": "https://sierraservices.ch/"
+              }
+            }
+          ]
         }
       </script>
     </head>

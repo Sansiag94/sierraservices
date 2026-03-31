@@ -3,23 +3,25 @@
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Sierra Services helps service businesses build clearer websites, CRM pipelines, and internal workflows so growth stays organized.">
+      <meta name="description" content="Sierra Services is a Zurich consulting practice helping service businesses improve websites, CRM systems, and operational workflows so enquiries and delivery stay organised.">
       <meta name="author" content="Santiago Sierra">
       <meta name="robots" content="index,follow">
       <meta name="theme-color" content="#142232">
+      <meta property="og:locale" content="en_CH">
       <meta property="og:site_name" content="Sierra Services">
       <meta property="og:type" content="website">
-      <meta property="og:title" content="Sierra Services | Website, CRM &amp; Operational Systems for Service Businesses">
-      <meta property="og:description" content="Build a clearer website, CRM, and internal operating system so your service business can grow without unnecessary chaos.">
+      <meta property="og:title" content="Business Systems Consultant in Zurich | Sierra Services">
+      <meta property="og:description" content="Improve your website, CRM, and operational workflows with practical consulting for service businesses in Zurich and beyond.">
       <meta property="og:url" content="https://sierraservices.ch/">
       <meta property="og:image" content="https://sierraservices.ch/social-cover.jpg">
       <meta property="og:image:alt" content="Mountain landscape representing clarity and direction for Sierra Services.">
       <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:title" content="Sierra Services | Website, CRM &amp; Operational Systems for Service Businesses">
-      <meta name="twitter:description" content="Build a clearer website, CRM, and internal operating system so your service business can grow without unnecessary chaos.">
+      <meta name="twitter:title" content="Business Systems Consultant in Zurich | Sierra Services">
+      <meta name="twitter:description" content="Improve your website, CRM, and operational workflows with practical consulting for service businesses in Zurich and beyond.">
       <meta name="twitter:image" content="https://sierraservices.ch/social-cover.jpg">
+      <meta name="twitter:image:alt" content="Mountain landscape representing clarity and direction for Sierra Services.">
       <title>
-        Sierra Services | Website, CRM &amp; Operational Systems for Service Businesses
+        Business Systems Consultant in Zurich | Sierra Services
       </title>
       <link rel="canonical" href="https://sierraservices.ch/">
       <link rel="preload" as="image" href="/portrait-home-optimized.jpg" imagesizes="(max-width: 900px) 92vw, 34vw">
@@ -34,37 +36,83 @@
       <script type="application/ld+json">
         {
           "@context": "https://schema.org",
-          "@type": "ProfessionalService",
-          "@id": "https://sierraservices.ch/#business",
-          "name": "Sierra Services",
-          "url": "https://sierraservices.ch/",
-          "image": "https://sierraservices.ch/social-cover.jpg",
-          "description": "Sierra Services helps service businesses build clearer websites, CRM pipelines, and internal workflows so growth stays organized.",
-          "founder": {
-            "@type": "Person",
-            "name": "Santiago Sierra"
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Zurich",
-            "addressCountry": "CH"
-          },
-          "telephone": "+41 76 231 02 35",
-          "email": "santiago@sierraservices.ch",
-          "areaServed": [
-            "Switzerland",
-            "International"
-          ],
-          "availableLanguage": [
-            "English",
-            "Spanish",
-            "German"
-          ],
-          "serviceType": [
-            "Website strategy",
-            "CRM implementation",
-            "Operational workflow design",
-            "Reporting and analytics"
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://sierraservices.ch/#website",
+              "url": "https://sierraservices.ch/",
+              "name": "Sierra Services",
+              "description": "Sierra Services is a Zurich consulting practice helping service businesses improve websites, CRM systems, and operational workflows.",
+              "inLanguage": "en-CH",
+              "publisher": {
+                "@id": "https://sierraservices.ch/#business"
+              }
+            },
+            {
+              "@type": "ProfessionalService",
+              "@id": "https://sierraservices.ch/#business",
+              "name": "Sierra Services",
+              "url": "https://sierraservices.ch/",
+              "image": "https://sierraservices.ch/social-cover.jpg",
+              "description": "Sierra Services helps service businesses improve websites, CRM systems, and operational workflows so growth stays organised.",
+              "founder": {
+                "@type": "Person",
+                "name": "Santiago Sierra"
+              },
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://sierraservices.ch/logo%20black.jpg"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Zurich",
+                "addressCountry": "CH"
+              },
+              "telephone": "+41 76 231 02 35",
+              "email": "santiago@sierraservices.ch",
+              "areaServed": [
+                "Switzerland",
+                "International"
+              ],
+              "availableLanguage": [
+                "English",
+                "Spanish",
+                "German"
+              ],
+              "serviceType": [
+                "Website consulting",
+                "CRM consulting",
+                "Operational workflow design",
+                "Reporting and analytics"
+              ],
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Sierra Services consulting services",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Website structure and messaging"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "CRM and lead system setup"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Operational workflow design"
+                    }
+                  }
+                ]
+              }
+            }
           ]
         }
       </script>
