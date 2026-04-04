@@ -359,8 +359,6 @@ section {
 }
 
 .hero-portrait-wrap {
-  display: grid;
-  gap: 1rem;
   background: linear-gradient(160deg, #f9fbfd 0%, #eef3f8 100%);
   border: 0;
   border-radius: var(--radius-lg);
@@ -379,11 +377,15 @@ section {
   margin-top: 1rem;
 }
 
+.hero-product-band {
+  margin-top: 1.35rem;
+}
+
 .hero-product-note {
   border: 1px solid #d9e2eb;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.92);
-  padding: 1rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 248, 252, 0.98));
+  padding: 1.1rem 1.2rem;
   box-shadow: 0 12px 26px rgba(18, 35, 53, 0.07);
 }
 
@@ -411,6 +413,17 @@ section {
   font-size: 0.78rem;
   font-weight: 700;
   padding: 0.38rem 0.68rem;
+}
+
+.hero-product-note--standalone {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(16rem, 0.8fr);
+  gap: 1.2rem;
+  align-items: end;
+}
+
+.hero-product-note--standalone p {
+  max-width: 62ch;
 }
 
 .proof-strip {
@@ -1154,8 +1167,8 @@ section {
 
 .product-landing-grid {
   display: grid;
-  gap: 1.4rem;
-  grid-template-columns: minmax(0, 1.08fr) minmax(20rem, 0.92fr);
+  gap: 1.8rem;
+  grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.96fr);
   align-items: start;
 }
 
@@ -1508,6 +1521,7 @@ section {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .hero-product-note--standalone,
   .page-summary-grid,
   .pricing-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1536,6 +1550,7 @@ section {
 
   .service-preview-grid,
   .product-promo,
+  .hero-product-note--standalone,
   .page-summary-grid,
   .pricing-grid,
   .two-col,
