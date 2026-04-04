@@ -160,6 +160,16 @@ section {
   padding-bottom: 0.2rem;
 }
 
+.site-nav .nav-product {
+  padding: 0.42rem 0.78rem;
+  border: 1px solid #d3dde7;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  color: #29415c;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+
 .site-nav a::after {
   content: "";
   position: absolute;
@@ -179,6 +189,17 @@ section {
   transform: scaleX(1);
 }
 
+.site-nav .nav-product::after {
+  display: none;
+}
+
+.site-nav .nav-product:hover,
+.site-nav .nav-product.active {
+  border-color: #9fb5ca;
+  background: #eef4f9;
+  color: var(--accent);
+}
+
 .site-nav .nav-cta {
   border: 1px solid var(--accent);
   border-radius: 999px;
@@ -189,6 +210,16 @@ section {
 
 .site-nav .nav-cta:hover {
   background: var(--accent);
+  color: #fff;
+}
+
+.site-nav .nav-cta.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.site-nav .nav-cta.active:hover {
+  background: var(--accent-deep);
   color: #fff;
 }
 
@@ -328,6 +359,8 @@ section {
 }
 
 .hero-portrait-wrap {
+  display: grid;
+  gap: 1rem;
   background: linear-gradient(160deg, #f9fbfd 0%, #eef3f8 100%);
   border: 0;
   border-radius: var(--radius-lg);
@@ -344,6 +377,40 @@ section {
 
 .hero-support {
   margin-top: 1rem;
+}
+
+.hero-product-note {
+  border: 1px solid #d9e2eb;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 1rem;
+  box-shadow: 0 12px 26px rgba(18, 35, 53, 0.07);
+}
+
+.hero-product-note h3 {
+  font-size: 1.02rem;
+  margin: 0.2rem 0 0.45rem;
+}
+
+.hero-product-note p {
+  color: var(--ink-soft);
+  font-size: 0.94rem;
+}
+
+.hero-product-note__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0.85rem 0 0.95rem;
+}
+
+.hero-product-note__meta span {
+  border-radius: 999px;
+  background: #edf3f8;
+  color: #29415c;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.38rem 0.68rem;
 }
 
 .proof-strip {
@@ -563,6 +630,36 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+}
+
+.page-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.page-summary-card {
+  border: 1px solid #d9e2eb;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 10px 24px rgba(14, 35, 55, 0.05);
+  padding: 1.15rem 1.1rem;
+}
+
+.page-summary-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.45rem;
+}
+
+.page-summary-card p {
+  color: var(--ink-soft);
+  font-size: 0.94rem;
+}
+
+.page-summary-card a {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-weight: 700;
 }
 
 .authority-grid {
@@ -861,6 +958,10 @@ section {
   color: var(--ink-soft);
 }
 
+.page-hero .hero-actions {
+  margin-top: 1.15rem;
+}
+
 .service-detail-grid {
   display: grid;
   gap: 1rem;
@@ -936,7 +1037,7 @@ section {
 .contact-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1.18fr) minmax(18rem, 0.82fr);
 }
 
 .contact-card {
@@ -945,6 +1046,11 @@ section {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   padding: 1.25rem;
+}
+
+.contact-side-stack {
+  display: grid;
+  gap: 1rem;
 }
 
 .contact-form {
@@ -1036,6 +1142,150 @@ section {
   gap: 0.9rem;
   justify-items: center;
   padding: 1.1rem 0 0.35rem;
+}
+
+.mini-note h3 {
+  margin-bottom: 0.45rem;
+}
+
+.mini-note p + p {
+  margin-top: 0.7rem;
+}
+
+.product-landing-grid {
+  display: grid;
+  gap: 1.4rem;
+  grid-template-columns: minmax(0, 1.08fr) minmax(20rem, 0.92fr);
+  align-items: start;
+}
+
+.product-showcase {
+  border: 1px solid rgba(217, 226, 235, 0.24);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(165deg, #162537 0%, #223a55 42%, #325377 100%);
+  color: #f6f9fc;
+  box-shadow: 0 24px 48px rgba(14, 35, 55, 0.18);
+  padding: 1.45rem;
+}
+
+.product-showcase h3,
+.product-showcase strong,
+.product-showcase .section-kicker {
+  color: #f6f9fc;
+}
+
+.product-showcase p,
+.product-showcase li,
+.product-showcase small {
+  color: rgba(246, 249, 252, 0.84);
+}
+
+.product-showcase__frame {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  background: rgba(9, 17, 28, 0.24);
+  padding: 1.1rem;
+  margin-top: 1rem;
+}
+
+.product-showcase__row {
+  display: grid;
+  grid-template-columns: 1.25fr auto auto;
+  gap: 0.85rem;
+  align-items: center;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.product-showcase__row:last-child {
+  border-bottom: 0;
+}
+
+.product-showcase__row strong {
+  display: block;
+  font-size: 0.96rem;
+}
+
+.product-showcase__row small {
+  display: block;
+  font-size: 0.82rem;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.3rem 0.62rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.status-pill--paid {
+  background: #d8f5e7;
+  color: #0d6a42;
+}
+
+.status-pill--sent {
+  background: #fff1c9;
+  color: #9a6200;
+}
+
+.status-pill--draft {
+  background: #e7edf5;
+  color: #314659;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.pricing-card {
+  border: 1px solid #d8e2eb;
+  border-radius: var(--radius-md);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  padding: 1.3rem;
+}
+
+.pricing-card strong {
+  display: block;
+  margin: 0.4rem 0 0.2rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.9rem;
+  line-height: 1.1;
+}
+
+.pricing-card ul {
+  margin-top: 0.9rem;
+}
+
+.product-link-list {
+  list-style: none;
+  margin: 1.15rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.product-link-list li {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--ink-soft);
+}
+
+.product-link-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7rem;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 999px;
+  background: var(--accent);
 }
 
 .calendly-shell.is-loaded {
@@ -1257,12 +1507,18 @@ section {
   .authority-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .page-summary-grid,
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 900px) {
   .hero-layout,
   .about-grid,
   .contact-grid,
+  .product-landing-grid,
   .thank-you-grid {
     grid-template-columns: 1fr;
   }
@@ -1280,6 +1536,8 @@ section {
 
   .service-preview-grid,
   .product-promo,
+  .page-summary-grid,
+  .pricing-grid,
   .two-col,
   .decision-grid,
   .process-grid,

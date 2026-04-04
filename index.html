@@ -3,7 +3,7 @@
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Sierra Services is a Zurich consulting practice helping service businesses improve websites, CRM systems, and operational workflows so enquiries and delivery stay organised.">
+      <meta name="description" content="Sierra Services is a Zurich consulting practice helping service businesses improve websites, CRM systems, and operational workflows, and maker of Sierra Invoices for Swiss-ready billing.">
       <meta name="author" content="Santiago Sierra">
       <meta name="robots" content="index,follow">
       <meta name="theme-color" content="#142232">
@@ -11,13 +11,13 @@
       <meta property="og:site_name" content="Sierra Services">
       <meta property="og:type" content="website">
       <meta property="og:title" content="Business Systems Consultant in Zurich | Sierra Services">
-      <meta property="og:description" content="Improve your website, CRM, and operational workflows with practical consulting for service businesses in Zurich and beyond.">
+      <meta property="og:description" content="Improve your website, CRM, and operational workflows with practical consulting for service businesses, and explore Sierra Invoices for Swiss-ready billing.">
       <meta property="og:url" content="https://sierraservices.ch/">
       <meta property="og:image" content="https://sierraservices.ch/social-cover.jpg">
       <meta property="og:image:alt" content="Mountain landscape representing clarity and direction for Sierra Services.">
       <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:title" content="Business Systems Consultant in Zurich | Sierra Services">
-      <meta name="twitter:description" content="Improve your website, CRM, and operational workflows with practical consulting for service businesses in Zurich and beyond.">
+      <meta name="twitter:description" content="Improve your website, CRM, and operational workflows with practical consulting for service businesses, and explore Sierra Invoices for Swiss-ready billing.">
       <meta name="twitter:image" content="https://sierraservices.ch/social-cover.jpg">
       <meta name="twitter:image:alt" content="Mountain landscape representing clarity and direction for Sierra Services.">
       <title>
@@ -112,6 +112,32 @@
                   }
                 ]
               }
+            },
+            {
+              "@type": "SoftwareApplication",
+              "@id": "https://sierraservices.ch/sierra-invoices#app",
+              "name": "Sierra Invoices",
+              "url": "https://sierraservices.ch/sierra-invoices",
+              "applicationCategory": "BusinessApplication",
+              "operatingSystem": "Web",
+              "description": "Swiss-ready invoicing software for freelancers and small businesses with QR-bill support, reminders, and online payments.",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "CHF",
+                  "description": "Free plan with 3 issued invoices per calendar month"
+                },
+                {
+                  "@type": "Offer",
+                  "price": "19",
+                  "priceCurrency": "CHF",
+                  "description": "Pro plan with unlimited invoices per month"
+                }
+              ],
+              "publisher": {
+                "@id": "https://sierraservices.ch/#business"
+              }
             }
           ]
         }
@@ -152,7 +178,7 @@
             <a           href="/about"           data-page="about"                             >
               About
             </a>
-            <a href="https://invoices.sierraservices.ch/">
+            <a href="/sierra-invoices" class="nav-product" data-page="sierra-invoices">
               Sierra Invoices
             </a>
             <a           href="/contact"           data-page="contact"           class="nav-cta"                  >
@@ -175,19 +201,41 @@
                 I help service-based businesses organise how enquiries are generated, how opportunities are followed up, and how internal work is structured so growth feels more controlled.
               </p>
               <p class="hero-support">
-                Most projects focus on clarifying the website, improving the CRM, and building a more reliable workflow behind day-to-day operations.
+                Most projects focus on clarifying the website, improving the CRM, and building a more reliable workflow behind day-to-day operations. If you mainly need cleaner billing rather than consulting, Sierra Invoices is the product line built for that.
               </p>
               <div class="hero-actions">
                 <a href="/contact" class="btn btn-primary">
                   Request a consultation
                 </a>
-                <a href="https://wa.me/41762310235?text=Hello%20Santiago%2C%20I%20would%20like%20to%20discuss%20my%20business%20systems." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                  Send WhatsApp Message
+                <a href="/sierra-invoices" class="btn btn-secondary">
+                  Explore Sierra Invoices
                 </a>
               </div>
             </div>
             <aside class="hero-portrait-wrap" data-reveal aria-label="Portrait of Santiago Sierra">
               <img src="/portrait-home-optimized.jpg" alt="Santiago Sierra portrait" class="hero-portrait" fetchpriority="high" decoding="async">
+              <div class="hero-product-note">
+                <p class="section-kicker">
+                  Product
+                </p>
+                <h3>
+                  Sierra Invoices
+                </h3>
+                <p>
+                  Swiss-ready invoicing for freelancers and small businesses, with QR-bills, payment tracking, and a free plan for the first 3 issued invoices each month.
+                </p>
+                <div class="hero-product-note__meta">
+                  <span>
+                    3 free invoices / month
+                  </span>
+                  <span>
+                    Pro CHF 19
+                  </span>
+                </div>
+                <a href="/sierra-invoices" class="text-link">
+                  See the product details
+                </a>
+              </div>
             </aside>
           </div>
           <div class="container" data-reveal>
@@ -357,76 +405,6 @@
                 View Services
               </a>
             </p>
-          </div>
-        </section>        <section class="section">
-          <div class="container product-promo">
-            <div class="product-copy" data-reveal>
-              <p class="section-kicker">
-                Product
-              </p>
-              <h2>
-                Sierra Invoices for freelancers and small businesses
-              </h2>
-              <p>
-                I also built Sierra Invoices, a Swiss-ready invoicing app for independent professionals and small businesses that want simpler invoicing without full accounting-suite complexity.
-              </p>
-              <p>
-                It is designed for sending clear invoices, using Swiss QR-bills, tracking payments, following up on reminders, and staying organised as the business grows.
-              </p>
-              <div class="cta-actions">
-                <a href="https://invoices.sierraservices.ch/" class="btn btn-primary">
-                  Open Sierra Invoices
-                </a>
-                <a href="https://invoices.sierraservices.ch/signup" class="btn btn-secondary">
-                  Start free
-                </a>
-              </div>
-            </div>
-            <aside class="product-panel" data-reveal aria-label="Sierra Invoices overview">
-              <div class="product-panel__header">
-                <p class="section-kicker">
-                  Swiss-ready invoicing
-                </p>
-                <h3>
-                  Built for straightforward billing
-                </h3>
-              </div>
-              <div class="product-metrics">
-                <article class="product-metric">
-                  <span>
-                    Free plan
-                  </span>
-                  <strong>
-                    3 invoices
-                  </strong>
-                  <small>
-                    each calendar month
-                  </small>
-                </article>
-                <article class="product-metric">
-                  <span>
-                    Pro
-                  </span>
-                  <strong>
-                    CHF 19
-                  </strong>
-                  <small>
-                    per month for unlimited invoices
-                  </small>
-                </article>
-              </div>
-              <ul class="product-points">
-                <li>
-                  Swiss QR-bills and clear invoice PDFs
-                </li>
-                <li>
-                  Client tracking, reminders, expenses, and analytics
-                </li>
-                <li>
-                  Optional onboarding support for first setup
-                </li>
-              </ul>
-            </aside>
           </div>
         </section>
         <section class="section">
@@ -620,7 +598,7 @@
           <a href="/privacy">
             Privacy Policy
           </a>
-          <a href="https://invoices.sierraservices.ch/">
+          <a href="/sierra-invoices">
             Sierra Invoices
           </a>
           <button type="button" class="footer-link-button" data-open-cookie-settings>
