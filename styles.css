@@ -1632,18 +1632,18 @@ section {
   margin-bottom: 0.28rem;
 }
 
-.process-rail {
+.founder-process-rail {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
 }
 
-.process-step {
+.founder-process-card {
   padding: 1.15rem 0 0;
   border-top: 1px solid var(--line);
 }
 
-.process-step__count {
+.founder-process-count {
   display: inline-block;
   margin-bottom: 0.8rem;
   font-size: 0.78rem;
@@ -1653,12 +1653,12 @@ section {
   color: var(--accent);
 }
 
-.process-step h3 {
+.founder-process-card h3 {
   font-size: 1.35rem;
   margin-bottom: 0.45rem;
 }
 
-.process-step p {
+.founder-process-card p {
   color: var(--ink-soft);
 }
 
@@ -2193,7 +2193,7 @@ section {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .process-rail {
+  .founder-process-rail {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -2258,7 +2258,7 @@ section {
   }
 
   .foundation-grid,
-  .process-rail {
+  .founder-process-rail {
     grid-template-columns: 1fr;
   }
 
