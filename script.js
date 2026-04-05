@@ -96,22 +96,12 @@
   };
 
   const applyClarityConsent = async (status) => {
-    if (status !== "granted") {
-      if (typeof window.clarity === "function") {
-        window.clarity("consentv2", {
-          ad_Storage: "denied",
-          analytics_Storage: "denied"
-        });
-      }
-      return;
-    }
-
     try {
       const clarity = await ensureClarity();
       if (typeof clarity === "function") {
         clarity("consentv2", {
           ad_Storage: "denied",
-          analytics_Storage: "granted"
+          analytics_Storage: status === "granted" ? "granted" : "denied"
         });
       }
     } catch (error) {
@@ -511,6 +501,7 @@
   if (storedConsent === "granted" || storedConsent === "denied") {
     applyClarityConsent(storedConsent);
   } else {
+    applyClarityConsent("denied");
     openConsentBanner();
   }
 })();
