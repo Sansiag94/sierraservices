@@ -170,8 +170,8 @@
       <div class="cookie-banner__copy">
         <p class="cookie-banner__title" id="cookie-banner-title">Cookie settings</p>
         <p class="cookie-banner__text" id="cookie-banner-description">
-          This website uses basic analytics to understand visits and improve the experience.
-          If you accept analytics cookies, visits can also be recognised across pages and return visits for more complete measurement.
+          This site uses basic analytics to see which pages get used and where people come back.
+          Accept if you are happy with that. Decline if not.
         </p>
       </div>
       <div class="cookie-banner__actions">
@@ -232,11 +232,11 @@
       }
 
       contactForm.reset();
-      setFormStatus("Thanks. Your message has been sent.", "success");
+      setFormStatus("Message sent.", "success");
       window.location.assign("thank-you?source=form");
     } catch (error) {
       setFormStatus(
-        "I could not send your message right now. Please try again or email me directly.",
+        "I could not send it right now. Please try again or email me directly.",
         "error"
       );
     } finally {
@@ -374,23 +374,23 @@
 
     const contentBySource = {
       calendly: {
-        title: "Your consultation is booked",
-        message: "Your meeting is confirmed. You should receive a calendar confirmation email shortly.",
+        title: "Your call is booked",
+        message: "Your meeting is confirmed. The calendar email should arrive shortly.",
         detail:
-          "If you would like me to prepare in advance, feel free to reply with your website, current tools, or the main bottleneck you want to solve first."
+          "If you want me to prepare in advance, reply with your website, current tools, or the main bottleneck you want to fix first."
       },
       form: {
-        title: "Your message is on its way",
-        message: "Thanks for reaching out. I will review your message and come back with practical next steps.",
+        title: "Your message is in",
+        message: "Thanks. I will review it and come back with the next sensible step.",
         detail:
-          "If your request is time-sensitive, you can also send a WhatsApp message and mention that you already submitted the contact form."
+          "If it is time-sensitive, you can also send a WhatsApp message and mention that you already used the contact form."
       }
     };
 
     const content = contentBySource[source] || {
       title: "Thank you",
       message: "Your enquiry has been received.",
-      detail: "You can return to the site or book a consultation if you would like to move faster."
+      detail: "You can return to the site or book a call if you want to move faster."
     };
 
     if (titleNode) {
@@ -468,6 +468,10 @@
   }
 
   if ("IntersectionObserver" in window && revealNodes.length > 0) {
+    revealNodes.forEach((node, index) => {
+      node.style.setProperty("--reveal-delay", `${(index % 4) * 45}ms`);
+    });
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
