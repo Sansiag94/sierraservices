@@ -170,8 +170,8 @@
       <div class="cookie-banner__copy">
         <p class="cookie-banner__title" id="cookie-banner-title">Cookie settings</p>
         <p class="cookie-banner__text" id="cookie-banner-description">
-          This website uses optional analytics cookies to understand how visitors use the site and improve the experience.
-          Analytics are loaded only if you choose to accept them.
+          This website uses limited analytics by default to understand visits and improve the experience.
+          If you accept analytics cookies, visits can also be recognised across pages and sessions for more complete measurement.
         </p>
       </div>
       <div class="cookie-banner__actions">
