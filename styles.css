@@ -5478,7 +5478,7 @@ a:hover,
 .footer-compact,
 .footer-compact a,
 .footer-compact span {
-  color: rgba(247, 249, 251, 0.92);
+  color: #d1d5db;
 }
 
 .consult-home--dark .section-kicker,
@@ -5487,7 +5487,7 @@ a:hover,
 .home-trust .section-kicker,
 .trust-band .section-kicker,
 .section-kicker--light {
-  color: rgba(247, 249, 251, 0.76);
+  color: #e5e7eb;
 }
 
 /* Sierra Invoices product card override */
@@ -5785,4 +5785,1059 @@ a:hover,
   .privacy-card:hover {
     box-shadow: none;
   }
+}
+
+/* Card text contrast audit */
+.article-card,
+.trust-point,
+.founder-process-card,
+.home-services__feature,
+.home-services__card,
+.home-proof__item,
+.home-journal__product,
+.home-journal__article,
+.case-study-card,
+.testimonial-card,
+.process-card,
+.pricing-card,
+.fit-panel,
+.contact-card,
+.cta-panel,
+.thank-you-card,
+.services-grid__card,
+.consult-card,
+.consult-card--case,
+.consult-card--dark,
+.page-summary-card,
+.detail-card,
+.service-card,
+.insight-card,
+.engagement-card,
+.filter-card,
+.audience-card,
+.result-card,
+.faq-item,
+.trust-card,
+.product-panel,
+.product-showcase,
+.home-process__step,
+.home-trust__item,
+.contact-panel,
+.service-grid-card,
+.service-grid-feature,
+.story-panel,
+.mini-note,
+.privacy-card,
+.trust-band--soft .trust-point {
+  color: #0b1f2a;
+}
+
+.article-card h2,
+.article-card h3,
+.trust-point h2,
+.trust-point h3,
+.founder-process-card h2,
+.founder-process-card h3,
+.home-services__feature h2,
+.home-services__feature h3,
+.home-services__card h2,
+.home-services__card h3,
+.home-proof__item h2,
+.home-proof__item h3,
+.home-journal__product h2,
+.home-journal__product h3,
+.home-journal__article h2,
+.home-journal__article h3,
+.case-study-card h2,
+.case-study-card h3,
+.testimonial-card h2,
+.testimonial-card h3,
+.process-card h2,
+.process-card h3,
+.pricing-card h2,
+.pricing-card h3,
+.fit-panel h2,
+.fit-panel h3,
+.contact-card h2,
+.contact-card h3,
+.cta-panel h2,
+.cta-panel h3,
+.thank-you-card h2,
+.thank-you-card h3,
+.services-grid__card h2,
+.services-grid__card h3,
+.consult-card h2,
+.consult-card h3,
+.consult-card--case h2,
+.consult-card--case h3,
+.consult-card--dark h2,
+.consult-card--dark h3,
+.page-summary-card h2,
+.page-summary-card h3,
+.detail-card h2,
+.detail-card h3,
+.service-card h2,
+.service-card h3,
+.insight-card h2,
+.insight-card h3,
+.engagement-card h2,
+.engagement-card h3,
+.filter-card h2,
+.filter-card h3,
+.audience-card h2,
+.audience-card h3,
+.result-card h2,
+.result-card h3,
+.faq-item h2,
+.faq-item h3,
+.trust-card h2,
+.trust-card h3,
+.product-panel h2,
+.product-panel h3,
+.product-showcase h2,
+.product-showcase h3,
+.home-process__step h2,
+.home-process__step h3,
+.home-trust__item h2,
+.home-trust__item h3,
+.contact-panel h2,
+.contact-panel h3,
+.service-grid-card h2,
+.service-grid-card h3,
+.service-grid-feature h2,
+.service-grid-feature h3,
+.story-panel h2,
+.story-panel h3,
+.mini-note h2,
+.mini-note h3,
+.privacy-card h2,
+.privacy-card h3 {
+  color: #0b1f2a;
+}
+
+.article-card p,
+.article-card li,
+.article-card span,
+.article-card small,
+.trust-point p,
+.trust-point li,
+.trust-point span,
+.trust-point small,
+.founder-process-card p,
+.founder-process-card li,
+.founder-process-card span,
+.founder-process-card small,
+.home-services__feature p,
+.home-services__feature li,
+.home-services__feature span,
+.home-services__feature small,
+.home-services__card p,
+.home-services__card li,
+.home-services__card span,
+.home-services__card small,
+.home-proof__item p,
+.home-proof__item li,
+.home-proof__item span,
+.home-proof__item small,
+.home-journal__product p,
+.home-journal__product li,
+.home-journal__product span,
+.home-journal__product small,
+.home-journal__article p,
+.home-journal__article li,
+.home-journal__article span,
+.home-journal__article small,
+.case-study-card p,
+.case-study-card li,
+.case-study-card span,
+.case-study-card small,
+.testimonial-card p,
+.testimonial-card li,
+.testimonial-card span,
+.testimonial-card small,
+.process-card p,
+.process-card li,
+.process-card span,
+.process-card small,
+.pricing-card p,
+.pricing-card li,
+.pricing-card span,
+.pricing-card small,
+.fit-panel p,
+.fit-panel li,
+.fit-panel span,
+.fit-panel small,
+.contact-card p,
+.contact-card li,
+.contact-card span,
+.contact-card small,
+.cta-panel p,
+.cta-panel li,
+.cta-panel span,
+.cta-panel small,
+.thank-you-card p,
+.thank-you-card li,
+.thank-you-card span,
+.thank-you-card small,
+.services-grid__card p,
+.services-grid__card li,
+.services-grid__card span,
+.services-grid__card small,
+.consult-card p,
+.consult-card li,
+.consult-card span,
+.consult-card small,
+.consult-card--case p,
+.consult-card--case li,
+.consult-card--case span,
+.consult-card--case small,
+.consult-card--dark p,
+.consult-card--dark li,
+.consult-card--dark span,
+.consult-card--dark small,
+.page-summary-card p,
+.page-summary-card li,
+.page-summary-card span,
+.page-summary-card small,
+.detail-card p,
+.detail-card li,
+.detail-card span,
+.detail-card small,
+.service-card p,
+.service-card li,
+.service-card span,
+.service-card small,
+.insight-card p,
+.insight-card li,
+.insight-card span,
+.insight-card small,
+.engagement-card p,
+.engagement-card li,
+.engagement-card span,
+.engagement-card small,
+.filter-card p,
+.filter-card li,
+.filter-card span,
+.filter-card small,
+.audience-card p,
+.audience-card li,
+.audience-card span,
+.audience-card small,
+.result-card p,
+.result-card li,
+.result-card span,
+.result-card small,
+.faq-item p,
+.faq-item li,
+.faq-item span,
+.faq-item small,
+.trust-card p,
+.trust-card li,
+.trust-card span,
+.trust-card small,
+.product-panel p,
+.product-panel li,
+.product-panel span,
+.product-panel small,
+.product-showcase p,
+.product-showcase li,
+.product-showcase span,
+.product-showcase small,
+.home-process__step p,
+.home-process__step li,
+.home-process__step span,
+.home-process__step small,
+.home-trust__item p,
+.home-trust__item li,
+.home-trust__item span,
+.home-trust__item small,
+.contact-panel p,
+.contact-panel li,
+.contact-panel span,
+.contact-panel small,
+.service-grid-card p,
+.service-grid-card li,
+.service-grid-card span,
+.service-grid-card small,
+.service-grid-feature p,
+.service-grid-feature li,
+.service-grid-feature span,
+.service-grid-feature small,
+.story-panel p,
+.story-panel li,
+.story-panel span,
+.story-panel small,
+.mini-note p,
+.mini-note li,
+.mini-note span,
+.mini-note small,
+.privacy-card p,
+.privacy-card li,
+.privacy-card span,
+.privacy-card small {
+  color: #425363;
+}
+
+.article-card .section-kicker,
+.trust-point .section-kicker,
+.founder-process-card .section-kicker,
+.home-services__feature .section-kicker,
+.home-services__card .section-kicker,
+.home-proof__item .section-kicker,
+.home-journal__product .section-kicker,
+.home-journal__article .section-kicker,
+.case-study-card .section-kicker,
+.testimonial-card .section-kicker,
+.process-card .section-kicker,
+.pricing-card .section-kicker,
+.fit-panel .section-kicker,
+.contact-card .section-kicker,
+.cta-panel .section-kicker,
+.thank-you-card .section-kicker,
+.services-grid__card .section-kicker,
+.consult-card__eyebrow,
+.consult-step,
+.page-summary-card .section-kicker,
+.detail-card .section-kicker,
+.service-card .section-kicker,
+.insight-card .section-kicker,
+.engagement-card .section-kicker,
+.filter-card .section-kicker,
+.audience-card .section-kicker,
+.result-card .section-kicker,
+.faq-item .section-kicker,
+.trust-card .section-kicker,
+.product-panel .section-kicker,
+.product-showcase .section-kicker,
+.home-process__step .section-kicker,
+.home-trust__item .section-kicker,
+.contact-panel .section-kicker,
+.service-grid-card .section-kicker,
+.service-grid-feature .section-kicker,
+.story-panel .section-kicker,
+.mini-note .section-kicker,
+.privacy-card .section-kicker {
+  color: #275f78;
+}
+
+.hero-product-note,
+.home-hero__card--dark,
+.home-services__card--contrast {
+  color: #f9fafb;
+}
+
+.hero-product-note h2,
+.hero-product-note h3,
+.hero-product-note strong,
+.home-hero__card--dark h2,
+.home-hero__card--dark h3,
+.home-hero__card--dark strong,
+.home-services__card--contrast h2,
+.home-services__card--contrast h3,
+.home-services__card--contrast strong {
+  color: #f9fafb;
+}
+
+.hero-product-note p,
+.hero-product-note li,
+.hero-product-note span,
+.hero-product-note small,
+.home-hero__card--dark p,
+.home-hero__card--dark li,
+.home-hero__card--dark span,
+.home-hero__card--dark small,
+.home-services__card--contrast p,
+.home-services__card--contrast li,
+.home-services__card--contrast span,
+.home-services__card--contrast small {
+  color: rgba(249, 250, 251, 0.9);
+}
+
+/* Homepage process card clarity */
+.consult-grid--process .consult-card,
+.consult-grid--process .consult-card--dark {
+  background: #ffffff;
+  border: 1px solid #d5dde5;
+  box-shadow: none;
+  opacity: 1;
+  transform: none;
+}
+
+.consult-grid--process .consult-card h3,
+.consult-grid--process .consult-card--dark h3,
+.consult-grid--process .consult-card .consult-step,
+.consult-grid--process .consult-card--dark .consult-step {
+  color: #0b1f2a;
+}
+
+.consult-grid--process .consult-card p,
+.consult-grid--process .consult-card--dark p {
+  color: #425363;
+}
+
+@media (hover: hover) {
+  .consult-grid--process .consult-card:hover,
+  .consult-grid--process .consult-card--dark:hover {
+    transform: translateY(-2px);
+    border-color: #8fa1b1;
+    box-shadow: none;
+  }
+}
+
+/* About value card clarity */
+.trust-band--soft .trust-band__list {
+  gap: 1rem;
+}
+
+.trust-band--soft .trust-point {
+  background: #ffffff;
+  border: 1px solid #d5dde5;
+  border-radius: var(--card-radius-md);
+  padding: var(--card-pad-md);
+  box-shadow: none;
+  transform: none;
+  opacity: 1;
+}
+
+.trust-band--soft .trust-point h3 {
+  color: #0b1f2a;
+}
+
+.trust-band--soft .trust-point p {
+  color: #425363;
+}
+
+@media (hover: hover) {
+  .trust-band--soft .trust-point:hover {
+    transform: translateY(-2px);
+    border-color: #8fa1b1;
+    box-shadow: none;
+  }
+}
+
+/* Sierra Invoices hero redesign */
+.product-landing-grid {
+  align-items: start;
+  gap: clamp(2rem, 4vw, 3rem);
+  grid-template-columns: minmax(0, 1.02fr) minmax(22rem, 0.98fr);
+}
+
+.product-hero-copy {
+  display: grid;
+  gap: 1.2rem;
+  align-content: start;
+  max-width: 39rem;
+}
+
+.product-hero-copy > .section-kicker {
+  color: #275f78;
+}
+
+.product-hero-copy__lead {
+  max-width: 33rem;
+  color: #425363;
+}
+
+.product-hero-copy .hero-actions {
+  margin-top: 0.2rem;
+}
+
+.product-hero-copy .hero-support {
+  max-width: 32rem;
+  color: #5b6a78;
+}
+
+.product-showcase {
+  background:
+    radial-gradient(circle at top right, rgba(74, 95, 140, 0.24), transparent 26%),
+    linear-gradient(180deg, #0f172a 0%, #14203a 52%, #1c2b49 100%);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 16px;
+  color: #f9fafb;
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.28);
+  padding: 1.75rem;
+}
+
+.product-showcase h3,
+.product-showcase strong,
+.product-showcase .section-kicker,
+.product-showcase .product-showcase__plan {
+  color: #f9fafb;
+}
+
+.product-showcase p,
+.product-showcase li,
+.product-showcase small,
+.product-showcase span {
+  color: #b7c2d4;
+}
+
+.product-showcase > .section-kicker {
+  color: #d6e0f5;
+}
+
+.product-showcase__dashboard {
+  margin-top: 1.2rem;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 14px;
+  background: rgba(38, 52, 82, 0.74);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  padding: 1rem;
+}
+
+.product-showcase__dashboard-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.product-showcase__dashboard-head strong {
+  display: block;
+  font-size: 1.02rem;
+}
+
+.product-showcase__dashboard-head small {
+  display: block;
+  margin-top: 0.15rem;
+  color: #9fb0c8;
+  font-size: 0.82rem;
+}
+
+.product-showcase__plan {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.product-showcase__stats {
+  gap: 0.75rem;
+  margin-top: 0;
+}
+
+.product-showcase__stat {
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 14px;
+  background: rgba(20, 32, 58, 0.78);
+  padding: 1rem 0.95rem;
+}
+
+.product-showcase__stat small {
+  color: #9fb0c8;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.product-showcase__stat strong {
+  margin-top: 0.5rem;
+  color: #f9fafb;
+  font-size: 1.25rem;
+  line-height: 1.1;
+}
+
+.product-showcase__stat span {
+  display: block;
+  margin-top: 0.35rem;
+  color: #c9d4e5;
+  font-size: 0.84rem;
+}
+
+.product-showcase__frame {
+  margin-top: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 14px;
+  background: rgba(20, 32, 58, 0.82);
+  padding: 1rem;
+}
+
+.product-showcase__frame-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.product-showcase__label {
+  margin: 0;
+  color: #9fb0c8;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: none;
+}
+
+.product-showcase__row {
+  grid-template-columns: minmax(0, 1.35fr) auto auto;
+  gap: 0.9rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.product-showcase__row strong {
+  color: #f9fafb;
+  font-size: 0.98rem;
+}
+
+.product-showcase__row small {
+  color: #9fb0c8;
+  font-size: 0.84rem;
+}
+
+.product-showcase__row > span:not(.status-pill) {
+  color: #f9fafb;
+  font-weight: 700;
+}
+
+.status-pill {
+  min-width: 4.25rem;
+  border-radius: 999px;
+  padding: 0.38rem 0.72rem;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.status-pill--paid {
+  background: #d9fbe6;
+  color: #0d7a4b;
+}
+
+.status-pill--sent {
+  background: #ffe7ad;
+  color: #9a5b00;
+}
+
+.status-pill--draft {
+  background: #edf2f8;
+  color: #44566b;
+}
+
+/* Final sharpness cleanup */
+:root {
+  --shadow-sm: 0 8px 18px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 14px 30px rgba(15, 23, 42, 0.06);
+  --section-pad: clamp(5rem, 8vw, 6.5rem);
+}
+
+body,
+.page-hero,
+.section,
+.consult-home--light,
+.consult-home--muted,
+.trust-band--soft {
+  background-image: none;
+}
+
+.site-header,
+.site-header.scrolled {
+  backdrop-filter: none;
+}
+
+.section-kicker,
+.consult-card__eyebrow {
+  background: #f4f7fb;
+  border-color: #d3dcea;
+  color: #1c2b49;
+}
+
+.consult-home--dark .section-kicker,
+.consult-home--cta .section-kicker,
+.trust-band .section-kicker,
+.section-kicker--light {
+  background: #16233d;
+  border-color: #2b3b5c;
+  color: #e7eef8;
+}
+
+.trust-point,
+.cta-panel,
+.services-grid__card,
+.consult-card,
+.consult-card--case,
+.detail-card,
+.article-card,
+.privacy-card,
+.contact-card,
+.mini-note,
+.product-panel,
+.page-summary-card,
+.result-card,
+.service-card,
+.insight-card,
+.engagement-card,
+.audience-card,
+.filter-card,
+.faq-item,
+.trust-card,
+.service-grid-card,
+.service-grid-feature,
+.story-panel {
+  box-shadow: var(--shadow-sm);
+  background: #ffffff;
+}
+
+.product-showcase__dashboard,
+.product-showcase__stat,
+.product-showcase__frame {
+  background: #1a2743;
+}
+
+.consult-card p,
+.consult-card--case p,
+.consult-card span,
+.consult-card--case span,
+.services-grid__card p,
+.services-grid__card li,
+.trust-point p,
+.cta-panel p,
+.page-hero p,
+.about-copy p,
+.note-columns p,
+.detail-card p,
+.article-card p,
+.privacy-card p,
+.service-card p,
+.insight-card p {
+  color: #415065;
+}
+
+.consult-home--dark p,
+.consult-home--cta p,
+.trust-band p,
+.site-footer,
+.site-footer a,
+.site-footer span {
+  color: #d1d5db;
+}
+
+.consult-home--dark h1,
+.consult-home--dark h2,
+.consult-home--dark h3,
+.consult-home--cta h1,
+.consult-home--cta h2,
+.consult-home--cta h3,
+.trust-band h1,
+.trust-band h2,
+.trust-band h3,
+.site-footer strong {
+  color: #ffffff;
+}
+
+.consult-grid,
+.services-grid,
+.trust-band__list,
+.note-columns,
+.split-section,
+.contact-layout,
+.footer-wrap {
+  gap: 1.5rem;
+}
+
+.consult-card:hover,
+.consult-card--case:hover,
+.services-grid__card:hover,
+.trust-point:hover,
+.cta-panel:hover {
+  border-color: #c1ccdb;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.06);
+}
+
+@media (max-width: 900px) {
+  .product-landing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-showcase {
+    padding: 1.35rem;
+  }
+
+  .product-showcase__dashboard-head,
+  .product-showcase__frame-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .product-showcase__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .product-showcase__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Final primary CTA button system */
+.btn,
+.btn-primary {
+  cursor: pointer;
+}
+
+.btn {
+  transition:
+    transform 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease,
+    box-shadow 0.18s ease,
+    filter 0.18s ease;
+}
+
+.btn-primary,
+.consult-home--dark .btn-primary,
+.consult-home--cta .btn-primary,
+.home-process .btn-primary,
+.home-trust .btn-primary,
+.trust-band .btn-primary {
+  background: #0f1b24;
+  border-color: #0f1b24;
+  color: #ffffff;
+  box-shadow: 0 10px 22px rgba(15, 27, 36, 0.16);
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.consult-home--dark .btn-primary:hover,
+.consult-home--dark .btn-primary:active,
+.consult-home--cta .btn-primary:hover,
+.consult-home--cta .btn-primary:active,
+.home-process .btn-primary:hover,
+.home-process .btn-primary:active,
+.home-trust .btn-primary:hover,
+.home-trust .btn-primary:active,
+.trust-band .btn-primary:hover,
+.trust-band .btn-primary:active {
+  background: #162634;
+  border-color: #162634;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(15, 27, 36, 0.22);
+  filter: brightness(1.06);
+}
+
+.btn-primary:focus-visible {
+  outline-color: rgba(15, 27, 36, 0.28);
+}
+
+/* Product and marketing alignment */
+:root {
+  --bg: #f3f6fb;
+  --surface: #ffffff;
+  --surface-soft: #f7f9fc;
+  --surface-strong: #e7edf5;
+  --ink: #0f172a;
+  --ink-soft: #415065;
+  --muted: #6f8096;
+  --line: #d7dfeb;
+  --accent: #1c2b49;
+  --accent-deep: #0f172a;
+  --accent-soft: #e7eef8;
+  --surface-ink: #f8fafc;
+  --shadow-sm: 0 12px 24px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 18px 36px rgba(15, 23, 42, 0.08);
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --card-radius-sm: 12px;
+  --card-radius-md: 14px;
+  --card-pad-md: 1.5rem;
+  --card-pad-lg: 1.75rem;
+}
+
+body {
+  background: linear-gradient(180deg, #f5f8fc 0%, #eef3f9 100%);
+  color: var(--ink);
+}
+
+.site-header,
+.site-header.scrolled {
+  border-bottom-color: rgba(200, 212, 227, 0.9);
+  background: rgba(248, 251, 255, 0.94);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+}
+
+.brand-logo {
+  border-color: #d6deea;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+}
+
+.site-nav .nav-product {
+  border-color: #cbd7e6;
+  background: #eef3fb;
+  color: #1c2b49;
+}
+
+.site-nav .nav-product:hover,
+.site-nav .nav-product.active {
+  border-color: #9fb0c8;
+  background: #e7eef8;
+  color: #0f172a;
+}
+
+.page-hero,
+.section,
+.consult-home--light,
+.consult-home--muted,
+.trust-band--soft {
+  background: transparent;
+}
+
+.consult-home--dark,
+.consult-home--cta,
+.trust-band,
+.cta-band,
+.site-footer {
+  background: #0f172a;
+}
+
+.section-kicker,
+.consult-card__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.34rem 0.78rem;
+  border: 1px solid #d7dfeb;
+  border-radius: 999px;
+  background: #f8fbff;
+  color: #1c2b49;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.consult-home--dark .section-kicker,
+.consult-home--cta .section-kicker,
+.trust-band .section-kicker,
+.section-kicker--light,
+.product-showcase .section-kicker {
+  border-color: rgba(191, 204, 224, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+  color: #d6e0f5;
+}
+
+.page-hero h1,
+.consult-hero__copy h1,
+.product-hero-copy h1,
+.cta-block h2,
+.consult-cta__copy h2 {
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+.page-hero p,
+.consult-hero__lead,
+.product-hero-copy__lead,
+.product-hero-copy .hero-support,
+.consult-card p,
+.consult-card--case p,
+.services-grid__card p,
+.services-grid__card li,
+.trust-point p,
+.cta-panel p {
+  line-height: 1.6;
+}
+
+.btn-secondary,
+.consult-home--dark .btn-secondary,
+.consult-home--cta .btn-secondary,
+.trust-band .btn-secondary {
+  background: #f8fbff;
+  border-color: #c7d2df;
+  color: #0f172a;
+  box-shadow: none;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active,
+.consult-home--dark .btn-secondary:hover,
+.consult-home--dark .btn-secondary:active,
+.consult-home--cta .btn-secondary:hover,
+.consult-home--cta .btn-secondary:active,
+.trust-band .btn-secondary:hover,
+.trust-band .btn-secondary:active {
+  background: #ffffff;
+  border-color: #9fb0c8;
+  color: #0f172a;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+}
+
+.trust-point,
+.cta-panel,
+.services-grid__card,
+.consult-card,
+.consult-card--case,
+.detail-card,
+.article-card,
+.privacy-card,
+.contact-card,
+.mini-note,
+.product-panel,
+.page-summary-card,
+.result-card,
+.service-card,
+.insight-card,
+.engagement-card,
+.audience-card,
+.filter-card,
+.faq-item,
+.trust-card,
+.service-grid-card,
+.service-grid-feature,
+.story-panel {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: var(--card-radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.consult-card,
+.consult-card--case,
+.services-grid__card,
+.trust-point,
+.cta-panel {
+  padding: var(--card-pad-md);
+}
+
+.consult-grid--cases .consult-card--case,
+.cta-panel {
+  padding: var(--card-pad-lg);
+}
+
+.consult-card:hover,
+.consult-card--case:hover,
+.services-grid__card:hover,
+.trust-point:hover,
+.cta-panel:hover {
+  border-color: #b8c7d9;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+}
+
+.status-pill {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.status-pill--paid {
+  background: #d9fbe6;
+  color: #0d7a4b;
+}
+
+.status-pill--sent {
+  background: #ffe7ad;
+  color: #9a5b00;
+}
+
+.status-pill--draft {
+  background: #edf2f8;
+  color: #44566b;
 }
