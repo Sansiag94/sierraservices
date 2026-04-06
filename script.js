@@ -309,7 +309,7 @@
 
         calendlyInlineHost.dataset.ready = "true";
         calendlyShell.classList.add("is-loaded");
-        setCalendlyStatus("The booking calendar is ready.", "success");
+        setCalendlyStatus("", "success");
         if (calendlyLoadButton) {
           calendlyLoadButton.remove();
         }
@@ -335,11 +335,9 @@
       return;
     }
 
-    if (calendlyLoadButton) {
-      calendlyLoadButton.addEventListener("click", () => {
-        loadCalendlyWidget().catch(() => {
-          // The UI already shows the error state.
-        });
+    if (calendlyShell && calendlyInlineHost) {
+      loadCalendlyWidget().catch(() => {
+        // The UI already shows the error state.
       });
     }
 

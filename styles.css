@@ -160,8 +160,7 @@ section {
 }
 
 .brand-text small {
-  color: var(--muted);
-  font-size: 0.82rem;
+  display: none;
 }
 
 .site-nav {
@@ -1528,7 +1527,7 @@ section {
 .calendly-shell {
   display: grid;
   gap: 0.9rem;
-  justify-items: center;
+  justify-items: stretch;
   padding: 1.1rem 0 0.35rem;
 }
 
@@ -2008,14 +2007,6 @@ section {
   background: var(--accent);
 }
 
-.calendly-shell.is-loaded {
-  padding-top: 0.4rem;
-}
-
-.calendly-load-button {
-  min-width: 220px;
-}
-
 .calendly-status {
   margin: 0;
   color: var(--muted);
@@ -2037,11 +2028,7 @@ section {
 
 .calendly-inline-host {
   width: 100%;
-  display: none;
-}
-
-.calendly-shell.is-loaded .calendly-inline-host {
-  display: block;
+  min-height: 760px;
 }
 
 .calendly-inline-host .calendly-inline-widget {
@@ -4959,7 +4946,7 @@ body {
 }
 
 .btn-primary {
-  background: var(--ink);
+  background: var(--accent);
   border-radius: var(--radius-md);
   box-shadow: none;
 }
@@ -5263,5 +5250,539 @@ a:hover,
     transform: translateY(-2px);
     box-shadow: var(--card-shadow-hover);
     border-color: var(--line);
+  }
+}
+
+/* Global consistency and contrast override */
+.btn-primary {
+  background: #0f1b24;
+  color: var(--surface-ink);
+  border-color: #0f1b24;
+  box-shadow: 0 0 0 1px rgba(15, 27, 36, 0.06);
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  background: #162634;
+  border-color: #162634;
+  color: var(--surface-ink);
+  box-shadow: 0 10px 22px rgba(15, 27, 36, 0.16);
+  filter: brightness(1.06);
+}
+
+.consult-home--dark .btn-primary,
+.consult-home--cta .btn-primary,
+.home-process .btn-primary,
+.home-trust .btn-primary,
+.trust-band .btn-primary {
+  background: #0f1b24;
+  border-color: rgba(247, 249, 251, 0.2);
+  color: var(--surface-ink);
+  box-shadow:
+    0 0 0 1px rgba(247, 249, 251, 0.08),
+    0 10px 22px rgba(0, 0, 0, 0.28);
+}
+
+.consult-home--dark .btn-primary:hover,
+.consult-home--dark .btn-primary:active,
+.consult-home--cta .btn-primary:hover,
+.consult-home--cta .btn-primary:active,
+.home-process .btn-primary:hover,
+.home-process .btn-primary:active,
+.home-trust .btn-primary:hover,
+.home-trust .btn-primary:active,
+.trust-band .btn-primary:hover,
+.trust-band .btn-primary:active {
+  background: #162634;
+  border-color: rgba(247, 249, 251, 0.28);
+  color: var(--surface-ink);
+  box-shadow:
+    0 0 0 1px rgba(247, 249, 251, 0.1),
+    0 12px 24px rgba(0, 0, 0, 0.32);
+  filter: brightness(1.08);
+}
+
+.consult-home--dark .btn-secondary,
+.consult-home--cta .btn-secondary,
+.home-process .btn-secondary,
+.home-trust .btn-secondary,
+.trust-band .btn-secondary {
+  background: transparent;
+  border-color: rgba(247, 249, 251, 0.28);
+  color: var(--surface-ink);
+}
+
+.consult-home--dark .btn-secondary:hover,
+.consult-home--dark .btn-secondary:active,
+.consult-home--cta .btn-secondary:hover,
+.consult-home--cta .btn-secondary:active,
+.home-process .btn-secondary:hover,
+.home-process .btn-secondary:active,
+.home-trust .btn-secondary:hover,
+.home-trust .btn-secondary:active,
+.trust-band .btn-secondary:hover,
+.trust-band .btn-secondary:active {
+  background: rgba(247, 249, 251, 0.08);
+  border-color: var(--surface-ink);
+  color: var(--surface-ink);
+}
+
+.consult-home--cta .btn-primary {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #101820;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.18),
+    0 14px 28px rgba(0, 0, 0, 0.3);
+}
+
+.consult-home--cta .btn-primary:hover,
+.consult-home--cta .btn-primary:active {
+  background: #f1f5f8;
+  border-color: #f1f5f8;
+  color: #101820;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.22),
+    0 16px 30px rgba(0, 0, 0, 0.34);
+}
+
+.consult-home--cta .btn-secondary {
+  background: transparent;
+  border-color: rgba(247, 249, 251, 0.22);
+  color: rgba(247, 249, 251, 0.88);
+  box-shadow: none;
+}
+
+.consult-home--cta .btn-secondary:hover,
+.consult-home--cta .btn-secondary:active {
+  background: rgba(247, 249, 251, 0.08);
+  border-color: rgba(247, 249, 251, 0.5);
+  color: var(--surface-ink);
+  box-shadow: none;
+}
+
+.consult-home--dark .consult-section-head h2,
+.consult-home--dark .consult-section-head p,
+.consult-home--cta .consult-cta__copy h2,
+.consult-home--cta .consult-cta__copy p,
+.home-process__intro h2,
+.home-process__intro p,
+.home-process__step h3,
+.home-process__step p,
+.home-process__step span,
+.home-trust__intro h2,
+.home-trust__intro p,
+.home-trust__item h3,
+.home-trust__item p,
+.trust-band h2,
+.trust-band h3,
+.trust-band p,
+.trust-band .section-kicker,
+.site-footer,
+.site-footer a,
+.site-footer span,
+.footer-compact,
+.footer-compact a,
+.footer-compact span {
+  color: rgba(247, 249, 251, 0.9);
+}
+
+.article-card,
+.trust-point,
+.founder-process-card,
+.hero-product-note,
+.home-services__feature,
+.home-services__card,
+.home-proof__item,
+.home-journal__product,
+.home-journal__article,
+.case-study-card,
+.testimonial-card,
+.process-card,
+.pricing-card,
+.fit-panel,
+.contact-card,
+.cta-panel,
+.thank-you-card,
+.services-grid__card,
+.consult-card,
+.consult-card--case,
+.page-summary-card,
+.detail-card,
+.service-card,
+.insight-card,
+.engagement-card,
+.filter-card,
+.audience-card,
+.result-card,
+.faq-item,
+.trust-card,
+.product-panel,
+.home-process__step,
+.home-trust__item,
+.contact-panel,
+.service-grid-card,
+.service-grid-feature,
+.story-panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius-md);
+  box-shadow: none;
+}
+
+.article-card,
+.trust-point,
+.founder-process-card,
+.product-panel,
+.contact-panel,
+.service-grid-card,
+.service-grid-feature,
+.story-panel {
+  padding: var(--card-pad-md);
+}
+
+/* Dark section readability override */
+.consult-home--dark h1,
+.consult-home--dark h2,
+.consult-home--dark h3,
+.consult-home--cta h1,
+.consult-home--cta h2,
+.consult-home--cta h3,
+.home-process h1,
+.home-process h2,
+.home-process h3,
+.home-trust h1,
+.home-trust h2,
+.home-trust h3,
+.trust-band h1,
+.trust-band h2,
+.trust-band h3,
+.site-footer strong,
+.footer-compact strong {
+  color: #ffffff;
+}
+
+.consult-home--dark p,
+.consult-home--dark li,
+.consult-home--cta p,
+.consult-home--cta li,
+.home-process p,
+.home-process li,
+.home-trust p,
+.home-trust li,
+.trust-band p,
+.trust-band li,
+.site-footer,
+.site-footer a,
+.site-footer span,
+.footer-compact,
+.footer-compact a,
+.footer-compact span {
+  color: rgba(247, 249, 251, 0.92);
+}
+
+.consult-home--dark .section-kicker,
+.consult-home--cta .section-kicker,
+.home-process .section-kicker,
+.home-trust .section-kicker,
+.trust-band .section-kicker,
+.section-kicker--light {
+  color: rgba(247, 249, 251, 0.76);
+}
+
+/* Sierra Invoices product card override */
+.product-showcase {
+  background: #ffffff;
+  border: 1px solid #d5dde5;
+  border-radius: 12px;
+  color: #101820;
+  box-shadow: 0 8px 24px rgba(16, 24, 32, 0.06);
+}
+
+.product-showcase h3,
+.product-showcase strong,
+.product-showcase .section-kicker {
+  color: #101820;
+}
+
+.product-showcase p,
+.product-showcase li,
+.product-showcase small {
+  color: #50606f;
+}
+
+.product-showcase__stats {
+  gap: 0.85rem;
+}
+
+.product-showcase__stat {
+  border: 1px solid #d5dde5;
+  border-radius: 10px;
+  background: #f9fbfc;
+  padding: 0.95rem 0.9rem;
+}
+
+.product-showcase__stat small {
+  color: #5b6a78;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.product-showcase__stat strong {
+  margin-top: 0.4rem;
+  font-size: 1.25rem;
+  color: #101820;
+}
+
+.product-showcase__frame {
+  border: 1px solid #d5dde5;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 1rem;
+}
+
+.product-showcase__label {
+  color: #5b6a78;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+}
+
+.product-showcase__row {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #e2e8ee;
+}
+
+.product-showcase__row strong {
+  color: #101820;
+  font-size: 0.98rem;
+}
+
+.product-showcase__row small {
+  color: #5b6a78;
+}
+
+.product-showcase__row > span:not(.status-pill) {
+  color: #101820;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.status-pill--paid {
+  background: #e6f4ea;
+  color: #166534;
+}
+
+.status-pill--sent {
+  background: #fff4d6;
+  color: #8a5a00;
+}
+
+.status-pill--draft {
+  background: #e9eef4;
+  color: #314659;
+}
+
+/* Final consistency pass */
+:root {
+  --section-pad: clamp(4.75rem, 8vw, 6.5rem);
+  --section-pad-hero: clamp(5.25rem, 8vw, 7rem);
+}
+
+.section,
+.consult-home,
+.page-hero,
+.trust-band {
+  padding-top: var(--section-pad);
+  padding-bottom: var(--section-pad);
+}
+
+.consult-home--hero,
+.page-hero:first-of-type {
+  padding-top: var(--section-pad-hero);
+  padding-bottom: var(--section-pad);
+}
+
+.section-head,
+.consult-section-head,
+.consult-cta__copy,
+.page-hero .container > div,
+.privacy-card,
+.about-copy,
+.product-copy {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero-actions,
+.cta-actions,
+.product-hero-metrics,
+.product-link-list,
+.trust-band__list,
+.process-grid,
+.pricing-grid,
+.services-grid,
+.page-summary-grid {
+  gap: 1rem;
+}
+
+.article-card,
+.trust-point,
+.founder-process-card,
+.hero-product-note,
+.home-services__feature,
+.home-services__card,
+.home-proof__item,
+.home-journal__product,
+.home-journal__article,
+.case-study-card,
+.testimonial-card,
+.process-card,
+.pricing-card,
+.fit-panel,
+.contact-card,
+.cta-panel,
+.thank-you-card,
+.services-grid__card,
+.consult-card,
+.consult-card--case,
+.page-summary-card,
+.detail-card,
+.service-card,
+.insight-card,
+.engagement-card,
+.filter-card,
+.audience-card,
+.result-card,
+.faq-item,
+.trust-card,
+.product-panel,
+.product-showcase,
+.home-process__step,
+.home-trust__item,
+.contact-panel,
+.service-grid-card,
+.service-grid-feature,
+.story-panel,
+.mini-note,
+.privacy-card {
+  background: var(--surface);
+  background-image: none;
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius-md);
+  box-shadow: none;
+}
+
+.article-card,
+.trust-point,
+.founder-process-card,
+.hero-product-note,
+.home-services__feature,
+.home-services__card,
+.home-proof__item,
+.home-journal__product,
+.home-journal__article,
+.case-study-card,
+.testimonial-card,
+.process-card,
+.pricing-card,
+.fit-panel,
+.contact-card,
+.cta-panel,
+.thank-you-card,
+.services-grid__card,
+.consult-card,
+.consult-card--case,
+.page-summary-card,
+.detail-card,
+.service-card,
+.insight-card,
+.engagement-card,
+.filter-card,
+.audience-card,
+.result-card,
+.faq-item,
+.trust-card,
+.product-panel,
+.product-showcase,
+.home-process__step,
+.home-trust__item,
+.contact-panel,
+.service-grid-card,
+.service-grid-feature,
+.story-panel,
+.mini-note,
+.privacy-card {
+  padding: var(--card-pad-md);
+}
+
+.product-showcase__stat,
+.product-showcase__frame {
+  border-radius: var(--card-radius-md);
+}
+
+.article-card p,
+.trust-point p,
+.founder-process-card p,
+.process-card p,
+.pricing-card p,
+.pricing-card li,
+.services-grid__card p,
+.services-grid__card li,
+.page-summary-card p,
+.detail-card p,
+.service-card p,
+.insight-card p,
+.engagement-card p,
+.filter-card p,
+.audience-card p,
+.result-card p,
+.faq-item p,
+.product-panel p,
+.contact-card p,
+.thank-you-card p,
+.contact-note,
+.hero-support,
+.mini-note p,
+.privacy-card p,
+.privacy-card li {
+  color: var(--ink-soft);
+}
+
+.section-kicker,
+.consult-card__eyebrow,
+.consult-step,
+.product-showcase__label,
+.product-showcase__stat small,
+.product-hero-metrics span,
+.hero-product-note__meta span,
+.site-nav .nav-product {
+  letter-spacing: 0.08em;
+}
+
+@media (hover: hover) {
+  .article-card:hover,
+  .trust-point:hover,
+  .home-services__feature:hover,
+  .home-services__card:hover,
+  .home-proof__item:hover,
+  .home-journal__product:hover,
+  .home-journal__article:hover,
+  .case-study-card:hover,
+  .testimonial-card:hover,
+  .process-card:hover,
+  .pricing-card:hover,
+  .fit-panel:hover,
+  .contact-card:hover,
+  .cta-panel:hover,
+  .thank-you-card:hover,
+  .services-grid__card:hover,
+  .consult-card:hover,
+  .page-summary-card:hover,
+  .product-showcase:hover,
+  .home-process__step:hover,
+  .home-trust__item:hover,
+  .privacy-card:hover {
+    box-shadow: none;
   }
 }
