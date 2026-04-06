@@ -4632,3 +4632,636 @@ a:hover,
 .footer-link-button:hover {
   color: var(--ink);
 }
+/* Homepage consulting layout override */
+.consult-home {
+  padding: clamp(6rem, 10vw, 8.5rem) 0;
+}
+
+.consult-home--hero {
+  padding-top: clamp(7rem, 11vw, 9rem);
+  background: var(--bg);
+}
+
+.consult-home--light {
+  background: var(--surface);
+}
+
+.consult-home--muted {
+  background: var(--bg);
+}
+
+.consult-home--dark,
+.consult-home--cta {
+  background: var(--ink);
+}
+
+.consult-home--separated {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.consult-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.consult-hero {
+  align-items: center;
+}
+
+.consult-hero__copy {
+  grid-column: 1 / span 7;
+  display: grid;
+  gap: 1.35rem;
+}
+
+.consult-hero__copy h1 {
+  max-width: 10.5ch;
+  font-size: clamp(3.2rem, 6vw, 5rem);
+  line-height: 0.98;
+}
+
+.consult-hero__lead {
+  max-width: 54ch;
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+}
+
+.consult-hero__meta {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--ink-soft);
+}
+
+.consult-hero__media {
+  grid-column: 9 / span 4;
+}
+
+.consult-hero__image {
+  width: 100%;
+  min-height: 32rem;
+  object-fit: cover;
+  border-radius: var(--card-radius-md);
+  border: 1px solid var(--line);
+  box-shadow: var(--card-shadow);
+}
+
+.consult-section-head {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.4rem;
+}
+
+.consult-section-head > .section-kicker,
+.consult-section-head > h2,
+.consult-section-head > p {
+  grid-column: 1 / span 8;
+}
+
+.consult-section-head h2 {
+  max-width: 18ch;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  margin: 0;
+}
+
+.consult-section-head p {
+  max-width: 54ch;
+  color: var(--ink-soft);
+}
+
+.consult-section-head--dark h2,
+.consult-section-head--dark p {
+  color: var(--surface-ink);
+}
+
+.consult-section-head--dark p {
+  color: var(--surface-ink);
+}
+
+.consult-grid--cards .consult-card {
+  grid-column: span 6;
+}
+
+.consult-grid--cases .consult-card--case {
+  grid-column: span 6;
+}
+
+.consult-grid--testimonials .consult-card {
+  grid-column: span 6;
+}
+
+.consult-card {
+  display: grid;
+  gap: 0.9rem;
+  min-height: 100%;
+  padding: var(--card-pad-md);
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius-md);
+  background: var(--surface);
+  box-shadow: none;
+}
+
+.consult-card--case {
+  padding: var(--card-pad-lg);
+}
+
+
+.consult-card h3 {
+  font-size: 1.55rem;
+  margin: 0;
+}
+
+.consult-card p,
+.consult-card li,
+.consult-card span {
+  color: var(--ink-soft);
+}
+
+.consult-card strong {
+  color: var(--ink);
+}
+
+.consult-card__eyebrow,
+.consult-step {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.consult-card--dark {
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+.consult-card--dark h3,
+.consult-card--dark p,
+.consult-card--dark .consult-step {
+  color: var(--ink);
+}
+
+.consult-grid--process {
+  row-gap: 1.25rem;
+}
+
+.consult-grid--what .consult-card:nth-child(1),
+.consult-grid--what .consult-card:nth-child(2),
+.consult-grid--process .consult-card:nth-child(1),
+.consult-grid--process .consult-card:nth-child(2),
+.consult-grid--testimonials .consult-card:nth-child(1),
+.consult-grid--testimonials .consult-card:nth-child(2) {
+  border-top-width: 2px;
+}
+
+.consult-grid--testimonials .consult-card span {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.consult-cta {
+  align-items: start;
+}
+
+.consult-cta__copy {
+  grid-column: 1 / span 8;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.consult-cta__copy h2,
+.consult-cta__copy p {
+  color: var(--surface-ink);
+}
+
+.consult-cta__copy h2 {
+  max-width: 14ch;
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  margin: 0;
+}
+
+.consult-cta__copy p {
+  max-width: 50ch;
+  color: rgba(245, 248, 251, 0.84);
+}
+
+.consult-home .hero-actions,
+.consult-home .cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  justify-content: flex-start;
+}
+
+@media (max-width: 1080px) {
+  .consult-hero__copy,
+  .consult-hero__media,
+  .consult-section-head > .section-kicker,
+  .consult-section-head > h2,
+  .consult-section-head > p,
+  .consult-cta__copy {
+    grid-column: 1 / -1;
+  }
+
+  .consult-hero__image {
+    min-height: 26rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .consult-grid,
+  .consult-section-head {
+    grid-template-columns: 1fr;
+  }
+
+  .consult-grid--cards .consult-card,
+  .consult-grid--cases .consult-card--case,
+  .consult-grid--testimonials .consult-card,
+  .consult-hero__copy,
+  .consult-hero__media,
+  .consult-cta__copy,
+  .consult-section-head > .section-kicker,
+  .consult-section-head > h2,
+  .consult-section-head > p {
+    grid-column: auto;
+  }
+
+  .consult-hero__image {
+    min-height: 22rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .consult-home {
+    padding: 4.5rem 0;
+  }
+
+  .consult-home--hero {
+    padding-top: 5.8rem;
+  }
+
+  .consult-hero__copy h1 {
+    font-size: clamp(2.6rem, 12vw, 3.5rem);
+    max-width: 11ch;
+  }
+
+  .consult-card,
+  .consult-card--case {
+    padding: 1.15rem;
+  }
+}
+
+/* Minimal consulting design override */
+:root {
+  --bg: #f3f5f7;
+  --surface: #ffffff;
+  --surface-soft: #ffffff;
+  --surface-strong: #e3e8ed;
+  --ink: #101820;
+  --ink-soft: #3e4b57;
+  --muted: #667480;
+  --line: #d6dde3;
+  --accent: #275f78;
+  --accent-deep: #101820;
+  --accent-soft: #e6eef2;
+  --accent-warm: #275f78;
+  --accent-warm-soft: #e6eef2;
+  --surface-ink: #f6f8fa;
+  --radius-lg: 12px;
+  --radius-md: 8px;
+  --shadow-sm: 0 1px 3px rgba(16, 24, 32, 0.03);
+  --shadow-md: 0 4px 12px rgba(16, 24, 32, 0.05);
+  --card-radius-sm: 8px;
+  --card-radius-md: 8px;
+  --card-pad-sm: 1rem;
+  --card-pad-md: 1.5rem;
+  --card-pad-lg: 2rem;
+  --card-shadow: 0 1px 2px rgba(16, 24, 32, 0.04);
+  --card-shadow-hover: 0 3px 10px rgba(16, 24, 32, 0.05);
+}
+
+body {
+  background: var(--bg);
+}
+
+.site-header,
+.site-header.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom-color: var(--line);
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.btn-primary {
+  background: var(--ink);
+  border-radius: var(--radius-md);
+  box-shadow: none;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  background: var(--accent);
+  box-shadow: none;
+}
+
+.btn-secondary {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--ink);
+  border-radius: var(--radius-md);
+  box-shadow: none;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+  background: var(--surface);
+  border-color: var(--accent);
+  color: var(--ink);
+  box-shadow: none;
+}
+
+.home-hero::before,
+.home-hero::after,
+.page-summary-card::before,
+.proof-strip li::before,
+.hero-proof li::before {
+  display: none;
+}
+
+.hero-product-note,
+.home-services__feature,
+.home-services__card,
+.home-proof__item,
+.home-journal__product,
+.home-journal__article,
+.case-study-card,
+.testimonial-card,
+.process-card,
+.pricing-card,
+.fit-panel,
+.contact-card,
+.cta-panel,
+.thank-you-card,
+.services-grid__card,
+.consult-card,
+.consult-card--case,
+.consult-hero__image,
+.calendly-box,
+.page-summary-card,
+.detail-card,
+.service-card,
+.insight-card,
+.engagement-card,
+.filter-card,
+.audience-card,
+.result-card,
+.faq-item,
+.trust-card,
+.product-panel,
+.home-hero__note,
+.home-hero__profile,
+.home-hero__card,
+.home-portfolio__item,
+.home-process__step,
+.home-trust__item,
+.site-cta,
+.product-summary,
+.product-showcase,
+.service-stage__media,
+.service-stage__copy,
+.service-grid-card,
+.service-grid-feature,
+.story-block,
+.story-panel,
+.about-block,
+.contact-panel,
+.insight-hero__panel {
+  background: var(--surface);
+  background-image: none;
+  box-shadow: none;
+  border-color: var(--line);
+  border-radius: var(--card-radius-md);
+}
+
+.consult-card,
+.consult-card--case,
+.services-grid__card,
+.home-services__feature,
+.home-services__card,
+.case-study-card,
+.contact-card,
+.cta-panel,
+.fit-panel,
+.thank-you-card {
+  padding: var(--card-pad-md);
+}
+
+.consult-card--case,
+.home-services__feature,
+.contact-card,
+.cta-panel {
+  padding: var(--card-pad-lg);
+}
+
+.consult-home,
+.home-overview,
+.home-proof,
+.home-testimonials,
+.home-journal,
+.home-cta,
+.section-soft,
+.page-hero,
+.home-services,
+.home-portfolio {
+  background: var(--surface);
+}
+
+.consult-home--muted,
+.consult-home--hero,
+.home-trust,
+.home-process,
+.trust-band,
+.consult-home--dark,
+.consult-home--cta {
+  background: var(--bg);
+}
+
+.consult-home--dark,
+.consult-home--cta,
+.home-process,
+.home-trust,
+.trust-band,
+.site-footer,
+.footer-compact {
+  background: var(--ink);
+  background-image: none;
+}
+
+.consult-card--dark {
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+.consult-card--dark h3,
+.consult-card--dark p,
+.consult-card--dark .consult-step {
+  color: var(--ink);
+}
+
+.consult-section-head--dark h2,
+.consult-section-head--dark p,
+.consult-cta__copy h2,
+.consult-cta__copy p,
+.section-kicker--light {
+  color: var(--surface-ink);
+}
+
+.consult-cta__copy p {
+  color: rgba(246, 248, 250, 0.86);
+}
+
+.section-kicker,
+.consult-card__eyebrow,
+.consult-step,
+.text-link,
+.footer-link-button,
+.product-copy a,
+.article-card__link-row a {
+  color: var(--accent);
+}
+
+a:hover,
+.text-link:hover,
+.footer-link-button:hover,
+.product-copy a:hover,
+.article-card__link-row a:hover {
+  color: var(--ink);
+}
+
+.hero-product-note__meta span,
+.product-hero-metrics span,
+.status-pill--sent,
+.site-nav .nav-product,
+.product-showcase__label,
+.setup-ledger__label,
+.project-pattern__count,
+.proof-ledger__label,
+.home-hero__card-label {
+  background: var(--accent-soft);
+  border-color: var(--accent-soft);
+  color: var(--accent-deep);
+  border-radius: var(--radius-md);
+}
+
+.brand-logo,
+.site-cta,
+.footer-link-button,
+.status-pill--sent,
+.site-nav .nav-product {
+  border-radius: var(--radius-md);
+  box-shadow: none;
+}
+
+.site-nav a,
+.btn-primary,
+.btn-secondary,
+.footer-link-button,
+.text-link {
+  transform: none;
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.site-nav a:hover {
+  color: var(--accent);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  background: #1f2b35;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+  background: #edf1f4;
+}
+
+.page-hero,
+.home-hero,
+.home-services,
+.home-overview,
+.home-proof,
+.home-journal,
+.home-testimonials,
+.consult-home {
+  background-image: none;
+}
+
+.field input,
+.field textarea,
+.field select {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--muted);
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 14px, 0);
+  transition:
+    opacity 0.34s ease,
+    transform 0.34s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (hover: hover) {
+  .page-summary-card:hover,
+  .article-card:hover,
+  .contact-card:hover,
+  .pricing-card:hover,
+  .process-card:hover,
+  .fit-panel:hover,
+  .trust-point:hover,
+  .home-services__feature:hover,
+  .home-services__card:hover,
+  .home-proof__item:hover,
+  .home-journal__product:hover,
+  .home-journal__article:hover,
+  .case-study-card:hover,
+  .testimonial-card:hover,
+  .home-trust__item:hover,
+  .home-process__step:hover,
+  .cta-panel:hover,
+  .thank-you-card:hover,
+  .consult-card:hover,
+  .services-grid__card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--card-shadow-hover);
+    border-color: var(--line);
+  }
+}

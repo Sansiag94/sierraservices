@@ -469,7 +469,7 @@
 
   if ("IntersectionObserver" in window && revealNodes.length > 0) {
     revealNodes.forEach((node, index) => {
-      node.style.setProperty("--reveal-delay", `${(index % 4) * 45}ms`);
+      node.style.setProperty("--reveal-delay", `${(index % 4) * 30}ms`);
     });
 
     const observer = new IntersectionObserver(
