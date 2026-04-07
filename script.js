@@ -170,13 +170,12 @@
       <div class="cookie-banner__copy">
         <p class="cookie-banner__title" id="cookie-banner-title">Cookie settings</p>
         <p class="cookie-banner__text" id="cookie-banner-description">
-          This site uses basic analytics to see which pages get used and where people come back.
-          Accept if you are happy with that. Decline if not.
+          This site uses cookies for basic analytics and to improve site usage. You can accept or decline.
         </p>
       </div>
       <div class="cookie-banner__actions">
         <button type="button" class="btn btn-secondary cookie-banner__button" data-consent-action="deny">Decline</button>
-        <button type="button" class="btn btn-primary cookie-banner__button" data-consent-action="grant">Accept analytics</button>
+        <button type="button" class="btn btn-primary cookie-banner__button" data-consent-action="grant">Accept</button>
       </div>
     `;
 

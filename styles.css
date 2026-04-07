@@ -6841,3 +6841,212 @@ body {
   background: #edf2f8;
   color: #44566b;
 }
+
+/* Post-alignment production overrides */
+:root {
+  --surface: #f8fbff;
+  --surface-soft: #f3f6fb;
+  --line: #d3dcea;
+  --shadow-sm: 0 8px 18px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 14px 30px rgba(15, 23, 42, 0.06);
+  --section-pad: clamp(5.25rem, 8vw, 7rem);
+  --card-pad-md: 1.55rem;
+  --card-pad-lg: 1.9rem;
+}
+
+.section,
+.page-hero,
+.consult-home,
+.trust-band {
+  padding-top: var(--section-pad);
+  padding-bottom: var(--section-pad);
+}
+
+.consult-home--hero {
+  padding-top: clamp(5.75rem, 9vw, 7.75rem);
+}
+
+.trust-point,
+.cta-panel,
+.services-grid__card,
+.consult-card,
+.consult-card--case,
+.detail-card,
+.article-card,
+.privacy-card,
+.contact-card,
+.mini-note,
+.product-panel,
+.page-summary-card,
+.result-card,
+.service-card,
+.insight-card,
+.engagement-card,
+.audience-card,
+.filter-card,
+.faq-item,
+.trust-card,
+.service-grid-card,
+.service-grid-feature,
+.story-panel,
+.process-card,
+.pricing-card,
+.fit-panel,
+.thank-you-card {
+  background: #f8fbff;
+  border-color: #d3dcea;
+  box-shadow: var(--shadow-sm);
+  color: #0f172a;
+  padding: var(--card-pad-md);
+}
+
+.consult-grid--cases .consult-card--case,
+.cta-panel {
+  padding: var(--card-pad-lg);
+}
+
+.trust-point h2,
+.trust-point h3,
+.cta-panel h2,
+.cta-panel h3,
+.services-grid__card h2,
+.services-grid__card h3,
+.consult-card h2,
+.consult-card h3,
+.consult-card--case h2,
+.consult-card--case h3,
+.detail-card h2,
+.detail-card h3,
+.article-card h2,
+.article-card h3,
+.privacy-card h2,
+.privacy-card h3,
+.contact-card h2,
+.contact-card h3,
+.mini-note h2,
+.mini-note h3,
+.product-panel h2,
+.product-panel h3,
+.page-summary-card h2,
+.page-summary-card h3,
+.process-card h2,
+.process-card h3 {
+  color: #0f172a;
+}
+
+.trust-point p,
+.trust-point li,
+.trust-point span,
+.cta-panel p,
+.cta-panel li,
+.services-grid__card p,
+.services-grid__card li,
+.consult-card p,
+.consult-card li,
+.consult-card span,
+.consult-card--case p,
+.consult-card--case li,
+.consult-card--case span,
+.detail-card p,
+.article-card p,
+.privacy-card p,
+.contact-card p,
+.mini-note p,
+.product-panel p,
+.page-summary-card p,
+.process-card p {
+  color: #415065;
+}
+
+.consult-home--dark .consult-section-head h2,
+.consult-home--cta h2,
+.trust-band h2,
+.trust-band h3,
+.cta-band h2 {
+  color: #ffffff;
+}
+
+.consult-home--dark .consult-section-head p,
+.consult-home--cta p,
+.trust-band p,
+.cta-band p {
+  color: #d1d5db;
+}
+
+.home-product {
+  align-items: center;
+  grid-template-columns: minmax(0, 5fr) minmax(22rem, 7fr);
+}
+
+.home-product__copy {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+  max-width: 44rem;
+}
+
+.home-product__copy h2 {
+  max-width: 13ch;
+}
+
+.home-product__list {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-product__list li {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.home-product__list li::before {
+  content: "";
+  display: inline-block;
+  width: 0.55rem;
+  height: 0.55rem;
+  margin-right: 0.65rem;
+  border-radius: 999px;
+  background: #1c2b49;
+}
+
+.home-product__showcase {
+  width: 100%;
+}
+
+.consult-grid--testimonials {
+  gap: 1.5rem;
+}
+
+.consult-grid--testimonials .consult-card p {
+  color: #0f172a;
+  font-size: clamp(1.08rem, 1.4vw, 1.22rem);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.consult-grid--testimonials .consult-card span {
+  color: #415065;
+  font-weight: 700;
+}
+
+.contact-form {
+  row-gap: 1.15rem;
+}
+
+.field label {
+  color: #0f172a;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .home-product {
+    grid-template-columns: 1fr;
+  }
+
+  .home-product__copy h2 {
+    max-width: 100%;
+  }
+}
