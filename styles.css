@@ -8164,13 +8164,6 @@ body[data-page="home"] .consult-cta__copy > .section-kicker {
   }
 }
 
-/* Remove decorative section label pills */
-.section-kicker,
-.consult-card__eyebrow,
-.article-card__eyebrow {
-  display: none !important;
-}
-
 /* Keep footer transitions consistent across pages */
 .site-footer {
   border-top: 0;
@@ -8209,7 +8202,43 @@ body[data-page="contact"] .section-head {
   text-align: left;
 }
 
-/* Keep the footer boundary consistent across all pages */
-.site-footer {
-  border-top: 0;
+/* Product badge refinement */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.28rem;
+  min-width: 3.2rem;
+  border-color: rgba(203, 213, 225, 0.2);
+  background: rgba(203, 213, 225, 0.1);
+  color: #e5ecf6;
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+}
+
+.status-pill::before {
+  content: "";
+  width: 0.34rem;
+  height: 0.34rem;
+  border-radius: 999px;
+  background: #94a3b8;
+}
+
+.status-pill--paid,
+.status-pill--sent,
+.status-pill--draft {
+  background: rgba(203, 213, 225, 0.1);
+  color: #e5ecf6;
+}
+
+.status-pill--paid::before {
+  background: #8fb5a3;
+}
+
+.status-pill--sent::before {
+  background: #b8aa88;
+}
+
+.status-pill--draft::before {
+  background: #94a3b8;
 }
