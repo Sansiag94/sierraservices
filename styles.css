@@ -8163,3 +8163,53 @@ body[data-page="home"] .consult-cta__copy > .section-kicker {
     justify-self: stretch;
   }
 }
+
+/* Remove decorative section label pills */
+.section-kicker,
+.consult-card__eyebrow,
+.article-card__eyebrow {
+  display: none !important;
+}
+
+/* Keep footer transitions consistent across pages */
+.site-footer {
+  border-top: 0;
+}
+
+/* Page heading alignment pass */
+body[data-page="services"] .page-hero .container:not(.product-landing-grid),
+body[data-page="insights"] .page-hero .container:not(.product-landing-grid),
+body[data-page="about"] .page-hero .container:not(.product-landing-grid),
+body[data-page="contact"] .page-hero .container:not(.product-landing-grid) {
+  width: min(var(--container), 92vw);
+  max-width: var(--container);
+  margin-inline: auto;
+  text-align: left;
+}
+
+body[data-page="services"] .page-hero h1,
+body[data-page="insights"] .page-hero h1,
+body[data-page="about"] .page-hero h1,
+body[data-page="contact"] .page-hero h1,
+body[data-page="services"] .page-hero p,
+body[data-page="insights"] .page-hero p,
+body[data-page="about"] .page-hero p,
+body[data-page="contact"] .page-hero p {
+  max-width: 42rem;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+body[data-page="services"] .section-head,
+body[data-page="insights"] .section-head,
+body[data-page="about"] .section-head,
+body[data-page="contact"] .section-head {
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+}
+
+/* Keep the footer boundary consistent across all pages */
+.site-footer {
+  border-top: 0;
+}
