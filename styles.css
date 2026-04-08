@@ -8056,3 +8056,110 @@ body[data-page="home"] .consult-cta__copy > .section-kicker {
     flex-direction: column;
   }
 }
+
+/* Media containment guard */
+.consult-home--hero,
+.home-product,
+.page-hero,
+.product-landing-grid,
+.product-showcase,
+.home-product__showcase {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.consult-hero,
+.product-landing-grid,
+.home-product {
+  min-width: 0;
+}
+
+.consult-hero__copy,
+.consult-hero__media,
+.product-hero-copy,
+.product-showcase,
+.home-product__copy,
+.home-product__showcase {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.consult-hero__media,
+.home-product__showcase {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.consult-hero__image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 34rem;
+  min-height: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 900px) {
+  .consult-hero__image {
+    max-height: 28rem;
+  }
+}
+
+/* Product hero collision fix */
+.page-hero .container.product-landing-grid {
+  width: min(var(--container), 92vw);
+  max-width: var(--container);
+}
+
+.product-landing-grid {
+  align-items: center;
+  column-gap: clamp(2.25rem, 5vw, 4.5rem);
+  grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.86fr);
+}
+
+.product-hero-copy {
+  max-width: 34rem;
+}
+
+.product-hero-copy h1 {
+  max-width: 11ch;
+  font-size: clamp(2.65rem, 5vw, 4.2rem);
+  overflow-wrap: normal;
+  text-wrap: balance;
+}
+
+.product-landing-grid > .product-showcase {
+  width: min(100%, 30rem);
+  justify-self: end;
+}
+
+.product-showcase__label {
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+@media (max-width: 900px) {
+  .page-hero .container.product-landing-grid {
+    width: min(var(--container), 90vw);
+  }
+
+  .product-landing-grid {
+    row-gap: 1.6rem;
+  }
+
+  .product-hero-copy h1 {
+    max-width: 12ch;
+  }
+
+  .product-landing-grid > .product-showcase {
+    width: 100%;
+    justify-self: stretch;
+  }
+}
