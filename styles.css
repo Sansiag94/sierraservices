@@ -8395,3 +8395,157 @@ body[data-page="insights"] .article-list > .article-card {
     max-width: none;
   }
 }
+
+/* Homepage case study hierarchy */
+.consult-card--case-meta {
+  color: #52647d;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.consult-grid--cases {
+  align-items: start;
+}
+
+.consult-card--case-featured {
+  grid-column: span 7;
+  gap: 1rem;
+}
+
+.consult-card--case-featured h3 {
+  max-width: 16ch;
+  font-size: clamp(1.68rem, 2.45vw, 2.1rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+.consult-card--case-supporting {
+  grid-column: span 5;
+  align-self: start;
+}
+
+.consult-card--case-supporting h3 {
+  max-width: 16ch;
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
+  line-height: 1.08;
+}
+
+.consult-card--case-featured p:last-child,
+.consult-card--case-supporting p:last-child {
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+/* About intro tightening */
+.about-intro--founder {
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.about-copy {
+  max-width: 34rem;
+}
+
+.about-copy p {
+  max-width: 32rem;
+}
+
+.about-photo-wrap {
+  max-width: 22rem;
+  justify-self: end;
+  padding: 0.85rem;
+  box-shadow: 0 14px 30px rgba(18, 35, 53, 0.08);
+}
+
+.about-photo {
+  aspect-ratio: 4 / 4.9;
+}
+
+/* Services page polish */
+body[data-page="services"] .services-grid {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+body[data-page="services"] .services-grid > .services-grid__card:nth-child(1),
+body[data-page="services"] .services-grid > .services-grid__card:nth-child(4) {
+  grid-column: span 7;
+}
+
+body[data-page="services"] .services-grid > .services-grid__card:nth-child(2),
+body[data-page="services"] .services-grid > .services-grid__card:nth-child(3) {
+  grid-column: span 5;
+}
+
+body[data-page="services"] .services-grid__card {
+  gap: 0.7rem;
+  padding: 1.25rem 1.2rem 1.15rem;
+}
+
+body[data-page="services"] .services-grid__card ul {
+  gap: 0.35rem;
+}
+
+body[data-page="services"] .services-grid__card li {
+  line-height: 1.5;
+}
+
+/* Footer cleanup */
+.footer-wrap {
+  justify-content: space-between;
+  gap: 0.7rem 1rem;
+  padding-top: 1.35rem;
+  padding-bottom: 1.35rem;
+}
+
+.site-footer,
+.site-footer p,
+.site-footer span,
+.site-footer a,
+.footer-link-button {
+  font-size: 0.94rem;
+}
+
+.footer-link-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+/* Sierra Invoices spacing polish */
+body[data-page="sierra-invoices"] .product-hero-copy {
+  gap: 0.85rem;
+}
+
+body[data-page="sierra-invoices"] .product-hero-copy .hero-support {
+  max-width: 28rem;
+}
+
+body[data-page="sierra-invoices"] .page-summary-grid {
+  gap: 0.9rem;
+}
+
+body[data-page="sierra-invoices"] .page-summary-card {
+  padding: 1.2rem 1.1rem 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .consult-card--case-featured,
+  .consult-card--case-supporting,
+  body[data-page="services"] .services-grid > .services-grid__card:nth-child(1),
+  body[data-page="services"] .services-grid > .services-grid__card:nth-child(2),
+  body[data-page="services"] .services-grid > .services-grid__card:nth-child(3),
+  body[data-page="services"] .services-grid > .services-grid__card:nth-child(4) {
+    grid-column: span 12;
+  }
+
+  .about-copy,
+  .about-copy p {
+    max-width: none;
+  }
+
+  .about-photo-wrap {
+    max-width: none;
+    justify-self: stretch;
+  }
+}
