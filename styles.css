@@ -8309,3 +8309,19 @@ body[data-page="contact"] .section-head {
     justify-content: center;
   }
 }
+
+/* Insights index layout */
+body[data-page="insights"] .article-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+body[data-page="insights"] .article-list > .article-card {
+  height: 100%;
+}
+
+@media (max-width: 900px) {
+  body[data-page="insights"] .article-list {
+    grid-template-columns: 1fr;
+  }
+}
