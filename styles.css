@@ -8242,3 +8242,70 @@ body[data-page="contact"] .section-head {
 .status-pill--draft::before {
   background: #94a3b8;
 }
+
+/* Sierra Invoices mobile layout fix */
+@media (max-width: 900px) {
+  body[data-page="sierra-invoices"] .page-hero .container.product-landing-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+    width: min(var(--container), 92vw);
+    max-width: var(--container);
+  }
+
+  body[data-page="sierra-invoices"] .product-hero-copy {
+    order: 1;
+    max-width: none;
+  }
+
+  body[data-page="sierra-invoices"] .product-showcase {
+    order: 2;
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+  }
+
+  body[data-page="sierra-invoices"] .product-hero-copy h1 {
+    max-width: 10ch;
+    font-size: clamp(2.35rem, 9vw, 3.4rem);
+  }
+}
+
+@media (max-width: 640px) {
+  body[data-page="sierra-invoices"] .page-hero {
+    padding-bottom: 2.8rem;
+  }
+
+  body[data-page="sierra-invoices"] .page-hero .container.product-landing-grid {
+    gap: 1.2rem;
+    width: min(var(--container), 94vw);
+  }
+
+  body[data-page="sierra-invoices"] .product-showcase {
+    padding: 1rem;
+    border-radius: 14px;
+  }
+
+  body[data-page="sierra-invoices"] .product-showcase h3 {
+    font-size: 1.05rem;
+    max-width: 16rem;
+  }
+
+  body[data-page="sierra-invoices"] .product-showcase__dashboard {
+    padding: 0.85rem;
+  }
+
+  body[data-page="sierra-invoices"] .product-showcase__stat {
+    padding: 0.72rem;
+  }
+
+  body[data-page="sierra-invoices"] .product-showcase__frame {
+    padding: 0.7rem 0.75rem 0.15rem;
+  }
+
+  body[data-page="sierra-invoices"] .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
