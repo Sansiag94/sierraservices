@@ -8325,3 +8325,73 @@ body[data-page="insights"] .article-list > .article-card {
     grid-template-columns: 1fr;
   }
 }
+
+/* Homepage testimonial split */
+.testimonial-band {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: 1.1rem 1.35rem;
+  align-items: start;
+}
+
+.testimonial-band__copy {
+  display: grid;
+  gap: 0.9rem;
+  max-width: 22rem;
+}
+
+.testimonial-band__copy h2 {
+  max-width: 10ch;
+}
+
+.testimonial-band__copy p {
+  max-width: 20rem;
+  color: #425363;
+}
+
+.testimonial-band__grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.consult-card--testimonial {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+  min-height: 100%;
+}
+
+.testimonial-band__quote {
+  color: #0f172a;
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  max-width: 19ch;
+}
+
+.testimonial-band__context {
+  max-width: 34rem;
+  color: #425363;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.consult-card--testimonial span {
+  color: #52647d;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .testimonial-band {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .testimonial-band__copy,
+  .testimonial-band__copy p,
+  .testimonial-band__copy h2 {
+    max-width: none;
+  }
+}
