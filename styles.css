@@ -8780,8 +8780,33 @@ body[data-page="about"] .page-hero p {
   max-width: 34rem;
 }
 
+body[data-page="about"] .about-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(16rem, 0.8fr);
+  align-items: start;
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+body[data-page="about"] .about-hero-grid > div {
+  max-width: 36rem;
+}
+
+body[data-page="about"] .about-hero-grid .about-photo-wrap {
+  justify-self: start;
+  align-self: start;
+  max-width: 18.5rem;
+  margin-top: 0.45rem;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
 body[data-page="about"] .page-hero + .section {
-  padding-top: 0.25rem;
+  padding-top: 0;
+}
+
+body[data-page="about"] .about-intro--text-only {
+  display: block;
 }
 
 body[data-page="about"] .about-intro--founder {
@@ -8792,7 +8817,11 @@ body[data-page="about"] .about-intro--founder {
 
 body[data-page="about"] .about-photo-wrap {
   justify-self: start;
-  margin-top: -2.2rem;
+  align-self: start;
+  margin-top: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 body[data-page="about"] .about-copy {
@@ -8814,6 +8843,17 @@ body[data-page="about"] .about-copy p {
 
   body[data-page="about"] .page-hero + .section {
     padding-top: 0.3rem;
+  }
+
+  body[data-page="about"] .about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  body[data-page="about"] .about-hero-grid .about-photo-wrap {
+    max-width: min(21rem, 100%);
+    justify-self: center;
+    margin-top: 0;
   }
 
   body[data-page="about"] .about-intro--founder {
