@@ -8708,6 +8708,63 @@ body[data-page="sierra-invoices"] .page-summary-card {
   font-size: 0.91rem;
 }
 
+.btn,
+.button,
+a[class*="btn"],
+button {
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover,
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card:hover,
+[class*="card"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: all 0.25s ease;
+}
+
+.consult-hero__image {
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+nav a:not(.btn):not(.nav-cta):hover {
+  opacity: 0.65;
+  transition: opacity 0.15s ease;
+}
+
+.footer-cta-line {
+  margin-bottom: 12px;
+}
+
+.footer-cta-line a {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.footer-cta-line a:hover {
+  opacity: 1;
+}
+
+.faq-section {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.faq-section .faq-item {
+  margin-bottom: 32px;
+}
+
+.faq-section .faq-item h3 {
+  margin-bottom: 8px;
+}
+
 /* About page opening rhythm fix */
 body[data-page="about"] .page-hero {
   padding-bottom: 0.9rem;
