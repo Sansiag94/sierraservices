@@ -192,7 +192,7 @@
         <div class="cookie-banner__copy">
           <p class="cookie-banner__title" id="cookie-banner-title">Cookie settings</p>
           <p class="cookie-banner__text" id="cookie-banner-description">
-            This site uses Microsoft Clarity analytics and session recording cookies to understand visits and improve the website. Choose Accept to allow analytics, or Decline to continue without analytics.
+            This site uses tracking tools to understand visits, improve the website, and see where people get stuck. Choose Accept to allow tracking, or Decline to continue without it.
           </p>
           <a class="cookie-banner__privacy" href="/privacy">Privacy Policy</a>
         </div>
