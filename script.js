@@ -193,12 +193,11 @@
         <div class="cookie-banner__copy">
           <p class="cookie-banner__title" id="cookie-banner-title">Cookie settings</p>
           <p class="cookie-banner__text" id="cookie-banner-description">
-            This site uses tracking tools to understand visits, improve the website, and see where people get stuck. Choose Accept to allow tracking, or Decline to continue without it.
+            We use cookies to understand how this website is used and improve the experience.
           </p>
-          <a class="cookie-banner__privacy" href="/privacy">Privacy Policy</a>
         </div>
         <div class="cookie-banner__actions">
-          <button type="button" class="btn btn-secondary cookie-banner__button" data-consent-action="deny">Decline</button>
+          <button type="button" class="btn btn-secondary cookie-banner__button" data-consent-action="deny">Reject</button>
           <button type="button" class="btn btn-primary cookie-banner__button" data-consent-action="grant">Accept</button>
         </div>
       </div>

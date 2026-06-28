@@ -2148,7 +2148,7 @@ section {
   right: auto;
   bottom: 1rem;
   z-index: 90;
-  width: min(780px, calc(100vw - 1.5rem));
+  width: min(430px, calc(100vw - 1.5rem));
   transform: translateX(-50%);
 }
 
@@ -2158,14 +2158,12 @@ section {
 
 .cookie-banner__panel {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 1.1rem;
-  padding: 1.2rem;
+  gap: 1rem;
+  padding: 1.15rem;
   border: 1px solid #cfd9e2;
-  border-radius: 18px;
+  border-radius: 16px;
   background: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 22px 48px rgba(18, 35, 53, 0.18);
+  box-shadow: 0 18px 42px rgba(18, 35, 53, 0.18);
   backdrop-filter: blur(10px);
 }
 
@@ -2176,40 +2174,44 @@ section {
 }
 
 .cookie-banner__title {
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #152235;
+  display: none;
 }
 
 .cookie-banner__text {
   color: var(--ink-soft);
-  font-size: 0.94rem;
-}
-
-.cookie-banner__privacy {
-  width: fit-content;
-  color: var(--brand);
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.cookie-banner__privacy:hover,
-.cookie-banner__privacy:focus-visible {
-  text-decoration: underline;
+  font-size: 0.95rem;
+  line-height: 1.7;
 }
 
 .cookie-banner__actions {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 0.65rem;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
 .cookie-banner__button {
+  width: 100%;
+  min-height: 48px;
+  border-radius: 7px;
+  justify-content: center;
   white-space: nowrap;
+}
+
+.cookie-banner .btn-primary {
+  background: #050719;
+  box-shadow: none;
+}
+
+.cookie-banner .btn-primary:hover,
+.cookie-banner .btn-primary:active {
+  background: #101425;
+  box-shadow: none;
+}
+
+.cookie-banner .btn-secondary {
+  border-color: #cfd9e2;
+  color: #253044;
+  background: #fff;
 }
 
 [data-reveal] {
@@ -2433,17 +2435,8 @@ section {
 }
 
 @media (max-width: 820px) {
-  .cookie-banner__panel {
-    grid-template-columns: 1fr;
-    align-items: stretch;
-  }
-
-  .cookie-banner__actions {
-    justify-content: stretch;
-  }
-
   .cookie-banner__button {
-    flex: 1 1 180px;
+    min-height: 48px;
   }
 }
 
