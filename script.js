@@ -1,5 +1,7 @@
 (() => {
   const consentStorageKey = "sierraservices-cookie-consent";
+  const consentVersionStorageKey = "sierraservices-cookie-consent-version";
+  const consentVersion = "required-dialog-2026-06-28";
   const clarityProjectId = "vqp657dphp";
   const menuToggle = document.getElementById("menu-toggle");
   const siteNav = document.getElementById("site-nav");
@@ -19,6 +21,18 @@
   let hasRedirectedAfterBooking = false;
   let clarityLoadPromise;
   let calendlyLoadPromise;
+
+  const getClarity = () => {
+    if (typeof window.clarity === "function") {
+      return window.clarity;
+    }
+
+    window.clarity = function () {
+      (window.clarity.q = window.clarity.q || []).push(arguments);
+    };
+
+    return window.clarity;
+  };
 
   const loadScript = (src, attributes = {}) =>
     new Promise((resolve, reject) => {
@@ -79,13 +93,11 @@
     });
 
   const ensureClarity = async () => {
-    if (typeof window.clarity === "function") {
-      return window.clarity;
-    }
+    const clarity = getClarity();
 
     if (!clarityLoadPromise) {
       clarityLoadPromise = loadScript(`https://www.clarity.ms/tag/${clarityProjectId}`, { async: true })
-        .then(() => window.clarity)
+        .then(() => clarity)
         .catch((error) => {
           clarityLoadPromise = undefined;
           throw error;
@@ -111,6 +123,10 @@
 
   const readConsent = () => {
     try {
+      if (window.localStorage.getItem(consentVersionStorageKey) !== consentVersion) {
+        return null;
+      }
+
       return window.localStorage.getItem(consentStorageKey);
     } catch (error) {
       return null;
@@ -120,6 +136,7 @@
   const writeConsent = (status) => {
     try {
       window.localStorage.setItem(consentStorageKey, status);
+      window.localStorage.setItem(consentVersionStorageKey, consentVersion);
     } catch (error) {
       return;
     }
@@ -128,6 +145,7 @@
   const setConsent = (status) => {
     writeConsent(status);
     applyClarityConsent(status);
+    document.documentElement.classList.remove("has-cookie-modal");
 
     if (consentBanner) {
       consentBanner.remove();
@@ -145,8 +163,9 @@
     }
 
     consentBanner.hidden = false;
+    document.documentElement.classList.add("has-cookie-modal");
 
-    if (moveFocus) {
+    if (moveFocus || !readConsent()) {
       window.requestAnimationFrame(() => {
         const primaryAction = consentBanner.querySelector("[data-consent-action='grant']");
         if (primaryAction instanceof HTMLElement) {
@@ -163,19 +182,24 @@
 
     consentBanner = document.createElement("section");
     consentBanner.className = "cookie-banner";
+    consentBanner.setAttribute("role", "dialog");
+    consentBanner.setAttribute("aria-modal", "true");
     consentBanner.setAttribute("aria-labelledby", "cookie-banner-title");
     consentBanner.setAttribute("aria-describedby", "cookie-banner-description");
     consentBanner.hidden = true;
     consentBanner.innerHTML = `
-      <div class="cookie-banner__copy">
-        <p class="cookie-banner__title" id="cookie-banner-title">Cookie settings</p>
-        <p class="cookie-banner__text" id="cookie-banner-description">
-          This site uses cookies for basic analytics and to improve site usage. You can accept or decline.
-        </p>
-      </div>
-      <div class="cookie-banner__actions">
-        <button type="button" class="btn btn-secondary cookie-banner__button" data-consent-action="deny">Decline</button>
-        <button type="button" class="btn btn-primary cookie-banner__button" data-consent-action="grant">Accept</button>
+      <div class="cookie-banner__panel">
+        <div class="cookie-banner__copy">
+          <p class="cookie-banner__title" id="cookie-banner-title">Cookie settings</p>
+          <p class="cookie-banner__text" id="cookie-banner-description">
+            This site uses Microsoft Clarity analytics and session recording cookies to understand visits and improve the website. Choose Accept to allow analytics, or Decline to continue without analytics.
+          </p>
+          <a class="cookie-banner__privacy" href="/privacy">Privacy Policy</a>
+        </div>
+        <div class="cookie-banner__actions">
+          <button type="button" class="btn btn-secondary cookie-banner__button" data-consent-action="deny">Decline</button>
+          <button type="button" class="btn btn-primary cookie-banner__button" data-consent-action="grant">Accept</button>
+        </div>
       </div>
     `;
 
@@ -186,6 +210,34 @@
       }
 
       setConsent(trigger.dataset.consentAction === "grant" ? "granted" : "denied");
+    });
+
+    consentBanner.addEventListener("keydown", (event) => {
+      if (event.key !== "Tab") {
+        return;
+      }
+
+      const focusableElements = Array.from(
+        consentBanner.querySelectorAll("a[href], button:not([disabled])")
+      );
+
+      if (focusableElements.length === 0) {
+        return;
+      }
+
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements[focusableElements.length - 1];
+
+      if (event.shiftKey && document.activeElement === firstElement) {
+        event.preventDefault();
+        lastElement.focus();
+        return;
+      }
+
+      if (!event.shiftKey && document.activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
+      }
     });
 
     document.body.appendChild(consentBanner);
@@ -503,6 +555,8 @@
     applyClarityConsent(storedConsent);
   } else {
     applyClarityConsent("denied");
-    openConsentBanner();
+    if (pageId !== "privacy") {
+      openConsentBanner();
+    }
   }
 })();
