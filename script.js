@@ -142,6 +142,11 @@
     }
   };
 
+  const initialConsent = readConsent();
+  const initialClarityStatus =
+    initialConsent === "granted" || initialConsent === "denied" ? initialConsent : "denied";
+  applyClarityConsent(initialClarityStatus);
+
   const setConsent = (status) => {
     writeConsent(status);
     applyClarityConsent(status);
@@ -550,11 +555,7 @@
   setupCalendlyRedirect();
   setupThankYouPage();
 
-  const storedConsent = readConsent();
-  if (storedConsent === "granted" || storedConsent === "denied") {
-    applyClarityConsent(storedConsent);
-  } else {
-    applyClarityConsent("denied");
+  if (initialConsent !== "granted" && initialConsent !== "denied") {
     if (pageId !== "privacy") {
       openConsentBanner();
     }
