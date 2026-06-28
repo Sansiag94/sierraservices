@@ -150,7 +150,6 @@
   const setConsent = (status) => {
     writeConsent(status);
     applyClarityConsent(status);
-    document.documentElement.classList.remove("has-cookie-modal");
 
     if (consentBanner) {
       consentBanner.remove();
@@ -168,9 +167,8 @@
     }
 
     consentBanner.hidden = false;
-    document.documentElement.classList.add("has-cookie-modal");
 
-    if (moveFocus || !readConsent()) {
+    if (moveFocus) {
       window.requestAnimationFrame(() => {
         const primaryAction = consentBanner.querySelector("[data-consent-action='grant']");
         if (primaryAction instanceof HTMLElement) {
@@ -187,8 +185,6 @@
 
     consentBanner = document.createElement("section");
     consentBanner.className = "cookie-banner";
-    consentBanner.setAttribute("role", "dialog");
-    consentBanner.setAttribute("aria-modal", "true");
     consentBanner.setAttribute("aria-labelledby", "cookie-banner-title");
     consentBanner.setAttribute("aria-describedby", "cookie-banner-description");
     consentBanner.hidden = true;
@@ -215,34 +211,6 @@
       }
 
       setConsent(trigger.dataset.consentAction === "grant" ? "granted" : "denied");
-    });
-
-    consentBanner.addEventListener("keydown", (event) => {
-      if (event.key !== "Tab") {
-        return;
-      }
-
-      const focusableElements = Array.from(
-        consentBanner.querySelectorAll("a[href], button:not([disabled])")
-      );
-
-      if (focusableElements.length === 0) {
-        return;
-      }
-
-      const firstElement = focusableElements[0];
-      const lastElement = focusableElements[focusableElements.length - 1];
-
-      if (event.shiftKey && document.activeElement === firstElement) {
-        event.preventDefault();
-        lastElement.focus();
-        return;
-      }
-
-      if (!event.shiftKey && document.activeElement === lastElement) {
-        event.preventDefault();
-        firstElement.focus();
-      }
     });
 
     document.body.appendChild(consentBanner);

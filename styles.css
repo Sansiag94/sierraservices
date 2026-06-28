@@ -2144,32 +2144,29 @@ section {
 
 .cookie-banner {
   position: fixed;
-  inset: 0;
+  left: 50%;
+  right: auto;
+  bottom: 1rem;
   z-index: 90;
-  display: grid;
-  place-items: center;
-  padding: 1rem;
-  background: rgba(18, 35, 53, 0.42);
-  backdrop-filter: blur(6px);
+  width: min(780px, calc(100vw - 1.5rem));
+  transform: translateX(-50%);
 }
 
 .cookie-banner[hidden] {
   display: none !important;
 }
 
-.has-cookie-modal {
-  overflow: hidden;
-}
-
 .cookie-banner__panel {
-  width: min(640px, 100%);
   display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
   gap: 1.1rem;
   padding: 1.2rem;
   border: 1px solid #cfd9e2;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 22px 56px rgba(18, 35, 53, 0.24);
+  box-shadow: 0 22px 48px rgba(18, 35, 53, 0.18);
+  backdrop-filter: blur(10px);
 }
 
 .cookie-banner__copy {
@@ -2413,7 +2410,8 @@ section {
   }
 
   .cookie-banner {
-    padding: 1rem;
+    bottom: 0.75rem;
+    width: calc(100vw - 1rem);
   }
 }
 
